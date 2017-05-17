@@ -54,7 +54,7 @@ if ($user_login->is_logged_in())
 {
 $userId = $_SESSION['userSession'];
 $user = $session->getUser($userId);
-if ($user['userAdmin'] == 0)
+if ($user['userAdmin'] >= 0)
 {
 ?>
 <!-- Start header section -->

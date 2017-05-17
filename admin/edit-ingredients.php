@@ -44,7 +44,7 @@ if ($user['userAdmin'] == 1)
     <ul class="nav">
       <li class="right"><a href="../" target="_blank">View Live Site</a></li>
 
-      <li class="active"><a href="list-pizzas.php">Pizzas</a>
+      <li class="active"><a href="list-products.php">Products</a>
         <ul class="subnav">
           <li><a href="list-categories.php">Categories</a></li>
           <li class="active"><a href="list-ingredients.php">Ingredients</a></li>

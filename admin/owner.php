@@ -166,7 +166,7 @@ if ($user['userAdmin'] == 3)
     ?></h3>
 
                     <div class="actions">
-                        <a class="button icon delete" href="list-pizzas.php?action=delete&p_id=<?/*= $pizza['p_id'] */
+                        <a class="button icon delete" href="list-products.php?action=delete&p_id=<?/*= $pizza['p_id'] */
     ?>">Delete</a>
                         <a class="button icon edit" href="edit-pizza.php?p_id=<?/*= $pizza['p_id'] */
     ?>">Edit</a>

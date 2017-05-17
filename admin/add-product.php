@@ -44,7 +44,7 @@ if ($user['userAdmin'] == 1)
     <ul class="nav">
       <li class="right"><a href="../" target="_blank">View Live Site</a></li>
 
-      <li class="active"><a href="list-pizzas.php">Pizzas</a></li>
+      <li class="active"><a href="list-products.php">Products</a></li>
       <!-- <li><a href="index.php?action=manageotherfood">Other Food</a></li>
       <li><a href="index.php?action=managedrinks">Drinks</a></li>
       <li><a href="imagelibrary.php?type=relprod">Image Library</a></li> -->
@@ -92,7 +92,7 @@ if ($user['userAdmin'] == 1)
 
           echo '<select name="ingredients[]" id="ingredients" multiple>';
           foreach ($ingredients as $key => $value) {
-            echo '<option value="' . $value['i_id'] . '">' . $value['i_name'] . '</option>';
+            echo '<option value="' . $value['ingredientId'] . '">' . $value['i_name'] . '</option>';
           }
           echo '</select>';
 
@@ -103,21 +103,21 @@ if ($user['userAdmin'] == 1)
     </fieldset>
 
 
-    <fieldset>
+ <!--    <fieldset>
       <legend>Prices</legend>
       <ul>
         <?php
-        $sizes = $session->getSizes();
+        // $sizes = $session->getSizes();
 
-        foreach ($sizes as $key => $value) {
-          echo '<li>';
-          echo '<label for="price-' . $value['id'] . '">' . $value['name'] . ':</label>';
-          echo '<input type="text" id="price-' . $value['id'] . '" name="price[' . $value['id'] . ']" />';
-          echo '</li>';
-        }
+        // foreach ($sizes as $key => $value) {
+        //   echo '<li>';
+        //   echo '<label for="price-' . $value['id'] . '">' . $value['name'] . ':</label>';
+        //   echo '<input type="text" id="price-' . $value['id'] . '" name="price[' . $value['id'] . ']" />';
+        //   echo '</li>';
+        // }
         ?>
       </ul>
-    </fieldset>
+    </fieldset> -->
 
 
     <div class="buttons">

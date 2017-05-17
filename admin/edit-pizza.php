@@ -44,7 +44,7 @@ if ($user['userAdmin'] == 1)
     <ul class="nav">
       <li class="right"><a href="../" target="_blank">View Live Site</a></li>
 
-      <li class="active"><a href="list-pizzas.php">Pizzas</a>
+      <li class="active"><a href="list-products.php">Products</a>
         <ul class="subnav">
           <li><a href="list-categories.php">Categories</a></li>
           <li><a href="list-ingredients.php">Ingredients</a></li>
@@ -65,11 +65,13 @@ if ($user['userAdmin'] == 1)
 <div class="page-body">
   <?php
 
-  $pizzaId = $_GET['p_id'];
+  $productId = $_GET['productId'];
 
-  $pizza = $session->getPizza($pizzaId);
+  $product = $session->getProduct($productId);
   if (isset($_POST['action']) && $_POST['action'] == 'update') {
     try {
+
+     
       $name = $_POST['name'];// name of pizza
 
       $imgFile = $_FILES['new-image']['name'];
@@ -79,7 +81,7 @@ if ($user['userAdmin'] == 1)
       $category = $_POST['category'];
       $ingredients = $_POST['ingredients'];
 
-      $prices = $_POST['price'];
+      //$prices = $_POST['price'];
 
       if (empty($name)) {
         $errMSG = "Please enter pizza name.";
@@ -100,7 +102,7 @@ if ($user['userAdmin'] == 1)
         if (in_array($imgExt, $valid_extensions)) {
           // Check file size '5MB'
           if ($imgSize < 5000000) {
-            unlink($upload_dir . $pizza['p_photo']);
+            unlink($upload_dir . $product['photo']);
             move_uploaded_file($tmp_dir, $upload_dir . $userpic);
           } else {
             $errMSG = "Sorry, your file is too large.";
@@ -109,34 +111,34 @@ if ($user['userAdmin'] == 1)
           $errMSG = "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
         }
       } else { // photo not updated
-        $userpic = $pizza['p_photo'];
+        $userpic = $product['photo'];
       }
 
 
       //update Pizza
       if (!isset($errMSG)) {
 
-        $sql = "UPDATE pizza SET p_name=:name,p_photo=:photo,Category=:category where p_id=:id";
+        $sql = "UPDATE product SET name=:name,photo=:photo,categoryIdFK=:category where productId=:productId";
         $stmt = $database->connection->prepare($sql);
         $stmt->bindParam(':name', $name);
         $stmt->bindParam(':photo', $userpic);
         $stmt->bindParam(':category', $category);
-        $stmt->bindParam(':id', $pizzaId);
+        $stmt->bindParam(':productId', $productId);
         $stmt->execute();
       }
 
       if (!isset($errMSG)) {
-        $stmt = $database->connection->prepare('DELETE FROM pizza_ingredient WHERE pizza = :pizza');
-        $stmt->bindParam(':pizza', $pizzaId);
+        $stmt = $database->connection->prepare('DELETE FROM product_ingredients WHERE productIdFK = :product');
+        $stmt->bindParam(':product', $productId);
 
         if (!$stmt->execute()) {
           $errMSG = "error while deleting all pizza ingredients from pizza_ingredients";
         }
 
         foreach ($ingredients as $ingredient) {
-          $stmt = $database->connection->prepare('INSERT INTO pizza_ingredient(pizza,ingredient) VALUES(:pizza,:ingredient)');
+          $stmt = $database->connection->prepare('INSERT INTO product_ingredients(productIdFK,ingredientIdFK) VALUES(:product,:ingredient)');
           $stmt->bindParam(':ingredient', $ingredient);
-          $stmt->bindParam(':pizza', $pizzaId);
+          $stmt->bindParam(':product', $productId);
 
           if (!$stmt->execute()) {
             $errMSG = "error while inserting into pizza_ingredients";
@@ -146,42 +148,42 @@ if ($user['userAdmin'] == 1)
 
 
       //insert prices good :P so same with prices now, yup
-      if (!isset($errMSG)) {
-        $stmt = $database->connection->prepare('DELETE FROM pizza_size WHERE pizza = :pizza');
-        $stmt->bindParam(':pizza', $pizzaId);
+      // if (!isset($errMSG)) {
+      //   $stmt = $database->connection->prepare('DELETE FROM product_sz WHERE pizza = :pizza');
+      //   $stmt->bindParam(':pizza', $productId);
 
-        if (!$stmt->execute()) {
-          $errMSG = "error while deleting all pizza sizes from pizza_size";
-        }
+      //   if (!$stmt->execute()) {
+      //     $errMSG = "error while deleting all pizza sizes from pizza_size";
+      //   }
 
 
-        foreach ($prices as $sizeId => $price) {
-          $stmt = $database->connection->prepare('INSERT INTO pizza_size(pizza,size,price) VALUES(:pizza, :size, :price)');
-          $stmt->bindParam(':pizza', $pizzaId);
-          $stmt->bindParam(':size', $sizeId);
-          $stmt->bindParam(':price', $price);
+      //   foreach ($prices as $sizeId => $price) {
+      //     $stmt = $database->connection->prepare('INSERT INTO pizza_size(pizza,size,price) VALUES(:pizza, :size, :price)');
+      //     $stmt->bindParam(':pizza', $productId);
+      //     $stmt->bindParam(':size', $sizeId);
+      //     $stmt->bindParam(':price', $price);
 
-          if (!$stmt->execute()) {
-            $errMSG = "error while inserting into pizza_size";
-          }
-        }
-      }
+      //     if (!$stmt->execute()) {
+      //       $errMSG = "error while inserting into pizza_size";
+      //     }
+      //   }
+      // }
 
 
     } catch (Exception $e) {
       return $e->getMessage();
     }
 
-    echo '<p>Pizza successfully updated!</p>';
+    echo '<p>Product successfully updated!</p>';
 
   }
 
 
-  $name = $pizza['p_name'];
-  $pizza = $session->getPizza($pizzaId);
+  $name = $product['name'];
+  $product = $session->getProduct($productId);
 
   ?>
-  <h2>Edit <?= $pizza['p_name'] ?></h2>
+  <h2>Edit <?= $product['name'] ?></h2>
 
 
   <form class="admin-form" method="post" enctype="multipart/form-data">
@@ -193,11 +195,11 @@ if ($user['userAdmin'] == 1)
       <ul>
         <li>
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" value="<?= $pizza['p_name'] ?>"/>
+          <input type="text" id="name" name="name" value="<?= $product['name'] ?>"/>
         </li>
         <li>
           <label for="image">Photo:</label>
-          <img class="product-photo" src="../includes/pizza_images/<?= $pizza['p_photo'] ?>"/>
+          <img class="product-photo" src="../includes/pizza_images/<?= $product['photo'] ?>"/>
         </li>
         <li>
           <label for="image">Update photo:</label>
@@ -210,10 +212,10 @@ if ($user['userAdmin'] == 1)
           echo '<label for="category">Category:</label>';
           echo '<select name="category" id="category">';
           foreach ($categories as $key => $value) {
-            if ($value['c_id'] == $pizza['Category']) {
-              echo '<option value="' . $value['c_id'] . '" selected="selected">' . $value['c_name'] . '</option>';
+            if ($value['categoryId'] == $product['categoryIdFK']) {
+              echo '<option value="' . $value['categoryId'] . '" selected="selected">' . $value['name'] . '</option>';
             } else {
-              echo '<option value="' . $value['c_id'] . '">' . $value['c_name'] . '</option>';
+              echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
             }
           }
           echo '</select>';
@@ -224,14 +226,15 @@ if ($user['userAdmin'] == 1)
 
 
           <?php
-          $ingredientsPizza = $session->getPizzaIngredients($pizzaId);
+          $ingredientsPizza = $session->getPizzaIngredients($productId);
 
-          function pizzaIngredientCheck($pizzaIngredients, $ingredientId)
+
+          function pizzaIngredientCheck($productIngredients, $ingredientId)
           {
-            foreach ($pizzaIngredients as $pizzaIngredient) {
+            foreach ($productIngredients as $productIngredient) {
 
-              //var_dump($pizzaIngredient);
-              if ($pizzaIngredient['i_id'] == $ingredientId) {
+              //var_dump($productIngredient);
+              if ($productIngredient['ingredientId'] == $ingredientId) {
                 return true;
               }
             }
@@ -244,13 +247,13 @@ if ($user['userAdmin'] == 1)
 
 
           $ingredients = $session->getIngredients();
-
+          //var_dump($ingredients);
           echo '<select name="ingredients[]" id="ingredients" multiple>';
           foreach ($ingredients as $key => $value) {
-            if (pizzaIngredientCheck($ingredientsPizza, $value['i_id']) === true) {
-              echo '<option value="' . $value['i_id'] . '" selected="selected">' . $value['i_name'] . ' </option>';
+            if (pizzaIngredientCheck($ingredientsPizza, $value['ingredientId']) === true) {
+              echo '<option value="' . $value['ingredientId'] . '" selected="selected">' . $value['i_name'] . ' </option>';
             } else {
-              echo '<option value="' . $value['i_id'] . '">' . $value['i_name'] . '</option>';
+              echo '<option value="' . $value['ingredientId'] . '">' . $value['i_name'] . '</option>';
             }
           }
           echo '</select>';
@@ -264,29 +267,29 @@ if ($user['userAdmin'] == 1)
     </fieldset>
 
 
-    <fieldset>
+  <!--   <fieldset>
       <legend>Prices</legend>
       <ul>
         <?php
-        $sizes = $session->getPizzaPrices($pizzaId);
+        // $sizes = $session->getPizzaPrices($productId);
 
         // var_dump($sizes);
 
-        $pizzaIdSize = 1;
-        foreach ($sizes as $key => $value) {
-          echo '<li>';
-          echo '<label for="price-' . $value['id'] . '">' . $value['name'] . ':</label>';
-          echo '<input type="text" id="price-' . $value['id'] . '" name="price[' . $value['id'] . ']" value=' . $value['price'] . ' />';
-          echo '</li>';
-        }
+        // $productIdSize = 1;
+        // foreach ($sizes as $key => $value) {
+        //   echo '<li>';
+        //   echo '<label for="price-' . $value['id'] . '">' . $value['name'] . ':</label>';
+        //   echo '<input type="text" id="price-' . $value['id'] . '" name="price[' . $value['id'] . ']" value=' . $value['price'] . ' />';
+        //   echo '</li>';
+        // }
         ?>
       </ul>
-    </fieldset>
+    </fieldset> -->
 
 
     <div class="buttons">
       <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
-      <a class="button icon cancel" title="Cancel" href="list-pizzas.php">Cancel</a>
+      <a class="button icon cancel" title="Cancel" href="list-products.php">Cancel</a>
     </div>
 
   </form>
@@ -313,7 +316,7 @@ if ($user['userAdmin'] == 1)
 <!--     <?php
 // function pizzaIngredientCheck(){
 
-//   foreach($pizzaIngredients as $ingr) {
+//   foreach($productIngredients as $ingr) {
 //     echo $ingr;}
 // }
 

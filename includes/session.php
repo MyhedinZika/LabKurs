@@ -185,12 +185,12 @@ class Session
   function updateSize($sizeId, $sizeName, $sizeDiameter)
   {
     global $database;
-    $sql = "UPDATE size SET name = :name, diameter = :diameter WHERE id = :id";
+    $sql = "UPDATE size SET name = :name, CategoryIDFK = :CategoryIDFK WHERE sizeId = :sizeId";
     try {
       $stmt = $database->connection->prepare($sql);
-      $stmt->bindParam('id', $sizeId);
+      $stmt->bindParam('sizeId', $sizeId);
       $stmt->bindParam('name', $sizeName);
-      $stmt->bindParam('diameter', $sizeDiameter);
+      $stmt->bindParam('CategoryIDFK', $sizeDiameter);
       $stmt->execute();
     } catch (Exception $e) {
       return $e->getMessage();
@@ -294,9 +294,9 @@ class Session
   function getSize($sizeId)
   {
     global $database;
-    $sql = "SELECT * FROM size WHERE id = :id";
+    $sql = "SELECT * FROM size WHERE sizeId = :sizeId";
     $stmt = $database->connection->prepare($sql);
-    $stmt->bindParam('id', $sizeId);
+    $stmt->bindParam('sizeId', $sizeId);
     $stmt->execute();
     $size = $stmt->fetch();
 
@@ -320,14 +320,14 @@ class Session
   }
 
 
-  function addSize($name, $dia)
+  function addSize($name, $cat)
   {
     global $database;
     try {
-      $stmt = $database->connection->prepare('INSERT INTO size(name, diameter) VALUES(:name, :dia)');
+      $stmt = $database->connection->prepare('INSERT INTO size(name, CategoryIDFK) VALUES(:name, :category)');
 
       $stmt->bindParam(':name', $name);
-      $stmt->bindParam(':dia', $dia);
+      $stmt->bindParam(':category', $cat);
       $stmt->execute();
     } catch (Exception $e) {
       return $e->getMessage();
@@ -650,10 +650,10 @@ class Session
   function deleteSize($sizeId)
   {
     global $database;
-    $sql = "DELETE from size WHERE id = :id";
+    $sql = "DELETE from size WHERE sizeId = :sizeId";
     try {
       $stmt = $database->connection->prepare($sql);
-      $stmt->bindParam('id', $sizeId);
+      $stmt->bindParam('sizeId', $sizeId);
       $stmt->execute();
     } catch (Exception $e) {
       return $e->getMessage();

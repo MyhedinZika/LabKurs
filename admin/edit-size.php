@@ -44,7 +44,7 @@ if ($user['userAdmin'] == 1)
     <ul class="nav">
       <li class="right"><a href="../" target="_blank">View Live Site</a></li>
 
-      <li class="active"><a href="list-pizzas.php">Pizzas</a>
+      <li class="active"><a href="list-products.php">Products</a>
         <ul class="subnav">
           <li><a href="list-categories.php">Categories</a></li>
           <li><a href="list-ingredients.php">Ingredients</a></li>
@@ -66,8 +66,8 @@ if ($user['userAdmin'] == 1)
 <div class="page-body">
   <?php
   if (isset($_GET['id'])) {
-    if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['size-name']) && isset($_POST['size-diameter'])) {
-      $result = $session->updateSize($_GET['id'], $_POST['size-name'], $_POST['size-diameter']);
+    if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['size-name']) && isset($_POST['category'])) {
+      $result = $session->updateSize($_GET['id'], $_POST['size-name'], $_POST['category']);
       echo "<p>$result</p>";
     }
   }
@@ -85,8 +85,20 @@ if ($user['userAdmin'] == 1)
     <ul>
       <li>
         Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px" value="<?= $size['name'] ?>"/>
-        Diameter: <input type="text" id="size-diameter" name="size-diameter" style="min-width: 200px"
-                         value="<?= $size['diameter'] ?>"/>
+       <?php
+          $categories = $session->getCategory();
+
+          ?>
+         
+          
+         Category:
+          <select name="category" id="category">
+          <?php
+          foreach ($categories as $key => $value) {
+            echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
+          }
+          ?>
+          </select>
       </li>
     </ul>
 

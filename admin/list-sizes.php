@@ -42,7 +42,7 @@ if ($user['userAdmin'] == 1)
   <div class="navbar">
     <ul class="nav">
       <li class="right"><a href="../" target="_blank">View Live Site</a></li>
-      <li class="active"><a href="list-pizzas.php">Pizzas</a>
+      <li class="active"><a href="list-products.php">Products</a>
         <ul class="subnav">
           <li><a href="list-categories.php">Categories</a></li>
           <li><a href="list-ingredients.php">Ingredients</a></li>
@@ -66,11 +66,11 @@ if ($user['userAdmin'] == 1)
   <?php
 
   if (isset($_POST['action']) && $_POST['action'] === 'addSize') {
-
+    
     $name = $_POST['size-name'];
-    $diameter = $_POST['size-diameter'];
+    $category = $_POST['category'];
 
-    $result = $session->addSize($name, $diameter);
+    $result = $session->addSize($name, $category);
 
     echo $result;
   }
@@ -85,9 +85,9 @@ if ($user['userAdmin'] == 1)
     } else {
       // ask for confirmation
       ?>
-      <p>Are you sure you want to delete <?= $size['name'] ?>, <?= $size['diameter'] ?>cm?</p>
+      <p>Are you sure you want to delete <?= $size['name'] ?>, <?= $size['CategoryIDFK'] ?>cm?</p>
       <p>
-        <a href="list-sizes.php?action=delete&id=<?= $size['id'] ?>&confirmed=true">Yes</a> -
+        <a href="list-sizes.php?action=delete&id=<?= $size['sizeId'] ?>&confirmed=true">Yes</a> -
         <a href="list-sizes.php">No</a>
       </p>
       <?php
@@ -117,10 +117,25 @@ if ($user['userAdmin'] == 1)
   </ul>
 
   <form class="admin-form" method="POST">
-    Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px"/> Diameter: <input type="text"
-                                                                                                         id="size-diameter"
-                                                                                                         name="size-diameter"
-                                                                                                         style="min-width: 200px"/>
+    Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px; "/>
+          
+          <?php
+          $categories = $session->getCategory();
+
+          ?>
+         
+          
+          Category:
+          <select name="category" id="category">
+          <?php
+          foreach ($categories as $key => $value) {
+            echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
+          }
+          ?>
+          </select>
+          
+         
+                                                                          
     <button type="submit" class="button inline add" title="Add size" value="addSize" name="action">Add new Pizza size
     </button>
   </form>

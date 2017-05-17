@@ -43,7 +43,7 @@ if ($user['userAdmin'] == 1)
   <div class="navbar">
     <ul class="nav">
       <li class="right"><a href="../" target="_blank">View Live Site</a></li>
-      <li class="active"><a href="list-pizzas.php">Pizzas</a>
+      <li class="active"><a href="list-products.php">Products</a>
         <ul class="subnav">
           <li><a href="list-categories.php">Categories</a></li>
           <li><a href="list-ingredients.php">Ingredients</a></li>
@@ -81,8 +81,8 @@ if ($user['userAdmin'] == 1)
       ?>
       <p>Are you sure you want to delete <?= $product['name'] ?>?</p>
       <p>
-        <a href="list-pizzas.php?action=delete&productId=<?= $product['productId'] ?>&confirmed=true">Yes</a> -
-        <a href="list-pizzas.php">No</a>
+        <a href="list-products.php?action=delete&productId=<?= $product['productId'] ?>&confirmed=true">Yes</a> -
+        <a href="list-products.php">No</a>
       </p>
       <?php
     }
@@ -102,7 +102,7 @@ if ($user['userAdmin'] == 1)
         <h3><?= $product['name'] ?></h3>
 
         <div class="actions">
-          <a class="button icon delete" href="list-pizzas.php?action=delete&productId=<?= $product['productId'] ?>">Delete</a>
+          <a class="button icon delete" href="list-products.php?action=delete&productId=<?= $product['productId'] ?>">Delete</a>
           <a class="button icon edit" href="edit-pizza.php?productId=<?= $product['productId'] ?>">Edit</a>
         </div>
       </li>
@@ -112,7 +112,7 @@ if ($user['userAdmin'] == 1)
 
 
   <p>
-    <a class="button add" href="add-pizza.php">Add New Pizza</a>
+    <a class="button add" href="add-product.php">Add New Pizza</a>
   </p>
 
   <?php }

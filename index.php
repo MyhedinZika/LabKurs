@@ -4,11 +4,7 @@ include('includes/session.php');
 require_once 'includes/class.user.php';
 $user_home = new USER();
 
-/* 	if(!$user_home->is_logged_in())
-	{
-		$user_home->redirect('includes/login.php');
-	}
- */
+
 if ($user_home->is_logged_in()) {
   $stmt = $user_home->runQuery("SELECT * FROM users WHERE userID=:uid");
   $stmt->execute(array(":uid" => $_SESSION['userSession']));
@@ -23,7 +19,7 @@ if ($user_home->is_logged_in()) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GrandmaPizzas | Home</title>
+  <title>iMenu | Home</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d8/Pizza_slice_icon.png"
@@ -155,7 +151,7 @@ if ($user_home->is_logged_in()) {
           <li><a href="#mu-contact">CONTACT</a></li>
           <?php
           if (!$user_home->is_logged_in()) {
-            echo '<li><a href="../includes/login.php">LOG IN / SIGN UP</a></li>';
+            echo '<li><a href="includes/login.php">LOG IN / SIGN UP</a></li>';
           } else { ?>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
                                     href="index.php"><?php echo strtoupper($row['userName']); ?>
@@ -164,7 +160,7 @@ if ($user_home->is_logged_in()) {
                 <li><a href="account_details.php">ACCOUNT DETAILS</a></li>
                 <li><a href="cart.php">MY CART</a></li>
                 <li><a href="changePassword.php">CHANGE PASSWORD</a></li>
-                <li><a href="../includes/logout.php">LOG OUT</a></li>
+                <li><a href="includes/logout.php">LOG OUT</a></li>
               </ul>
             </li>
 
@@ -199,8 +195,8 @@ if ($user_home->is_logged_in()) {
         <!-- Top slider content -->
         <div class="mu-top-slider-content">
           <span class="mu-slider-small-title">Welcome to</span>
-          <h2 class="mu-slider-title">Grandma's Pizzas</h2>
-          <p>Square box,round pizza,triangle slices.</p>
+          <h2 class="mu-slider-title">iMenu </h2>
+          <p>.......</p>
           <a href="#mu-restaurant-menu" class="mu-readmore-btn">ORDER ONLINE</a>
         </div>
         <!-- / Top slider content -->
@@ -211,9 +207,9 @@ if ($user_home->is_logged_in()) {
         <img src="assets/img/slider/banner_2.png" alt="img">
         <!-- Top slider content -->
         <div class="mu-top-slider-content">
-          <span class="mu-slider-small-title">The Real Pizza</span>
+          <span class="mu-slider-small-title">iMenu</span>
           <h2 class="mu-slider-title">Never ordered online?</h2>
-          <p>Dont worry,pizza is coming.</p>
+          <p>Dont worry,your product is coming.</p>
           <a href="#mu-restaurant-menu" class="mu-readmore-btn">ORDER ONLINE</a>
         </div>
         <!-- / Top slider content -->
@@ -224,9 +220,9 @@ if ($user_home->is_logged_in()) {
         <img src="assets/img/slider/banner_3.png" alt="img">
         <!-- Top slider content -->
         <div class="mu-top-slider-content">
-          <span class="mu-slider-small-title">Delicious Pizza</span>
-          <h2 class="mu-slider-title">Get it any way you want just for 5€</h2>
-          <p>Pizza is life</p>
+          <span class="mu-slider-small-title">Delicious Products</span>
+          <h2 class="mu-slider-title">Get it any way you want </h2>
+          <p>iMenu is life</p>
           <a href="#mu-restaurant-menu" class="mu-readmore-btn">ORDER ONLINE</a>
         </div>
         <!-- / Top slider content -->
