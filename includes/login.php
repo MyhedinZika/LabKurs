@@ -54,7 +54,7 @@ if (isset($_POST['btn-login'])) {
         $user_login->redirect('../index.php');
         exit();
       } else if ($user['userAdmin'] == 1) {
-        $user_login->redirect('../admin/list-pizzas.php');
+        $user_login->redirect('../admin/list-products.php');
         exit();
       } else if ($user['userAdmin'] == 2) {
         $user_login->redirect('../orders.php');

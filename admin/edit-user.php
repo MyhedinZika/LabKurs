@@ -43,7 +43,7 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
     <div class="navbar">
       <ul class="nav">
         <li class="right"><a href="../" target="_blank">View Live Site</a></li>
-        <!--
+        
       <li><a href="list-products.php">Products</a>
                       <ul class="subnav">
                           <li><a href="list-categories.php">Categories</a></li>
@@ -51,8 +51,8 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
                           <li><a href="list-sizes.php">Sizes</a></li>
                       </ul>
                   </li>
-                    <!-- <li><a href="index.php?action=manageotherfood">Other Food</a></li>
-                <li><a href="index.php?action=managedrinks">Drinks</a></li>-->
+                     <li><a href="index.php?action=manageotherfood">Other Food</a></li>
+              <!--   <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
         <li><a href="list-gallery-images.php">Image Library</a></li>
         <li class="active"><a href="list-users.php">Users</a></li>
         <li class="right"><a href="../includes/logout.php">Log Out</a></li>
@@ -69,7 +69,7 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
               <li><a href="list-categories.php">Daily</a></li>
               <li><a href="list-ingredients.php">Monthly</a></li>
               <li><a href="list-sizes.php">Yearly</a></li>
-          </ul>-->
+          </ul>
         </li>
         <!--  <li><a href="index.php?action=manageotherfood">Other Food</a></li>
          <li><a href="index.php?action=managedrinks">Drinks</a></li> -->

@@ -52,7 +52,7 @@ if ($user['userAdmin'] == 1)
       <!-- <li><a href="index.php?action=manageotherfood">Other Food</a></li>
       <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
       <li class="active"><a href="list-gallery-images.php">Image Library</a></li>
-      <li><a href="list-dailyoffers.php">Daily Offers</a></li>
+     <!--  <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
       <li><a href="list-users.php">Users</a></li>
       <li class="right"><a href="../includes/logout.php">Log Out</a></li>
     </ul>

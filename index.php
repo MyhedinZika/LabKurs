@@ -1529,7 +1529,7 @@ if ($user_home->is_logged_in()) {
                       possible.</p>
                     <address>
                       <p><i class="fa fa-phone"></i> (+383) 44 123-456 </p>
-                      <p><i class="fa fa-envelope-o"></i>contact@grandmapizzas.com</p>
+                      <p><i class="fa fa-envelope-o"></i>contact@iMenu.com</p>
                       <p><i class="fa fa-map-marker"></i>Lagja Kalabria pn, Prishtine, Kosove</p>
                     </address>
                   </div>
