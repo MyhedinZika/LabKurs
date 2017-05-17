@@ -12,9 +12,20 @@ ob_start();
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Add pizza - GrandmasPizza Admin</title>
+  <title>Add product - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
+  <link rel="stylesheet" href="bootstrap-select/dist/css/bootstrap-select.min.css">
+
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="bootstrap-select/js/bootstrap-select.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="bootstrap-select/js/i18n/defaults-en_US.js"></script>
+
 
 </head>
 
@@ -77,8 +88,12 @@ if ($user['userAdmin'] == 1)
         <li>
           <?php
           $categories = $session->getCategory();
-          echo '<label for="category">Category:</label>';
-          echo '<select name="category" id="category">';
+          ?>
+
+
+          <label for="category">Category:</label>
+          <select name="category" id="category" class="selectpicker" data-live-search="true">
+          <?php 
           foreach ($categories as $key => $value) {
             echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
           }
@@ -90,7 +105,7 @@ if ($user['userAdmin'] == 1)
           <?php
           $ingredients = $session->getIngredients();
 
-          echo '<select name="ingredients[]" id="ingredients" multiple>';
+          echo '<select name="ingredients[]" id="ingredients" multiple class="selectpicker" data-live-search="true" style=" min-width: 400px;">';
           foreach ($ingredients as $key => $value) {
             echo '<option value="' . $value['ingredientId'] . '">' . $value['i_name'] . '</option>';
           }
@@ -145,7 +160,11 @@ if ($user['userAdmin'] == 1)
   ?>
 
 </div><!-- /.page-body -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 
 </body>
+
 </html>
 

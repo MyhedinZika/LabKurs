@@ -12,7 +12,7 @@ ob_start();
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pizza Sizes List - GrandmasPizza Admin</title>
+  <title>Product Sizes List - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
 
@@ -126,7 +126,7 @@ if ($user['userAdmin'] == 1)
          
           
           Category:
-          <select name="category" id="category">
+          <select name="category" id="category" >
           <?php
           foreach ($categories as $key => $value) {
             echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';

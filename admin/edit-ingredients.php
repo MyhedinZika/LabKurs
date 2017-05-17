@@ -12,7 +12,7 @@ ob_start();
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Edit Pizza ingredient - GrandmasPizza Admin</title>
+  <title>Edit Product ingredient - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
 

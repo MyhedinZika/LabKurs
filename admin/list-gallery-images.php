@@ -12,7 +12,7 @@ ob_start();
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery image list - GrandmasPizza Admin</title>
+  <title>Gallery image list - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
 
