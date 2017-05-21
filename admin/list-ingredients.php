@@ -38,7 +38,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Product"/>
   </a>
 
-  <h1>Grandmas Product Administration</h1>
+  <h1>iMenu Ingredients Administration</h1>
 
   <div class="navbar">
     <ul class="nav">
@@ -53,7 +53,7 @@ if ($user['userAdmin'] == 1)
       <!--  <li><a href="index.php?action=manageotherfood">Other Food</a></li>
        <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
       <li><a href="list-gallery-images.php">Image Library</a></li>
-     <!--  <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
+      <!--  <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
       <li><a href="list-users.php">Users</a></li>
       <li class="right"><a href="../includes/logout.php">Log Out</a></li>
     </ul>
@@ -64,16 +64,32 @@ if ($user['userAdmin'] == 1)
 
 <div class="page-body">
 
+  <form class="admin-form" method="post" action="../includes/process.php"
+        style="width: 700px; margin-top: -20px; float:right;">
+    <input type="hidden" name="action" value="doaddingredient"/>
+    <!-- you might not want this - I used it to specify what the next action would be after submitting the form -->
 
-  <h2>Product Ingredients</h2>
+    <input type="text" id="ingredient-name" name="ingredient-name" style=" margin-left: 225px; height: 36px;"/>
+    <button type="submit" class="button inline add" title="Add ingredient" value="addIngredient" name="action">Add
+      new
+      Ingredient
+    </button>
+  </form>
+
+
+  <h2 style="width: 300px; margin-left: 20px;">Product Ingredients</h2>
   <?php
 
   if (isset($_POST['action']) && $_POST['action'] === 'addIngredient') {
 
+
     $ingredientName = $_POST['ingredient-name'];
 
-    $result = $session->addIngredient($ingredientName);
-
+    if ($ingredientName == null) {
+      $result = "Emri i perberesit nuk ben te jete i zbrazet.";
+    } else {
+      $result = $session->addIngredient($ingredientName);
+    }
     echo $result;
   }
 
@@ -89,7 +105,9 @@ if ($user['userAdmin'] == 1)
       ?>
       <p>Are you sure you want to delete <?= $ingredient['i_name'] ?>?</p>
       <p>
-        <a href="list-ingredients.php?action=delete&ingredientId=<?= $ingredient['ingredientId'] ?>&confirmed=true">Yes</a> -
+        <a
+          href="list-ingredients.php?action=delete&ingredientId=<?= $ingredient['ingredientId'] ?>&confirmed=true">Yes</a>
+        -
         <a href="list-ingredients.php">No</a>
       </p>
       <?php
@@ -108,23 +126,16 @@ if ($user['userAdmin'] == 1)
         <h3><?= $ing['i_name'] ?></h3>
 
         <div class="actions">
-          <a class="button icon delete" href="list-ingredients.php?action=delete&ingredientId=<?= $ing['ingredientId'] ?>">Delete</a>
-          <a class="button icon edit" href="edit-ingredients.php?ingredientId=<?= $ing['ingredientId'] ?>">Edit</a>
+          <a class="button icon delete"
+             href="list-ingredients.php?action=delete&ingredientId=<?= $ing['ingredientId'] ?>">Delete</a>
+          <a class="button icon edit"
+             href="edit-ingredients.php?ingredientId=<?= $ing['ingredientId'] ?>">Edit</a>
         </div>
       </li>
     <?php endforeach; ?>
   </ul>
+  <br/>
 
-
-  <form class="admin-form" method="post" action="../includes/process.php">
-    <input type="hidden" name="action" value="doaddingredient"/>
-    <!-- you might not want this - I used it to specify what the next action would be after submitting the form -->
-
-    <input type="text" id="ingredient-name" name="ingredient-name"/>
-    <button type="submit" class="button inline add" title="Add ingredient" value="addIngredient" name="action">Add new
-      Product ingredient
-    </button>
-  </form>
 
   <?php }
   else {

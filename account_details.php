@@ -73,7 +73,7 @@ if ($user['userAdmin'] >= 0)
         </button>
         <!-- LOGO -->
         <!--  Image based logo  -->
-        <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Logo img"></a>
+        <a class="navbar-brand" href="index.php"><img src="assets/img/logomenu.png" alt="Logo img"></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
@@ -94,7 +94,7 @@ if ($user['userAdmin'] >= 0)
                 <li><a href="account_details.php">ACCOUNT DETAILS</a></li>
                 <li><a href="cart.php">MY CART</a></li>
                 <li><a href="changePassword.php">CHANGE PASSWORD</a></li>
-                <li><a href="../includes/logout.php">LOG OUT</a></li>
+                <li><a href="includes/logout.php">LOG OUT</a></li>
               </ul>
             </li>
             <?php
@@ -159,11 +159,13 @@ if ($user['userAdmin'] >= 0)
             <legend>Details</legend>
             <div class="form-group">
               <label for="name">Name:</label>
-              <input type="text" id="name" class="form-control" name="name" value="<?= $user['userName'] ?>"/>
+              <input type="text" id="name" class="form-control" name="name"
+                     value="<?= $user['userName'] ?>"/>
             </div>
             <div class="form-group">
               <label for="surname">Surname:</label>
-              <input type="text" id="surname" class="form-control" name="surname" value="<?= $user['userSurname'] ?>"/>
+              <input type="text" id="surname" class="form-control" name="surname"
+                     value="<?= $user['userSurname'] ?>"/>
             </div>
             <div class="form-group">
               <label for="email">Email:</label>
@@ -186,12 +188,15 @@ if ($user['userAdmin'] >= 0)
             </div>
             <div class="form-group">
               <label for="phone">Phone:</label>
-              <input type="text" id="phone" class="form-control" name="phone" value="<?= $user['userPhone'] ?>"/>
+              <input type="text" id="phone" class="form-control" name="phone"
+                     value="<?= $user['userPhone'] ?>"/>
             </div>
           </fieldset>
 
           <div class="buttons">
-            <button type="submit" class="mu-btn icon go" title="Update" name="action" value="update">Update</button>
+            <button type="submit" class="mu-btn icon go" title="Update" name="action" value="update">
+              Update
+            </button>
             <a class="mu-btn icon cancel" title="Cancel" href="account_details.php">Cancel</a>
           </div>
         </form>

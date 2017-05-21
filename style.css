@@ -240,7 +240,7 @@ img {
 }
 
 .navbar-bg {
-    background-color: #3c8dbc;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 0;
 }
 
@@ -2333,7 +2333,7 @@ RESERVATION SECTION
  FOOTER SECTION
 ====================*/
 #mu-footer {
-    background-color: #444;
+    background-color: rgba(0, 0, 0, 0.8);
     display: inline;
     float: left;
     padding: 50px 0;

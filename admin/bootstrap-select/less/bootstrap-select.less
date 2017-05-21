@@ -23,7 +23,9 @@ select.selectpicker {
     &.bs-placeholder,
     &.bs-placeholder:hover,
     &.bs-placeholder:focus,
-    &.bs-placeholder:active { color: @input-color-placeholder; }
+    &.bs-placeholder:active {
+      color: @input-color-placeholder;
+    }
   }
 
   > select {
@@ -142,7 +144,7 @@ select.selectpicker {
     position: absolute;
     height: 0 !important;
     padding: 0 !important;
-    
+
     .dropdown-menu {
       z-index: @zindex-select-dropdown;
     }

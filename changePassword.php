@@ -96,7 +96,7 @@ if ($user_login->is_logged_in())
 {
 $userId = $_SESSION['userSession'];
 $user = $session->getUser($userId);
-if ($user['userAdmin'] >= 0 )
+if ($user['userAdmin'] >= 0)
 {
 
 
@@ -118,7 +118,7 @@ if ($user['userAdmin'] >= 0 )
         </button>
         <!-- LOGO -->
         <!--  Image based logo  -->
-        <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Logo img"></a>
+        <a class="navbar-brand" href="index.php"><img src="assets/img/logomenu.png" alt="Logo img"></a>
         <!--  Text based logo  -->
         <!--           <a class="navbar-brand" href="index.html"><span>SpicyX</span></a>   -->
       </div>
@@ -143,7 +143,7 @@ if ($user['userAdmin'] >= 0 )
                 <li><a href="account_details.php">ACCOUNT DETAILS</a></li>
                 <li><a href="cart.php">MY CART</a></li>
                 <li><a href="changePassword.php">CHANGE PASSWORD</a></li>
-                <li><a href="../includes/logout.php">LOG OUT</a></li>
+                <li><a href="includes/logout.php">LOG OUT</a></li>
               </ul>
             </li>
 
@@ -244,13 +244,16 @@ if ($user['userAdmin'] >= 0 )
 
             <div class="form-group">
               <label for="email">Repeat New Password:</label>
-              <input id="pass" type="password" class="form-control" data-type="password" name="newpassconfirm">
+              <input id="pass" type="password" class="form-control" data-type="password"
+                     name="newpassconfirm">
             </div>
           </fieldset>
 
 
           <div class="buttons">
-            <button type="submit" class="mu-btn icon go" title="Update" name="action" value="update">Update</button>
+            <button type="submit" class="mu-btn icon go" title="Update" name="action" value="update">
+              Update
+            </button>
             <a class="mu-btn icon cancel" title="Cancel" href="list-users.php">Cancel</a>
           </div>
 

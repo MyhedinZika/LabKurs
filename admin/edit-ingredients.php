@@ -37,7 +37,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu Ingredient Administration</h1>
 
 
   <div class="navbar">
@@ -54,7 +54,7 @@ if ($user['userAdmin'] == 1)
       <!-- <li><a href="index.php?action=manageotherfood">Other Food</a></li>
       <li><a href="index.php?action=managedrinks">Drinks</a></li>-->
       <li><a href="imagelibrary.php?type=relprod">Image Library</a></li>
-    <!--   <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
+      <!--   <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
       <li><a href="list-users.php">Users</a></li>
       <li class="right"><a href="../includes/logout.php">Log Out</a></li>
     </ul>

@@ -259,11 +259,15 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
               <input type="hidden" name="subOrderId" value="<?= $value['OrderProductsId'] ?>">
               <td class="item-desc"><?= $dailyOfferProduct['DO_Name']; ?></td>
               <td>$<?= $dailyOfferProduct['DO_Price']; ?></td>
-              <td><input type="number" class="qty-num" name="productQuantity" value="<?= $value['Quantity'] ?>">
-                <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+              <td><input type="number" class="qty-num" name="productQuantity"
+                         value="<?= $value['Quantity'] ?>">
+                <button type="submit" class="button icon go" title="Update" name="action"
+                        value="update">Update
+                </button>
               </td>
               <td>
-                <button type="submit" class="button icon delete" title="delete" name="action" value="delete">Delete
+                <button type="submit" class="button icon delete" title="delete" name="action"
+                        value="delete">Delete
                 </button>
               </td>
             </form>
@@ -283,12 +287,16 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
               <input type="hidden" name="subOrderId" value="<?= $value['OrderProductsId'] ?>">
               <td class="item-desc"><?= $pizzaProduct['p_name']; ?></td>
               <td><?= $pizzaPrices['price']; ?></td>
-              <td><input type="number" class="qty-num" name="productQuantity" value="<?= $value['Quantity'] ?>">
+              <td><input type="number" class="qty-num" name="productQuantity"
+                         value="<?= $value['Quantity'] ?>">
 
-                <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+                <button type="submit" class="button icon go" title="Update" name="action"
+                        value="update">Update
+                </button>
               </td>
               <td>
-                <button type="submit" class="button icon delete" title="delete" name="action" value="delete">Delete
+                <button type="submit" class="button icon delete" title="delete" name="action"
+                        value="delete">Delete
                 </button>
               </td>
 

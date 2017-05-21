@@ -38,7 +38,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Product"/>
   </a>
 
-  <h1>Grandmas Product Administration</h1>
+  <h1>iMenu Categories Administration</h1>
 
   <div class="navbar">
     <ul class="nav">
@@ -64,16 +64,30 @@ if ($user['userAdmin'] == 1)
 
 <div class="page-body">
 
+  <form class="admin-form" method="post" style="margin-top:-21px; width: 700px; float: right;">
+    <input type="text" id="category-name" name="category-name"
+           style="width:100px; margin-left: 225px; height: 36px;"/>
+    <button type="submit" class="button inline add" title="Add category" value="addCategory" name="action"
+            style="width:180px; height:36px;">Add new Category
+    </button>
+  </form>
 
-  <h2>Product Categories</h2>
+
+  <h2 style="margin-left: 20px;">Product Categories</h2>
 
   <?php
 
   if (isset($_POST['action']) && $_POST['action'] === 'addCategory') {
 
     $categoryName = $_POST['category-name'];
+    if ($categoryName == null) {
+      $result = "Kategoria nuk mund te shtohet, 
+       emri i kategoriese nuk duhet te jete i zbrazet";
+    } else {
 
-    $result = $session->addCategory($categoryName);
+      $result = $session->addCategory($categoryName);
+
+    }
 
     echo $result;
   }
@@ -90,7 +104,8 @@ if ($user['userAdmin'] == 1)
       ?>
       <p>Are you sure you want to delete <?= $category['name'] ?>?</p>
       <p>
-        <a href="list-categories.php?action=delete&categoryId=<?= $category['categoryId'] ?>&confirmed=true">Yes</a> -
+        <a href="list-categories.php?action=delete&categoryId=<?= $category['categoryId'] ?>&confirmed=true">Yes</a>
+        -
         <a href="list-categories.php">No</a>
       </p>
       <?php
@@ -109,20 +124,14 @@ if ($user['userAdmin'] == 1)
         <h3><?= $cat['name'] ?></h3>
 
         <div class="actions">
-          <a class="button icon delete" href="list-categories.php?action=delete&categoryId=<?= $cat['categoryId'] ?>">Delete</a>
+          <a class="button icon delete"
+             href="list-categories.php?action=delete&categoryId=<?= $cat['categoryId'] ?>">Delete</a>
           <a class="button icon edit" href="edit-category.php?categoryId=<?= $cat['categoryId'] ?>">Edit</a>
         </div>
       </li>
     <?php endforeach; ?>
   </ul>
-
-  <form class="admin-form" method="post">
-    <input type="text" id="category-name" name="category-name"/>
-    <button type="submit" class="button inline add" title="Add category" value="addCategory" name="action">Add new Product
-      category
-    </button>
-  </form>
-
+  <br/>
   <?php }
   else {
     $user_login->redirect('../index.php');

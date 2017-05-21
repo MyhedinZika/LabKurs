@@ -37,7 +37,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu Category Administration</h1>
 
 
   <div class="navbar">

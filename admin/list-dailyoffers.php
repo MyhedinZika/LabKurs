@@ -102,7 +102,8 @@ if ($user['userAdmin'] == 1)
         <h3><?= $dailyoffer['DO_Name'] ?></h3>
 
         <div class="actions">
-          <a class="button icon delete" href="list-dailyoffers.php?action=delete&DailyId=<?= $dailyoffer['DailyId'] ?>">Delete</a>
+          <a class="button icon delete"
+             href="list-dailyoffers.php?action=delete&DailyId=<?= $dailyoffer['DailyId'] ?>">Delete</a>
           <a class="button icon edit" href="edit-dailyoffer.php?DailyId=<?= $dailyoffer['DailyId'] ?>">Edit</a>
         </div>
       </li>

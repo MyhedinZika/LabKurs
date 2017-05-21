@@ -17,7 +17,9 @@ class Session
   function __construct()
   {
     $this->time = time();
-    $this->startSession();
+    if (session_status() == PHP_SESSION_NONE) {
+      $this->startSession();
+    }
   }
 
   function startSession()
@@ -1083,6 +1085,19 @@ class Session
     } else {
       return false;
     }
+  }
+
+  function getCategorySizes($categoryId){
+    global $database;
+    $sql = "SELECT * from size where CategoryIDFK = :categoryId";
+    $stmt = $database->connection->prepare($sql);
+    $stmt->bindParam('categoryId', $categoryId);
+    $stmt->execute();
+    $categorySizes = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    return $categorySizes;
+
+
   }
 }
 

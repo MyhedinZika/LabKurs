@@ -176,7 +176,8 @@ if ($user['userAdmin'] == 0)
             ?>
             <div class="radio">
               <label>
-                <input type="radio" required name="delivery-addresses" value="<?= $value['address_id'] ?>">
+                <input type="radio" required name="delivery-addresses"
+                       value="<?= $value['address_id'] ?>">
                 Address line 1: <?= $value['address_1'] ?>,<br/>
                 Address line 2: <?= $value['address_2'] ?>,<br/>
                 City:<?= $value['city'] ?>,

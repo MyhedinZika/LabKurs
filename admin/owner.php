@@ -120,7 +120,8 @@ if ($user['userAdmin'] == 3)
     <div class="demo-content">
       <form name="frmSearch" method="post" action="">
         <p class="search_input">
-          <input type="text" placeholder="From Date" id="post_at" name="search[post_at]" value="<?php echo $post_at; ?>"
+          <input type="text" placeholder="From Date" id="post_at" name="search[post_at]"
+                 value="<?php echo $post_at; ?>"
                  class="input-control"/>
           <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]"
                  style="margin-left:10px" value="<?php echo $post_at_to_date; ?>" class="input-control"/>

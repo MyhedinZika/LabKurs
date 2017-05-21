@@ -37,22 +37,22 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu User Administration</h1>
 
   <?php if ($user['userAdmin'] == 1) { ?>
     <div class="navbar">
       <ul class="nav">
         <li class="right"><a href="../" target="_blank">View Live Site</a></li>
-        
-      <li><a href="list-products.php">Products</a>
-                      <ul class="subnav">
-                          <li><a href="list-categories.php">Categories</a></li>
-                          <li><a href="list-ingredients.php">Ingredients</a></li>
-                          <li><a href="list-sizes.php">Sizes</a></li>
-                      </ul>
-                  </li>
-                     <li><a href="index.php?action=manageotherfood">Other Food</a></li>
-              <!--   <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
+
+        <li><a href="list-products.php">Products</a>
+          <ul class="subnav">
+            <li><a href="list-categories.php">Categories</a></li>
+            <li><a href="list-ingredients.php">Ingredients</a></li>
+            <li><a href="list-sizes.php">Sizes</a></li>
+          </ul>
+        </li>
+        <li><a href="index.php?action=manageotherfood">Other Food</a></li>
+        <!--   <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
         <li><a href="list-gallery-images.php">Image Library</a></li>
         <li class="active"><a href="list-users.php">Users</a></li>
         <li class="right"><a href="../includes/logout.php">Log Out</a></li>
@@ -73,8 +73,8 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
         </li>
         <!--  <li><a href="index.php?action=manageotherfood">Other Food</a></li>
          <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
-        <!--<li><a href="list-gallery-images.php">Image Library</a></li>
-        <li><a href="list-dailyoffers.php">Daily Offers</a></li>-->
+          <!--<li><a href="list-gallery-images.php">Image Library</a></li>
+          <li><a href="list-dailyoffers.php">Daily Offers</a></li>-->
         <li class="active"><a href="list-users.php">Users</a></li>
         <li class="right"><a href="../includes/logout.php">Log Out</a></li>
       </ul>

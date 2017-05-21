@@ -1,7 +1,7 @@
-$(document).ready(function() {
+$(document).ready(function () {
   function formPostData(url, fields) {
     var form = $('<form style="display: none;" method="post" action="' + url + '"></form>');
-    $.each(fields, function(name, value) {
+    $.each(fields, function (name, value) {
       var input = $('<input type="hidden" name="' + name + '">');
       input.attr('value', value);
       form.append(input);
@@ -9,30 +9,30 @@ $(document).ready(function() {
 
     $(document).find('body').append(form);
 
-    form[0].submit(function(e) {
+    form[0].submit(function (e) {
       e.preventDefault();
     });
 
     form.remove();
   }
-  
+
   function plnkrOpener() {
     var ctrl = {};
-  
+
     ctrl.example = {
       path: ctrl.examplePath,
       manifest: undefined,
       files: undefined,
       name: 'bootstrap-select example'
     };
-  
-    ctrl.open = function() {
+
+    ctrl.open = function () {
       var postData = {
         'tags[0]': 'jquery',
         'tags[1]': 'bootstrap-select',
         'private': true
       };
-  
+
       ctrl.example.files = [
         {
           name: 'index.html',
@@ -56,15 +56,15 @@ $(document).ready(function() {
           method: 'GET',
           url: file.url
         })
-        .then(function(data) {
-          file.content = data;
-          postData['files[' + file.name + ']'] = file.content;
-        });
+          .then(function (data) {
+            file.content = data;
+            postData['files[' + file.name + ']'] = file.content;
+          });
       }
 
       var files = [];
 
-      $.each(ctrl.example.files, function(i, file) {
+      $.each(ctrl.example.files, function (i, file) {
         files.push(getData(file));
       });
 
@@ -74,11 +74,11 @@ $(document).ready(function() {
         formPostData('https://plnkr.co/edit/?p=preview', postData);
       };
 
-      $.when.apply(this, files).done(function() {
+      $.when.apply(this, files).done(function () {
         sendData();
       });
     };
-    
+
     return ctrl.open()
   }
 

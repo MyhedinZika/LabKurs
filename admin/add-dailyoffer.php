@@ -127,7 +127,8 @@ if ($user['userAdmin'] == 1)
 
 
     <div class="buttons">
-      <button type="submit" class="button icon go" title="Submit" value="addDailyOffer" name="action">Submit</button>
+      <button type="submit" class="button icon go" title="Submit" value="addDailyOffer" name="action">Submit
+      </button>
       <a class="button icon cancel" title="Cancel" href="../admin/add-pizza.php">Cancel</a>
     </div>
 

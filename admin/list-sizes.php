@@ -37,7 +37,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu Size Administration</h1>
 
   <div class="navbar">
     <ul class="nav">
@@ -52,7 +52,7 @@ if ($user['userAdmin'] == 1)
       <!--    <li><a href="index.php?action=manageotherfood">Other Food</a></li>
          <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
       <li><a href="list-gallery-images.php">Image Library</a></li>
-     <!--  <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
+      <!--  <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
       <li><a href="list-users.php">Users</a></li>
       <li class="right"><a href="../includes/logout.php">Log Out</a></li>
     </ul>
@@ -66,7 +66,7 @@ if ($user['userAdmin'] == 1)
   <?php
 
   if (isset($_POST['action']) && $_POST['action'] === 'addSize') {
-    
+
     $name = $_POST['size-name'];
     $category = $_POST['category'];
 
@@ -96,8 +96,31 @@ if ($user['userAdmin'] == 1)
 
   ?>
 
+  <form class="admin-form" method="POST" style="width:849px; float:right;margin-top: -20px; ">
+    Name: <input type="text" id="size-name" name="size-name" style="height: 36px;"/>
 
-  <h2>Pizza Sizes</h2>
+    <?php
+    $categories = $session->getCategory();
+
+    ?>
+
+
+    Category:
+    <select name="category" id="category" style="height: 38px;">
+      <?php
+      foreach ($categories as $key => $value) {
+        echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
+      }
+      ?>
+    </select>
+
+
+    <button type="submit" class="button inline add" title="Add size" value="addSize" name="action">Add new Product
+      size
+    </button>
+  </form>
+
+  <h2 style="margin-left: 20px;">Pizza Sizes</h2>
 
   <ul class="items-list clearfix">
     <?php
@@ -115,30 +138,8 @@ if ($user['userAdmin'] == 1)
       </li>
     <?php endforeach; ?>
   </ul>
+  <br/>
 
-  <form class="admin-form" method="POST">
-    Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px; "/>
-          
-          <?php
-          $categories = $session->getCategory();
-
-          ?>
-         
-          
-          Category:
-          <select name="category" id="category" >
-          <?php
-          foreach ($categories as $key => $value) {
-            echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
-          }
-          ?>
-          </select>
-          
-         
-                                                                          
-    <button type="submit" class="button inline add" title="Add size" value="addSize" name="action">Add new Pizza size
-    </button>
-  </form>
   <?php }
   else {
     $user_login->redirect('../index.php');

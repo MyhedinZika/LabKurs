@@ -15,6 +15,7 @@ ob_start();
   <title>Edit product - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
+  
 
 </head>
 
@@ -37,7 +38,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu Pizza Administration</h1>
 
 
   <div class="navbar">
@@ -71,7 +72,7 @@ if ($user['userAdmin'] == 1)
   if (isset($_POST['action']) && $_POST['action'] == 'update') {
     try {
 
-     
+
       $name = $_POST['name'];// name of pizza
 
       $imgFile = $_FILES['new-image']['name'];
@@ -267,22 +268,22 @@ if ($user['userAdmin'] == 1)
     </fieldset>
 
 
-  <!--   <fieldset>
+    <!--   <fieldset>
       <legend>Prices</legend>
       <ul>
         <?php
-        // $sizes = $session->getPizzaPrices($productId);
+    // $sizes = $session->getPizzaPrices($productId);
 
-        // var_dump($sizes);
+    // var_dump($sizes);
 
-        // $productIdSize = 1;
-        // foreach ($sizes as $key => $value) {
-        //   echo '<li>';
-        //   echo '<label for="price-' . $value['id'] . '">' . $value['name'] . ':</label>';
-        //   echo '<input type="text" id="price-' . $value['id'] . '" name="price[' . $value['id'] . ']" value=' . $value['price'] . ' />';
-        //   echo '</li>';
-        // }
-        ?>
+    // $productIdSize = 1;
+    // foreach ($sizes as $key => $value) {
+    //   echo '<li>';
+    //   echo '<label for="price-' . $value['id'] . '">' . $value['name'] . ':</label>';
+    //   echo '<input type="text" id="price-' . $value['id'] . '" name="price[' . $value['id'] . ']" value=' . $value['price'] . ' />';
+    //   echo '</li>';
+    // }
+    ?>
       </ul>
     </fieldset> -->
 

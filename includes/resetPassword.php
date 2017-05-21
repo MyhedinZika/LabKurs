@@ -108,11 +108,13 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
         <form id="resetPassword" method="post">
           <div class="group">
             <label for="user" class="label"></label>
-            <input id="user" placeholder="Enter your new password" type="password" class="input" name="pass">
+            <input id="user" placeholder="Enter your new password" type="password" class="input"
+                   name="pass">
           </div>
           <div class="group">
             <label for="user" class="label"></label>
-            <input id="user" placeholder="Retype your new password" type="password" class="input" name="confirmpass">
+            <input id="user" placeholder="Retype your new password" type="password" class="input"
+                   name="confirmpass">
           </div>
           <?php
           if (isset($msg)) {

@@ -34,11 +34,14 @@ if ($user['userAdmin'] == 1)
 
 ?>
 <div id="header" class="page-header">
-  <a href="frontPage.php" class="logo-home">
+  <a href="frontPage.php" class="logo-home" style="
+    float: left;
+    margin-left: 90px;
+">
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu Products Administration</h1>
 
   <div class="navbar">
     <ul class="nav">
@@ -53,7 +56,7 @@ if ($user['userAdmin'] == 1)
       <!--  <li><a href="index.php?action=manageotherfood">Other Food</a></li>
        <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
       <li><a href="list-gallery-images.php">Image Library</a></li>
-    <!--   <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
+      <!--   <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
       <li><a href="list-users.php">Users</a></li>
       <li class="right"><a href="../includes/logout.php">Log Out</a></li>
     </ul>
@@ -63,9 +66,10 @@ if ($user['userAdmin'] == 1)
 
 
 <div class="page-body">
+  <p><a class="button add" href="add-product.php" style="width: 180px;height: 36px;">Add New Product</a></p>
 
+  <h2 style="width: 300px; margin-top: 15px; margin-left: 20px; margin-right: 0px;">Products</h2>
 
-  <h2>Products</h2>
 
   <?php
 
@@ -102,7 +106,8 @@ if ($user['userAdmin'] == 1)
         <h3><?= $product['name'] ?></h3>
 
         <div class="actions">
-          <a class="button icon delete" href="list-products.php?action=delete&productId=<?= $product['productId'] ?>">Delete</a>
+          <a class="button icon delete"
+             href="list-products.php?action=delete&productId=<?= $product['productId'] ?>">Delete</a>
           <a class="button icon edit" href="edit-pizza.php?productId=<?= $product['productId'] ?>">Edit</a>
         </div>
       </li>
@@ -110,10 +115,6 @@ if ($user['userAdmin'] == 1)
     <?php endforeach; ?>
   </ul>
 
-
-  <p>
-    <a class="button add" href="add-product.php">Add New Pizza</a>
-  </p>
 
   <?php }
   else {

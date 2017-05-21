@@ -86,7 +86,7 @@ module.exports = function (grunt) {
 
     uglify: {
       options: {
-        preserveComments: function(node, comment) {
+        preserveComments: function (node, comment) {
           return /^!|@preserve|@license|@cc_on/i.test(comment.value);
         }
       },

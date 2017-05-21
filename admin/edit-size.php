@@ -37,7 +37,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu Size Administration</h1>
 
 
   <div class="navbar">
@@ -54,7 +54,7 @@ if ($user['userAdmin'] == 1)
       <!-- <li><a href="index.php?action=manageotherfood">Other Food</a></li>
       <li><a href="index.php?action=managedrinks">Drinks</a></li>-->
       <li><a href="imagelibrary.php?type=relprod">Image Library</a></li>
-     <!--  <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
+      <!--  <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
       <li><a href="list-users.php">Users</a></li>
       <li class="right"><a href="../includes/logout.php">Log Out</a></li>
     </ul>
@@ -84,21 +84,22 @@ if ($user['userAdmin'] == 1)
 
     <ul>
       <li>
-        Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px" value="<?= $size['name'] ?>"/>
-       <?php
-          $categories = $session->getCategory();
+        Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px"
+                     value="<?= $size['name'] ?>"/>
+        <?php
+        $categories = $session->getCategory();
 
-          ?>
-         
-          
-         Category:
-          <select name="category" id="category">
+        ?>
+
+
+        Category:
+        <select name="category" id="category">
           <?php
           foreach ($categories as $key => $value) {
             echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
           }
           ?>
-          </select>
+        </select>
       </li>
     </ul>
 

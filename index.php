@@ -135,7 +135,7 @@ if ($user_home->is_logged_in()) {
         </button>
         <!-- LOGO -->
         <!--  Image based logo  -->
-        <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Logo img"></a>
+        <a class="navbar-brand" href="index.php"><img src="assets/img/logomenu.png" alt="Logo img"></a>
         <!--  Text based logo  -->
         <!--           <a class="navbar-brand" href="index.html"><span>SpicyX</span></a>   -->
       </div>
@@ -197,14 +197,14 @@ if ($user_home->is_logged_in()) {
           <span class="mu-slider-small-title">Welcome to</span>
           <h2 class="mu-slider-title">iMenu </h2>
           <p>.......</p>
-          <a href="#mu-restaurant-menu" class="mu-readmore-btn">ORDER ONLINE</a>
+          <a href="#mu-restaurant-menu" class="mu-readmore-btn">ORDER</a>
         </div>
         <!-- / Top slider content -->
       </div>
       <!-- / Top slider single slide -->
       <!-- Top slider single slide -->
       <div class="mu-top-slider-single">
-        <img src="assets/img/slider/banner_2.png" alt="img">
+        <img src="assets/img/slider/iMenu_banner1.jpg" alt="img">
         <!-- Top slider content -->
         <div class="mu-top-slider-content">
           <span class="mu-slider-small-title">iMenu</span>
@@ -217,12 +217,36 @@ if ($user_home->is_logged_in()) {
       <!-- / Top slider single slide -->
       <!-- Top slider single slide -->
       <div class="mu-top-slider-single">
-        <img src="assets/img/slider/banner_3.png" alt="img">
+        <img src="assets/img/slider/iMenu_banner2.jpg" alt="img">
         <!-- Top slider content -->
         <div class="mu-top-slider-content">
           <span class="mu-slider-small-title">Delicious Products</span>
           <h2 class="mu-slider-title">Get it any way you want </h2>
           <p>iMenu is life</p>
+          <a href="#mu-restaurant-menu" class="mu-readmore-btn">ORDER ONLINE</a>
+        </div>
+        <!-- / Top slider content -->
+      </div>
+      <!-- / Top slider single slide -->
+      <div class="mu-top-slider-single">
+        <img src="assets/img/slider/iMenu_banner3.jpg" alt="img">
+        <!-- Top slider content -->
+        <div class="mu-top-slider-content">
+          <span class="mu-slider-small-title">iMenu</span>
+          <h2 class="mu-slider-title">Never ordered online?</h2>
+          <p>Dont worry,your product is coming.</p>
+          <a href="#mu-restaurant-menu" class="mu-readmore-btn">ORDER ONLINE</a>
+        </div>
+        <!-- / Top slider content -->
+      </div>
+      <!-- / Top slider single slide -->
+      <div class="mu-top-slider-single">
+        <img src="assets/img/slider/iMenu_banner4.jpg" alt="img">
+        <!-- Top slider content -->
+        <div class="mu-top-slider-content">
+          <span class="mu-slider-small-title">iMenu</span>
+          <h2 class="mu-slider-title">Never ordered online?</h2>
+          <p>Dont worry,your product is coming.</p>
           <a href="#mu-restaurant-menu" class="mu-readmore-btn">ORDER ONLINE</a>
         </div>
         <!-- / Top slider content -->
@@ -248,25 +272,35 @@ if ($user_home->is_logged_in()) {
           <div class="row">
             <div class="col-md-6">
               <div class="mu-about-us-left">
-                <p>It all started in 1972, when owner Judy Waller opened her first U.S. Pizza Company in a burned out
+                <p>It all started in 1972, when owner Judy Waller opened her first U.S. Pizza Company in
+                  a burned out
                   clock shop in Levy, AR. Armed with
-                  a unique recipe for thin crust pizza and an old fashioned stone hearth oven, U.S. Pizza embarked on a
+                  a unique recipe for thin crust pizza and an old fashioned stone hearth oven, U.S.
+                  Pizza embarked on a
                   quarter-of-a-century journey
-                  that has done everything but dwindle.That first store grossed only about $1,000 per week, but ten
+                  that has done everything but dwindle.That first store grossed only about $1,000 per
+                  week, but ten
                   other U.S. Pizza Company locations
-                  have opened since. In addition to the chain of U.S. Pizza Companies, in 1981, Judy opened Hillcrest
+                  have opened since. In addition to the chain of U.S. Pizza Companies, in 1981, Judy
+                  opened Hillcrest
                   Liquor Store on Kavanaugh Boulevard
-                  in Little Rock.Since we opened our first store in 1972, we’ve been making our thin crust pizza from
+                  in Little Rock.Since we opened our first store in 1972, we’ve been making our thin
+                  crust pizza from
                   scratch when you order it. And we
-                  still use stone hearth ovens. That’s one of the reasons our unique pizzas are worth the wait!We pride
+                  still use stone hearth ovens. That’s one of the reasons our unique pizzas are worth
+                  the wait!We pride
                   ourselves in offering you the
-                  very best pizza, salads and sandwiches, and we value your patronage. With more than 44 years of
+                  very best pizza, salads and sandwiches, and we value your patronage. With more than
+                  44 years of
                   experience under our belts,
-                  we understand how to best serve our customers through tried and true service principles. Instead of
+                  we understand how to best serve our customers through tried and true service
+                  principles. Instead of
                   following trends, we set them.
-                  We create food we’re proud to serve and deliver it fast, with a smile. If you’re looking for a reason
+                  We create food we’re proud to serve and deliver it fast, with a smile. If you’re
+                  looking for a reason
                   not to cook, need a place to
-                  watch the game with friends, or spending time with family, we’ve made sure there’s something for
+                  watch the game with friends, or spending time with family, we’ve made sure there’s
+                  something for
                   everybody.</p>
 
               </div>
@@ -291,7 +325,7 @@ if ($user_home->is_logged_in()) {
 <!-- End About us -->
 
 <!-- Start Counter Section -->
-<section id="mu-counter">
+<!-- <section id="mu-counter">
   <div class="mu-counter-overlay">
     <div class="container">
       <div class="row">
@@ -332,7 +366,7 @@ if ($user_home->is_logged_in()) {
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End Counter Section -->
 
 <!-- Start Restaurant Menu -->
@@ -348,14 +382,14 @@ if ($user_home->is_logged_in()) {
             <span class="mu-title-bar"></span>
           </div>
           <?php //if ($user_home->is_logged_in()) { ?>
-       <!--      <div class="currencyButtons">
-              <button style="font-size:18px" onclick="updatePrice('euro')"><i class="fa fa-euro"></i></button>
-              <button style="font-size:18px" onclick="updatePrice('gbp')"><i class="fa fa-gbp"></i></button>
-              <button style="font-size:18px" onclick="updatePrice('dollar')"><i class="fa fa-dollar"></i></button>
-            </div> -->
+          <!--      <div class="currencyButtons">
+                 <button style="font-size:18px" onclick="updatePrice('euro')"><i class="fa fa-euro"></i></button>
+                 <button style="font-size:18px" onclick="updatePrice('gbp')"><i class="fa fa-gbp"></i></button>
+                 <button style="font-size:18px" onclick="updatePrice('dollar')"><i class="fa fa-dollar"></i></button>
+               </div> -->
           <?php //} ?>
           <div class="mu-restaurant-menu-content">
-           <ul class="nav nav-tabs mu-restaurant-menu">
+            <ul class="nav nav-tabs mu-restaurant-menu">
               <?php
               $categories = $session->getCategory();
               $isActive = ' class="active" ';
@@ -367,515 +401,112 @@ if ($user_home->is_logged_in()) {
             </ul>
             <!-- Tab panes -->
             <div class="tab-content">
-               <?php foreach ($categories as $key => $value): ?>
-               <div class="tab-pane fade in <?= $key == 0 ? 'active' : '' ?>" id="category-<?= $value['categoryId'] ?>">
-                <div class="mu-tab-content-area">
-                  <div class="row">
-                    <?php
-                                $pizzas = $session->getProductsForCategory($value['categoryId']);
-                                foreach ($pizzas as $key => $value) {
-                                  $productId = $value['productId'];
-                                  ?>
-                                  <div class="col-md-6">
-                                    <div class="mu-tab-content-left">
-                                      <ul class="mu-menu-item-nav">
-                                        <li>
-                                          <div class="media">
-                                            <div class="media-left">
-                                              <a href="#">
-                                                <?php
-                                                echo '<img class="media-object" src="includes/pizza_images/' . $value['photo'] . '"" alt="img">';
-                                                ?>
-                                              </a>
-                                            </div>
-                                            <div class="media-body">
-                                              <h4 class="media-heading"><a href="#"><?php echo $value['name']; ?></a>
-                                              </h4>
-                                              <?php
-
-                                              //echo $productId;
-                                              if ($user_home->is_logged_in()) {
-                                                $prices = $session->getProductPrices($productId);
-                                                foreach ($prices as $key => $value) {
-                                                  echo $value['name'] . ' <span class="mu-menu-price currency" data-pizza-id="' . $productId . '" data-pizza-price="' . $value['price'] . '">$' . $value['price'] . '</span>';
-                                                }
-                                              } else {
-                                                echo '<h6 style=color:red>Prices are visible for logged in users!</h6>';
-                                              }
-
-                                              $ingredientsRaw = $session->getPizzaIngredients($productId);
-
-                                              $ingredients = [];
-                                              foreach ($ingredientsRaw as $ingredient) {
-                                                array_push($ingredients, $ingredient['i_name']);
-                                              }
-
-                                              $ingredientsFormatted = join(' | ', $ingredients); // this will concatenate each ingredient to A | B | C
-
-                                              ?>
-                                              <p></p>
-                                              <p><?php echo $ingredientsFormatted; ?>.</p>
-                                            </div>
-                                          </div>
-
-                                          <div class="basket-options">
-                                            <form action="#" method="post">
-                                              <div class="input-stepper">
-                                                <button type="button" data-input-stepper-decrease>-</button>
-                                                <input type="text" name="qty-<?= $productId ?>" id="qty-<?= $productId ?>"
-                                                       value="1">
-                                                <button type="button" data-input-stepper-increase>+</button>
-                                              </div>
-
-                                              <?php
-
-                                              $prices = $session->getProductPrices($productId);
-
-                                              ?>
-                                              <select name="pizza-size-<?= $productId ?>" id="pizza-size-<?= $productId ?>">
-                                                <?php
-
-                                                foreach ($prices as $key => $value) {
-                                                  echo '<option value="' . $value['sizeId'] . '">' . $value['name'] . '</option>';
-
-                                                }
-                                                ?>
-                                                <select>
-                                                  <?php if ($user_home->is_logged_in()) { ?>
-                                                    <button type="submit" class="add-to-basket"
-                                                            onclick="addToCart(event, $('#pizza-size-<?= $productId ?>').val(), $('#qty-<?= $productId ?>').val(), <?= $productId ?>)">
-                                                      Add to cart
-                                                    </button>
-                                                  <?php } ?>
-                                            </form>
-                                          </div>
-
-                                        </li>
-
-                                      </ul>
-                                    </div>
+              <?php foreach ($categories as $key => $value): ?>
+                <div class="tab-pane fade in <?= $key == 0 ? 'active' : '' ?>"
+                     id="category-<?= $value['categoryId'] ?>">
+                  <div class="mu-tab-content-area">
+                    <div class="row">
+                      <?php
+                      $pizzas = $session->getProductsForCategory($value['categoryId']);
+                      foreach ($pizzas as $key => $value) {
+                        $productId = $value['productId'];
+                        ?>
+                        <div class="col-md-6">
+                          <div class="mu-tab-content-left">
+                            <ul class="mu-menu-item-nav">
+                              <li>
+                                <div class="media">
+                                  <div class="media-left">
+                                    <a href="#">
+                                      <?php
+                                      echo '<img class="media-object" src="includes/pizza_images/' . $value['photo'] . '"" alt="img">';
+                                      ?>
+                                    </a>
                                   </div>
-                                <?php }
+                                  <div class="media-body">
+                                    <h4 class="media-heading"><a
+                                        href="#"><?php echo $value['name']; ?></a>
+                                    </h4>
+                                    <?php
 
-                             // pizza ?>
-                            </div>
-                      </div>
+                                    //echo $productId;
+                                    if ($user_home->is_logged_in()) {
+                                      $prices = $session->getProductPrices($productId);
+                                      foreach ($prices as $key => $value) {
+                                        echo $value['name'] . ' <span class="mu-menu-price currency" data-pizza-id="' . $productId . '" data-pizza-price="' . $value['price'] . '">$' . $value['price'] . '</span>';
+                                      }
+                                    } else {
+                                      echo '<h6 style=color:red>Prices are visible for logged in users!</h6>';
+                                    }
+
+                                    $ingredientsRaw = $session->getPizzaIngredients($productId);
+
+                                    $ingredients = [];
+                                    foreach ($ingredientsRaw as $ingredient) {
+                                      array_push($ingredients, $ingredient['i_name']);
+                                    }
+
+                                    $ingredientsFormatted = join(' | ', $ingredients); // this will concatenate each ingredient to A | B | C
+
+                                    ?>
+                                    <p></p>
+                                    <p><?php echo $ingredientsFormatted; ?>.</p>
+                                  </div>
+                                </div>
+
+                                <div class="basket-options">
+                                  <form action="#" method="post">
+                                    <div class="input-stepper">
+                                      <button type="button" data-input-stepper-decrease>-</button>
+                                      <input type="text" name="qty-<?= $productId ?>"
+                                             id="qty-<?= $productId ?>"
+                                             value="1">
+                                      <button type="button" data-input-stepper-increase>+</button>
+                                    </div>
+
+                                    <?php
+
+                                    $prices = $session->getProductPrices($productId);
+
+                                    ?>
+                                    <select name="pizza-size-<?= $productId ?>"
+                                            id="pizza-size-<?= $productId ?>">
+                                      <?php
+
+                                      foreach ($prices as $key => $value) {
+                                        echo '<option value="' . $value['sizeId'] . '">' . $value['name'] . '</option>';
+
+                                      }
+                                      ?>
+                                      <select>
+                                        <?php if ($user_home->is_logged_in()) { ?>
+                                          <button type="submit"
+                                                  class="add-to-basket"
+                                                  onclick="addToCart(event, $('#pizza-size-<?= $productId ?>').val(), $('#qty-<?= $productId ?>').val(), <?= $productId ?>)">
+                                            Add to cart
+                                          </button>
+                                        <?php } ?>
+                                  </form>
+                                </div>
+
+                              </li>
+
+                            </ul>
+                          </div>
+                        </div>
+                      <?php }
+
+                      // pizza ?>
                     </div>
-                    <?php endforeach; // category ?>
-                    <!--div class="tab-pane fade " id="meals">
-                      <div class="mu-tab-content-area">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="mu-tab-content-left">
-                              <ul class="mu-menu-item-nav">
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/veggiepizza/Margherita.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Margherita</a></h4>
-                                      <span class="mu-menu-price">$10.99</span>
-                                      <p>Loaded with extra cheese!.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/veggiepizza/Deluxeveggie.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Deluxe Veggie</a></h4>
-                                      <span class="mu-menu-price">$11.99</span>
-                                      <p>Onion | Crisp Capsicum | Mushroom | Golden Corn | Paneer.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/veggiepizza/Countryspecial.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Country Special</a></h4>
-                                      <span class="mu-menu-price">$9.99</span>
-                                      <p>Onion | Crisp Capsicum | Fresh Tomato.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mu-tab-content-right">
-                              <ul class="mu-menu-item-nav">
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/veggiepizza/Cloud9.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Cloud 9</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Onion | Tomato | Babycorn | Paneer | Crisp Capsicum | Jalapeno.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/veggiepizza/VeggieParadise.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Veggie Paradise</a></h4>
-                                      <span class="mu-menu-price">$11.95</span>
-                                      <p>Babycorn | Black Olives | Crisp Capsicum | Red Paprika.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/veggiepizza/Farmhouse.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Farm House</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Onion | Crisp Capsicum | Mushroom | Fresh Tomato.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div-->
-                    <!--div class="tab-pane fade " id="snacks">
-                      <div class="mu-tab-content-area">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="mu-tab-content-left">
-                              <ul class="mu-menu-item-nav">
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-5.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-6.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
-                                      <span class="mu-menu-price">$11.95</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-5.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mu-tab-content-right">
-                              <ul class="mu-menu-item-nav">
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-5.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-6.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
-                                      <span class="mu-menu-price">$11.95</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-5.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div-->
-                    <!--<div class="tab-pane fade " id="desserts">
-                      <div class="mu-tab-content-area">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="mu-tab-content-left">
-                              <ul class="mu-menu-item-nav">
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-7.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                 <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-8.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
-                                      <span class="mu-menu-price">$11.95</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                 <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-7.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                         <div class="col-md-6">
-                           <div class="mu-tab-content-right">
-                              <ul class="mu-menu-item-nav">
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-8.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">English Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                 <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-7.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Chines Breakfast</a></h4>
-                                      <span class="mu-menu-price">$11.95</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                 <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-8.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                    </div>-->
-                    <!--div class="tab-pane fade " id="drinks">
-                      <div class="mu-tab-content-area">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="mu-tab-content-left">
-                              <ul class="mu-menu-item-nav">
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/drinks/7up.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">7 UP</a></h4>
-                                      <span class="mu-menu-price">$2</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/drinks/Cocacola.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Coca Cola</a></h4>
-                                      <span class="mu-menu-price">$11.95</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/drinks/FantaOrange.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Fanta Orange</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mu-tab-content-right">
-                              <ul class="mu-menu-item-nav">
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/drinks/Fanta2.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Fanta Exotic</a></h4>
-                                      <span class="mu-menu-price">$2</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/drinks/FantaGrape.png" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Fanta Grape</a></h4>
-                                      <span class="mu-menu-price">$11.95</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="media">
-                                    <div class="media-left">
-                                      <a href="#">
-                                        <img class="media-object" src="assets/img/menu/item-9.jpg" alt="img">
-                                      </a>
-                                    </div>
-                                    <div class="media-body">
-                                      <h4 class="media-heading"><a href="#">Indian Breakfast</a></h4>
-                                      <span class="mu-menu-price">$15.85</span>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere nulla aliquid praesentium dolorem commodi illo.</p>
-                                    </div>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div-->
                   </div>
                 </div>
-              </div>
+              <?php endforeach; // category ?>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End Restaurant Menu -->
 
@@ -1003,177 +634,6 @@ if ($user_home->is_logged_in()) {
                   ?>
                   <?php } ?>
                 </div>
-
-
-                <!-- End single gallery image -->
-                <!-- start single gallery image -->
-                <!-- <div class="mu-single-gallery col-md-4">
-                  	<div class="mu-single-gallery-item">
-	                    <figure class="mu-single-gallery-img">
-	                      <a href="#"><img alt="img" src="assets/img/gallery/small/2.jpg"></a>
-	                    </figure>
-	                    <div class="mu-single-gallery-info">
-	                      	<a href="#" class="mu-view-btn">
-	                        	<img src="assets/img/plus.png" alt="plus icon img">
-	                      	</a>
-	                       <div class="portfolio-detail">
-			                    <a href="#" class="modal-close-btn"><span class="fa fa-times"></span></a>
-			                    <img src="assets/img/gallery/big/2.jpg" alt="img-2" />
-			                    <h2>Gallery Item Title</h2>
-			                    <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			                    <a href="#" class="view-project-btn">Live Demo</a>
-			                </div>
-	                    </div>                     
-					</div>
-                </div>         -->
-                <!-- End single gallery image -->
-                <!-- start single gallery image -->
-                <!--  <div class="mu-single-gallery col-md-4">
-                     <div class="mu-single-gallery-item">
-                      <figure class="mu-single-gallery-img">
-                         <a href="#"><img alt="img" src="assets/img/gallery/small/3.jpg"></a>
-                       </figure>
-                       <div class="mu-single-gallery-info">
-                           <a href="#" class="mu-view-btn">
-                             <img src="assets/img/plus.png" alt="plus icon img">
-                           </a>
-                          <div class="portfolio-detail">
-                           <a href="#" class="modal-close-btn"><span class="fa fa-times"></span></a>
-                           <img src="assets/img/gallery/big/3.jpg" alt="img-3" />
-                           <h2>Gallery Item Title</h2>
-                           <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                           <a href="#" class="view-project-btn">Live Demo</a>
-                       </div>
-                       </div>
-           </div>
-                 </div>         -->
-                <!-- End single gallery image -->
-                <!-- start single gallery image -->
-                <!--   <div class="mu-single-gallery col-md-4">
-                      <div class="mu-single-gallery-item">
-                        <figure class="mu-single-gallery-img">
-                          <a href="#"><img alt="img" src="assets/img/gallery/small/4.jpg"></a>
-                        </figure>
-                       <div class="mu-single-gallery-info">
-                            <a href="#" class="mu-view-btn">
-                              <img src="assets/img/plus.png" alt="plus icon img">
-                            </a>
-                           <div class="portfolio-detail">
-                            <a href="#" class="modal-close-btn"><span class="fa fa-times"></span></a>
-                            <img src="assets/img/gallery/big/4.jpg" alt="img-4" />
-                            <h2>Gallery Item Title</h2>
-                            <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a href="#" class="view-project-btn">Live Demo</a>
-                        </div>
-                        </div>
-            </div>
-                  </div> -->
-                <!-- End single gallery image -->
-                <!-- start single gallery image -->
-                <!--   <div class="mu-single-gallery col-md-4">
-                      <div class="mu-single-gallery-item">
-                        <figure class="mu-single-gallery-img">
-                          <a href="#"><img alt="img" src="assets/img/gallery/small/5.jpg"></a>
-                        </figure>
-                        <div class="mu-single-gallery-info">
-                            <a href="#" class="mu-view-btn">
-                              <img src="assets/img/plus.png" alt="plus icon img">
-                            </a>
-                           <div class="portfolio-detail">
-                            <a href="#" class="modal-close-btn"><span class="fa fa-times"></span></a>
-                            <img src="assets/img/gallery/big/5.jpg" alt="img-5" />
-                            <h2>Gallery Item Title</h2>
-                            <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a href="#" class="view-project-btn">Live Demo</a>
-                        </div>
-                        </div>
-            </div>
-                  </div>     -->
-                <!-- End single gallery image -->
-                <!-- start single gallery image -->
-                <!--  <div class="mu-single-gallery col-md-4">
-                     <div class="mu-single-gallery-item">
-                       <figure class="mu-single-gallery-img">
-                         <a href="#"><img alt="img" src="assets/img/gallery/small/6.jpg"></a>
-                       </figure>
-                       <div class="mu-single-gallery-info">
-                           <a href="#" class="mu-view-btn">
-                             <img src="assets/img/plus.png" alt="plus icon img">
-                           </a>
-                          <div class="portfolio-detail">
-                           <a href="#" class="modal-close-btn"><span class="fa fa-times"></span></a>
-                           <img src="assets/img/gallery/big/6.jpg" alt="img-6" />
-                           <h2>Gallery Item Title</h2>
-                           <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                           <a href="#" class="view-project-btn">Live Demo</a>
-                       </div>
-                       </div>
-           </div>
-                 </div> -->
-                <!-- End single gallery image -->
-                <!-- start single gallery image -->
-                <!--  <div class="mu-single-gallery col-md-4">
-                     <div class="mu-single-gallery-item">
-                       <figure class="mu-single-gallery-img">
-                         <a href="#"><img alt="img" src="assets/img/gallery/small/7.jpg"></a>
-                       </figure>
-                       <div class="mu-single-gallery-info">
-                           <a href="#" class="mu-view-btn">
-                             <img src="assets/img/plus.png" alt="plus icon img">
-                           </a>
-                          <div class="portfolio-detail">
-                           <a href="#" class="modal-close-btn"><span class="fa fa-times"></span></a>
-                           <img src="assets/img/gallery/big/7.jpg" alt="img-7" />
-                           <h2>Gallery Item Title</h2>
-                           <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                           <a href="#" class="view-project-btn">Live Demo</a>
-                       </div>
-                       </div>
-           </div>
-                 </div>  -->
-                <!-- End single gallery image -->
-                <!-- start single gallery image -->
-                <!-- <div class="mu-single-gallery col-md-4">                  
-                  	<div class="mu-single-gallery-item">
-	                   <figure class="mu-single-gallery-img">
-	                      <a href="#"><img alt="img" src="assets/img/gallery/small/8.jpg"></a>
-	                    </figure>
-	                    <div class="mu-single-gallery-info">
-	                      	<a href="#" class="mu-view-btn">
-	                        	<img src="assets/img/plus.png" alt="plus icon img">
-	                      	</a>
-	                        <div class="portfolio-detail">
-			                    <a href="#" class="modal-close-btn"><span class="fa fa-times"></span></a>
-			                    <img src="assets/img/gallery/big/8.jpg" alt="img-8" />
-			                    <h2>Gallery Item Title</h2>
-			                    <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			                    <a href="#" class="view-project-btn">Live Demo</a>
-			                </div>
-	                    </div>     
-					</div>
-                </div>      -->
-                <!-- End single gallery image -->
-                <!-- start single gallery image -->
-                <!-- <div class="mu-single-gallery col-md-4">                  
-                  	<div class="mu-single-gallery-item">
-	                    <figure class="mu-single-gallery-img">
-	                      <a href="#"><img alt="img" src="assets/img/gallery/small/9.jpg"></a>
-	                    </figure>
-	                    <div class="mu-single-gallery-info">
-	                      	<a href="#" class="mu-view-btn">
-	                        	<img src="assets/img/plus.png" alt="plus icon img">
-	                      	</a>
-	                       <div class="portfolio-detail">
-			                    <a href="#" class="modal-close-btn"><span class="fa fa-times"></span></a>
-			                    <img src="assets/img/gallery/big/9.jpg" alt="img-9" />
-			                    <h2>Gallery Item Title</h2>
-			                    <p>	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			                    <a href="#" class="view-project-btn">Live Demo</a>
-			                </div>
-	                    </div>                       
-					</div>
-                </div> -->
-                <!-- End single gallery image -->
               </div>
             </div>
           </div>
@@ -1499,23 +959,29 @@ if ($user_home->is_logged_in()) {
                   <form class="mu-contact-form" action="includes/process.php" method="POST">
                     <div class="form-group">
                       <label for="name">Your Name</label>
-                      <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
+                      <input type="text" class="form-control" id="name" placeholder="Name"
+                             name="name" required>
                     </div>
                     <div class="form-group">
                       <label for="email">Email address</label>
-                      <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+                      <input type="email" class="form-control" id="email" placeholder="Email"
+                             name="email" required>
                     </div>
                     <div class="form-group">
                       <label for="subject">Subject</label>
-                      <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject"
+                      <input type="text" class="form-control" id="subject" placeholder="Subject"
+                             name="subject"
                              required>
                     </div>
                     <div class="form-group">
                       <label for="message">Message</label>
-                      <textarea class="form-control" id="message" cols="30" rows="10" placeholder="Type Your Message"
+                      <textarea class="form-control" id="message" cols="30" rows="10"
+                                placeholder="Type Your Message"
                                 name="message" required></textarea>
                     </div>
-                    <button type="submit" class="mu-send-btn" name="action" value="sendMessage">Send Message</button>
+                    <button type="submit" class="mu-send-btn" name="action" value="sendMessage">Send
+                      Message
+                    </button>
                   </form>
                 </div>
               </div>
@@ -1523,9 +989,11 @@ if ($user_home->is_logged_in()) {
                 <div class="mu-contact-right">
                   <div class="mu-contact-widget">
                     <h3>Office Address</h3>
-                    <p>We always aim to provide a great experience, but if we didn’t get it right this time, then we are
+                    <p>We always aim to provide a great experience, but if we didn’t get it right
+                      this time, then we are
                       here to help. We love hearing from our guest and neighbors.
-                      Please use this form to let us know what's on your mind. We'll get back to you as soon as
+                      Please use this form to let us know what's on your mind. We'll get back to
+                      you as soon as
                       possible.</p>
                     <address>
                       <p><i class="fa fa-phone"></i> (+383) 44 123-456 </p>

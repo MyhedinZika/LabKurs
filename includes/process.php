@@ -126,10 +126,16 @@ EMAIL;
     global $database;
 
     $ingredientName = $_POST['ingredient-name'];
-    $stmt = $database->connection->prepare('INSERT INTO ingredient(i_name) VALUES(:name)');
 
-    $stmt->bindParam(':name', $ingredientName);
-    $stmt->execute();
+    if ($ingredientName == null) {
+      $result = "Emri i perberesit nuk ben te jete i zbrazet";
+    } else {
+      $stmt = $database->connection->prepare('INSERT INTO ingredient(i_name) VALUES(:name)');
+
+      $stmt->bindParam(':name', $ingredientName);
+      $stmt->execute();
+    }
+
 
   }
 
@@ -167,8 +173,8 @@ EMAIL;
     $category = $_POST['category'];
     $ingredients = $_POST['ingredients'];
 
-    // $prices = $_POST['price'];
-
+    $prices = $_POST['price'];
+    var_dump($prices);
     if (empty($name)) {
       $errMSG = "Please Enter Username.";
     } else if (empty($imgFile)) {
@@ -212,38 +218,38 @@ EMAIL;
     }
 
     $productId = $database->connection->lastInsertId();
-    var_dump($productId);
+   // var_dump($productId);
 
     // insert ingredients
     if (!isset($errMSG)) {
-      try{
-      foreach ($ingredients as $ingredient) {
-        $stmt = $database->connection->prepare('INSERT INTO product_ingredients(productIdFK,ingredientIdFK) VALUES(:product,:ingredient)');
-        $stmt->bindParam(':ingredient', $ingredient);
-        $stmt->bindParam(':product', $productId);
+      try {
+        foreach ($ingredients as $ingredient) {
+          $stmt = $database->connection->prepare('INSERT INTO product_ingredients(productIdFK,ingredientIdFK) VALUES(:product,:ingredient)');
+          $stmt->bindParam(':ingredient', $ingredient);
+          $stmt->bindParam(':product', $productId);
 
-        if (!$stmt->execute()) {
-          $errMSG = "error while inserting into pizza_ingredients";
+          if (!$stmt->execute()) {
+            $errMSG = "error while inserting into pizza_ingredients";
+          }
         }
+      } catch (Exception $e) {
+        return $e->getMessage();
       }
-      }catch (Exception $e) {
-      return $e->getMessage();
-    }
     }
 
     //insert prices
-    // if (!isset($errMSG)) {
-    //   foreach ($prices as $sizeId => $price) {
-    //     $stmt = $database->connection->prepare('INSERT INTO pizza_size(pizza,size,price) VALUES(:pizza, :size, :price)');
-    //     $stmt->bindParam(':pizza', $productId);
-    //     $stmt->bindParam(':size', $sizeId);
-    //     $stmt->bindParam(':price', $price);
+     if (!isset($errMSG)) {
+       foreach ($prices as $sizeId => $price) {
+         $stmt = $database->connection->prepare('INSERT INTO product_size(productIdFK,sizeIdFK,price) VALUES(:product, :sizeId, :price)');
+         $stmt->bindParam(':product', $productId);
+         $stmt->bindParam(':sizeId', $sizeId);
+         $stmt->bindParam(':price', $price);
 
-    //     if (!$stmt->execute()) {
-    //       $errMSG = "error while inserting into pizza_size";
-    //     }
-    //   }
-    // }
+         if (!$stmt->execute()) {
+           $errMSG = "error while inserting into pizza_size";
+         }
+       }
+     }
   }
 
   function procAddGallery()

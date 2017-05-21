@@ -37,7 +37,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu Users Administration</h1>
 
   <div class="navbar">
     <ul class="nav">
@@ -52,7 +52,7 @@ if ($user['userAdmin'] == 1)
       <!-- <li><a href="index.php?action=manageotherfood">Other Food</a></li>
       <li><a href="index.php?action=managedrinks">Drinks</a></li> -->
       <li><a href="list-gallery-images.php">Image Library</a></li>
-    <!--   <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
+      <!--   <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
       <li class="active"><a href="list-users.php">Users</a></li>
       <li class="right"><a href="../includes/logout.php">Log Out</a></li>
 
@@ -65,7 +65,7 @@ if ($user['userAdmin'] == 1)
 <div class="page-body">
 
 
-  <h2>Users</h2>
+  <h2 style="margin-left: 20px;">Users</h2>
 
   <?php
 
@@ -100,7 +100,8 @@ if ($user['userAdmin'] == 1)
         <h3><?= $user['userName'] ?><?php echo '&nbsp'; ?><?= $user['userSurname'] ?></h3>
 
         <div class="actions">
-          <a class="button icon delete" href="list-users.php?action=delete&userID=<?= $user['userID'] ?>">Delete</a>
+          <a class="button icon delete"
+             href="list-users.php?action=delete&userID=<?= $user['userID'] ?>">Delete</a>
           <a class="button icon edit" href="edit-user.php?userID=<?= $user['userID'] ?>">Edit</a>
 
         </div>

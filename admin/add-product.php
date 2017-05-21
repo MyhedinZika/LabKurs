@@ -17,14 +17,44 @@ ob_start();
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
   <link rel="stylesheet" href="bootstrap-select/dist/css/bootstrap-select.min.css">
 
-      <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css" />
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css"/>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="bootstrap-select/js/bootstrap-select.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="bootstrap-select/js/bootstrap-select.js"></script>
 
-<!-- (Optional) Latest compiled and minified JavaScript translation files -->
-<script src="bootstrap-select/js/i18n/defaults-en_US.js"></script>
+  <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+  <script src="bootstrap-select/js/i18n/defaults-en_US.js"></script>
+  <script type="text/javascript">
+
+
+    function run() {
+      var dop = document.getElementById("category").value;
+
+      //console.log(dop);
+      showSizes(dop);
+    }
+    function showSizes(valueID) {
+
+      var categoryIdData = {
+        categoryId: valueID
+      };
+
+      $.ajax({
+        type: 'POST',
+        url: 'categorySizes.php',
+        data: categoryIdData
+      }).then(function (data) {
+        $("#showMoreClear").html("");
+        $('.showMore').append(data);
+
+        console.log(data);
+      }, function (err, x, y) {
+        console.log(err, x, y);
+        alert('Item couldn\'t be added to cart.');
+      });
+    }
+  </script>
 
 
 </head>
@@ -48,7 +78,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>Grandmas Pizza Administration</h1>
+  <h1>iMenu Product Administration</h1>
 
 
   <div class="navbar">
@@ -92,13 +122,13 @@ if ($user['userAdmin'] == 1)
 
 
           <label for="category">Category:</label>
-          <select name="category" id="category" class="selectpicker" data-live-search="true">
-          <?php 
-          foreach ($categories as $key => $value) {
-            echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
-          }
-          echo '</select>';
-          ?>
+          <select name="category" id="category" class="selectpicker" data-live-search="true" onchange="run()">
+            <?php
+            foreach ($categories as $key => $value) {
+              echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
+            }
+            echo '</select>';
+            ?>
         </li>
         <li>
           <label for="ingredients">Ingredients</label>
@@ -112,25 +142,33 @@ if ($user['userAdmin'] == 1)
           echo '</select>';
 
           ?>
-          <span class="form-help">Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</span>
+
         </li>
+        <fieldset>
+        <legend>Prices</legend>
+        <div class="showMore" id="showMoreClear">
+
+          </div>
+         </fieldset>
+
+
       </ul>
     </fieldset>
 
 
- <!--    <fieldset>
+    <!--    <fieldset>
       <legend>Prices</legend>
       <ul>
         <?php
-        // $sizes = $session->getSizes();
+    // $sizes = $session->getSizes();
 
-        // foreach ($sizes as $key => $value) {
-        //   echo '<li>';
-        //   echo '<label for="price-' . $value['id'] . '">' . $value['name'] . ':</label>';
-        //   echo '<input type="text" id="price-' . $value['id'] . '" name="price[' . $value['id'] . ']" />';
-        //   echo '</li>';
-        // }
-        ?>
+    // foreach ($sizes as $key => $value) {
+    //   echo '<li>';
+    //   echo '<label for="price-' . $value['id'] . '">' . $value['name'] . ':</label>';
+    //   echo '<input type="text" id="price-' . $value['id'] . '" name="price[' . $value['id'] . ']" />';
+    //   echo '</li>';
+    // }
+    ?>
       </ul>
     </fieldset> -->
 
@@ -160,9 +198,9 @@ if ($user['userAdmin'] == 1)
   ?>
 
 </div><!-- /.page-body -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 
 </body>
 

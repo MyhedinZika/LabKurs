@@ -288,9 +288,13 @@ if (isset($_POST['action']) && $_POST['action'] === 'decline') {
                     <td><?= $userName ?></td>
                     <td><?= $mainAddress ?></td>
                     <td>
-                      <button type="submit" title="Accept" name="action" value="accept">Accept</button>
-                      <button type="submit" title="Decline" name="action" value="decline">Decline</button>
-                      <button type="button" class="showMore" data-request="0" data-orderid="<?= $value['Order_Id'] ?>">
+                      <button type="submit" title="Accept" name="action" value="accept">Accept
+                      </button>
+                      <button type="submit" title="Decline" name="action" value="decline">
+                        Decline
+                      </button>
+                      <button type="button" class="showMore" data-request="0"
+                              data-orderid="<?= $value['Order_Id'] ?>">
                         Show More
                       </button>
                     </td>
