@@ -13,21 +13,28 @@ ob_start();
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Add product - iMenu Admin</title>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js
+"></script>
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
+  <link rel="stylesheet" type="../assets/css/bootstrap.css"/>
   <link rel="stylesheet" href="bootstrap-select/dist/css/bootstrap-select.min.css">
+<!---->
+<!--  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">-->
+<!--  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css"/>-->
+<!---->
+<!--  <!-- Latest compiled and minified JavaScript -->
+<!--  <script src="bootstrap-select/js/bootstrap-select.js"></script>-->
+<!---->
+<!--  <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<!--  <script src="bootstrap-select/js/i18n/defaults-en_US.js"></script>-->
 
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css"/>
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="bootstrap-select/js/bootstrap-select.js"></script>
-
-  <!-- (Optional) Latest compiled and minified JavaScript translation files -->
-  <script src="bootstrap-select/js/i18n/defaults-en_US.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
   <script type="text/javascript">
-
-
+    $(document).ready(function() {
+      $("#category").select2();
+      $("#ingredients").select2();
+    });
     function run() {
       var dop = document.getElementById("category").value;
 
@@ -107,35 +114,41 @@ if ($user['userAdmin'] == 1)
       <legend>Details</legend>
 
       <ul>
+        <div class="form-group col-lg-1">
         <li>
           <label for="name">Name:</label>
           <input type="text" id="name" name="name"/>
         </li>
+        </div>
+        <div class="form-group">
         <li>
           <label for="new-image">Photo:</label>
           <input type="file" id="new-image" name="new-image"/>
         </li>
+        </div>
         <li>
           <?php
           $categories = $session->getCategory();
           ?>
 
-
+          <div class="form-group">
           <label for="category">Category:</label>
-          <select name="category" id="category" class="selectpicker" data-live-search="true" onchange="run()">
+          <select name="category" id="category"  class="js-example-basic-single" onchange="run()">
             <?php
             foreach ($categories as $key => $value) {
               echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
             }
             echo '</select>';
             ?>
+          </div>
         </li>
+
         <li>
           <label for="ingredients">Ingredients</label>
           <?php
           $ingredients = $session->getIngredients();
 
-          echo '<select name="ingredients[]" id="ingredients" multiple class="selectpicker" data-live-search="true" style=" min-width: 400px;">';
+          echo '<select name="ingredients[]" id="ingredients" class="js-example-basic-multiple" multiple style=" min-width: 400px;">';
           foreach ($ingredients as $key => $value) {
             echo '<option value="' . $value['ingredientId'] . '">' . $value['i_name'] . '</option>';
           }
@@ -198,7 +211,7 @@ if ($user['userAdmin'] == 1)
   ?>
 
 </div><!-- /.page-body -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 

@@ -15,7 +15,15 @@ ob_start();
   <title>Edit product - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#category").select2();
+      $("#ingredients").select2();
+    });
+  </script>
 
 </head>
 
@@ -262,7 +270,6 @@ if ($user['userAdmin'] == 1)
           ?>
 
 
-          <span class="form-help">Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</span>
         </li>
       </ul>
     </fieldset>

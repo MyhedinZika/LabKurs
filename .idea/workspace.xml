@@ -2,140 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7b4efca-3676-46bc-a63f-3461f5f7b162" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/categorySizes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/logo.png" afterPath="$PROJECT_DIR$/assets/img/logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/images/logo.png" afterPath="$PROJECT_DIR$/ui/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/css/select2.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/css/select2.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/az.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/eu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/hi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/km.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/pt-BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/sr-Cyrl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/sr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/i18n/zh-TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/select2.full.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/select2.full.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/select2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/dist/js/select2.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/account_details.php" afterPath="$PROJECT_DIR$/account_details.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/add-dailyoffer.php" afterPath="$PROJECT_DIR$/admin/add-dailyoffer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/add-gallery-image.php" afterPath="$PROJECT_DIR$/admin/add-gallery-image.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/add-product.php" afterPath="$PROJECT_DIR$/admin/add-product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/Gruntfile.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/css/bootstrap-select.css" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/css/bootstrap-select.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/css/bootstrap-select.css.map" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/css/bootstrap-select.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/bootstrap-select.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/bootstrap-select.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/bootstrap-select.js.map" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/bootstrap-select.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ar_AR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ar_AR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-bg_BG.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-bg_BG.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-cro_CRO.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-cro_CRO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-cs_CZ.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-cs_CZ.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-da_DK.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-da_DK.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-de_DE.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-de_DE.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-en_US.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-en_US.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-es_CL.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-es_CL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-es_ES.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-es_ES.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-eu.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-eu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-fa_IR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-fa_IR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-fi_FI.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-fi_FI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-fr_FR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-fr_FR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-hu_HU.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-hu_HU.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-id_ID.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-id_ID.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-it_IT.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-it_IT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ko_KR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ko_KR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-lt_LT.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-lt_LT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-nb_NO.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-nb_NO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-nl_NL.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-nl_NL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-pl_PL.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-pl_PL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-pt_BR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-pt_BR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-pt_PT.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-pt_PT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ro_RO.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ro_RO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ru_RU.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ru_RU.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-sk_SK.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-sk_SK.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-sl_SI.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-sl_SI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-sv_SE.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-sv_SE.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-tr_TR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-tr_TR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ua_UA.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-ua_UA.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-zh_CN.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-zh_CN.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-zh_TW.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/dist/js/i18n/defaults-zh_TW.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/base.html" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/css/base.css" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/js/base.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/js/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/nav.html" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/toc.html" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/custom_theme/toc.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/css/custom.css" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/css/bootstrap-select.css" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/css/bootstrap-select.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/css/bootstrap-select.css.map" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/css/bootstrap-select.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/bootstrap-select.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/bootstrap-select.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/bootstrap-select.js.map" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/bootstrap-select.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ar_AR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ar_AR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-bg_BG.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-bg_BG.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-cro_CRO.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-cro_CRO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-cs_CZ.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-cs_CZ.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-da_DK.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-da_DK.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-de_DE.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-de_DE.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-en_US.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-en_US.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-es_CL.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-es_CL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-es_ES.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-es_ES.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-eu.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-eu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-fa_IR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-fa_IR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-fi_FI.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-fi_FI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-fr_FR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-fr_FR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-hu_HU.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-hu_HU.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-id_ID.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-id_ID.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-it_IT.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-it_IT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ko_KR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ko_KR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-lt_LT.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-lt_LT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-nb_NO.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-nb_NO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-nl_NL.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-nl_NL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-pl_PL.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-pl_PL.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-pt_BR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-pt_BR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-pt_PT.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-pt_PT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ro_RO.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ro_RO.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ru_RU.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ru_RU.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-sk_SK.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-sk_SK.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-sl_SI.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-sl_SI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-sv_SE.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-sv_SE.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-tr_TR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-tr_TR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ua_UA.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-ua_UA.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-zh_CN.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-zh_CN.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-zh_TW.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/dist/js/i18n/defaults-zh_TW.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/playground/index.html" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/playground/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/playground/plnkrOpener.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/playground/plnkrOpener.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/playground/test.html" afterPath="$PROJECT_DIR$/admin/bootstrap-select/docs/docs/playground/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/js/bootstrap-select.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/js/bootstrap-select.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/js/i18n/defaults-fa_IR.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/js/i18n/defaults-fa_IR.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/js/i18n/defaults-it_IT.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/js/i18n/defaults-it_IT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/js/i18n/defaults-pt_PT.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/js/i18n/defaults-pt_PT.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/js/i18n/defaults-ru_RU.js" afterPath="$PROJECT_DIR$/admin/bootstrap-select/js/i18n/defaults-ru_RU.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/less/bootstrap-select.less" afterPath="$PROJECT_DIR$/admin/bootstrap-select/less/bootstrap-select.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/sass/bootstrap-select.scss" afterPath="$PROJECT_DIR$/admin/bootstrap-select/sass/bootstrap-select.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/bootstrap-select/test.html" afterPath="$PROJECT_DIR$/admin/bootstrap-select/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/edit-category.php" afterPath="$PROJECT_DIR$/admin/edit-category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/edit-gallery-image.php" afterPath="$PROJECT_DIR$/admin/edit-gallery-image.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/edit-ingredients.php" afterPath="$PROJECT_DIR$/admin/edit-ingredients.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/edit-pizza.php" afterPath="$PROJECT_DIR$/admin/edit-pizza.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/edit-size.php" afterPath="$PROJECT_DIR$/admin/edit-size.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/edit-user.php" afterPath="$PROJECT_DIR$/admin/edit-user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/list-categories.php" afterPath="$PROJECT_DIR$/admin/list-categories.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/list-dailyoffers.php" afterPath="$PROJECT_DIR$/admin/list-dailyoffers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/list-gallery-images.php" afterPath="$PROJECT_DIR$/admin/list-gallery-images.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/list-ingredients.php" afterPath="$PROJECT_DIR$/admin/list-ingredients.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/list-products.php" afterPath="$PROJECT_DIR$/admin/list-products.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/list-sizes.php" afterPath="$PROJECT_DIR$/admin/list-sizes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/list-users.php" afterPath="$PROJECT_DIR$/admin/list-users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/owner.php" afterPath="$PROJECT_DIR$/admin/owner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/ui/css/admin.css" afterPath="$PROJECT_DIR$/admin/ui/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap-datepicker.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap-datepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/bootstrap.js" afterPath="$PROJECT_DIR$/assets/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom-pre-checkout.js" afterPath="$PROJECT_DIR$/assets/js/custom-pre-checkout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/custom.js" afterPath="$PROJECT_DIR$/assets/js/custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery.counterup.js" afterPath="$PROJECT_DIR$/assets/js/jquery.counterup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/jquery.input-stepper.js" afterPath="$PROJECT_DIR$/assets/js/jquery.input-stepper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/slick.js" afterPath="$PROJECT_DIR$/assets/js/slick.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/waypoints.js" afterPath="$PROJECT_DIR$/assets/js/waypoints.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart.php" afterPath="$PROJECT_DIR$/cart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changePassword.php" afterPath="$PROJECT_DIR$/changePassword.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/checkout.php" afterPath="$PROJECT_DIR$/checkout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/includes/bootstrap/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/owner.php" afterPath="$PROJECT_DIR$/includes/owner.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/process.php" afterPath="$PROJECT_DIR$/includes/process.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/resetPassword.php" afterPath="$PROJECT_DIR$/includes/resetPassword.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/session.php" afterPath="$PROJECT_DIR$/includes/session.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listener.php" afterPath="$PROJECT_DIR$/listener.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders.php" afterPath="$PROJECT_DIR$/orders.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/payment.php" afterPath="$PROJECT_DIR$/payment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -147,16 +71,124 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="orders.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orders.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="295" column="22" lean-forward="true" selection-start-line="295" selection-start-column="22" selection-end-line="298" selection-end-column="31" />
+            <state relative-caret-position="-360">
+              <caret line="385" column="10" lean-forward="true" selection-start-line="385" selection-start-column="10" selection-end-line="385" selection-end-column="10" />
               <folding>
-                <marker date="1495284124807" expanded="true" signature="282:319" ph="SELECT * FRO... users" />
-                <marker date="1495284124807" expanded="true" signature="6853:6917" ph="UPDATE order... " />
-                <marker date="1495284124807" expanded="true" signature="7775:7840" ph="UPDATE order... " />
-                <marker date="1495284124807" expanded="true" signature="8109:8173" ph="UPDATE order... " />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1495410601999" expanded="true" signature="191:228" ph="SELECT * FRO... users" />
+                <marker date="1495410601999" expanded="true" signature="17788:17797" ph="..." />
+                <marker date="1495410601999" expanded="true" signature="25319:25483" ph="..." />
+                <marker date="1495410601999" expanded="true" signature="25541:26155" ph="..." />
+                <marker date="1495410601999" expanded="true" signature="25598:25705" ph="..." />
+                <marker date="1495410601999" expanded="true" signature="25760:26127" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addToCart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addToCart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="32" />
+              <folding>
+                <marker date="1489255550000" expanded="true" signature="191:228" ph="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cart.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="281" column="50" lean-forward="false" selection-start-line="281" selection-start-column="50" selection-end-line="281" selection-end-column="50" />
+              <folding>
+                <marker date="1495284121406" expanded="true" signature="293:330" ph="SELECT * FRO... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="session.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/session.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1098">
+              <caret line="976" column="40" lean-forward="true" selection-start-line="976" selection-start-column="40" selection-end-line="976" selection-end-column="40" />
+              <folding>
+                <marker date="1495393610817" expanded="true" signature="3308:3402" ph="SELECT pizza... pizza" />
+                <marker date="1495393610817" expanded="true" signature="3631:3655" ph="SELECT * FRO... ingredient" />
+                <marker date="1495393610817" expanded="true" signature="3887:3909" ph="SELECT * FRO... category" />
+                <marker date="1495393610817" expanded="true" signature="4149:4202" ph="SELECT * FRO... category" />
+                <marker date="1495393610817" expanded="true" signature="4457:4516" ph="SELECT * FRO... ingredient" />
+                <marker date="1495393610817" expanded="true" signature="4792:4865" ph="UPDATE ingre... " />
+                <marker date="1495393610817" expanded="true" signature="5275:5356" ph="UPDATE size " />
+                <marker date="1495393610817" expanded="true" signature="5791:5855" ph="UPDATE categ... " />
+                <marker date="1495393610817" expanded="true" signature="6255:6342" ph="UPDATE order... " />
+                <marker date="1495393610817" expanded="true" signature="6748:6856" ph="UPDATE galle... " />
+                <marker date="1495393610817" expanded="true" signature="8543:8584" ph="SELECT * FRO... size" />
+                <marker date="1495393610817" expanded="true" signature="8865:8905" ph="INSERT INTO category... " />
+                <marker date="1495393610817" expanded="true" signature="9207:9268" ph="INSERT INTO size... " />
+                <marker date="1495393610817" expanded="true" signature="9608:9652" ph="INSERT INTO ingredient... " />
+                <marker date="1495393610817" expanded="true" signature="10006:10073" ph="INSERT INTO login_attempts... " />
+                <marker date="1495393610817" expanded="true" signature="10326:10369" ph="SELECT * FRO... login_attempts" />
+                <marker date="1495393610817" expanded="true" signature="10702:10745" ph="SELECT * FRO... login_attempts" />
+                <marker date="1495393610817" expanded="true" signature="11132:11203" ph="UPDATE login... " />
+                <marker date="1495393610817" expanded="true" signature="11527:11568" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="11824:11842" ph="SELECT * FRO... size" />
+                <marker date="1495393610817" expanded="true" signature="12069:12174" ph="Select DISTI... pizza" />
+                <marker date="1495393610817" expanded="true" signature="12431:12486" ph="Select * fro... product" />
+                <marker date="1495393610817" expanded="true" signature="12753:12906" ph="SELECT * FRO... dailyoffer" />
+                <marker date="1495393610817" expanded="true" signature="13140:13189" ph="Select * fro... dailyoffer" />
+                <marker date="1495393610817" expanded="true" signature="13448:13495" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="13810:13830" ph="Select * fro... drinks" />
+                <marker date="1495393610817" expanded="true" signature="14044:14065" ph="Select * fro... product" />
+                <marker date="1495393610817" expanded="true" signature="14292:14342" ph="Select * fro... product" />
+                <marker date="1495393610817" expanded="true" signature="14597:14665" ph="SELECT * fro... order_products" />
+                <marker date="1495393610817" expanded="true" signature="14921:14963" ph="Select * fro... users" />
+                <marker date="1495393610817" expanded="true" signature="15204:15255" ph="Select * fro... address" />
+                <marker date="1495393610817" expanded="true" signature="15511:15705" ph="SELECT DISTI... orders" />
+                <marker date="1495393610817" expanded="true" signature="15973:16013" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="16333:16381" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="16712:16779" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="17123:17162" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="17485:17536" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="17874:17931" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="18272:18441" ph="SELECT DISTI... size" />
+                <marker date="1495393610817" expanded="true" signature="18718:18960" ph="SELECT ingre... product" />
+                <marker date="1495393610817" expanded="true" signature="19211:19232" ph="Select * fro... gallery" />
+                <marker date="1495393610817" expanded="true" signature="19457:19497" ph="Select * fro... gallery" />
+                <marker date="1495393610817" expanded="true" signature="19748:19786" ph="DELETE from " />
+                <marker date="1495393610817" expanded="true" signature="20106:20153" ph="SELECT * fro... orders" />
+                <marker date="1495393610817" expanded="true" signature="20394:20453" ph="SELECT * FRO... order_products" />
+                <marker date="1495393610817" expanded="true" signature="20767:20843" ph="INSERT INTO orders... " />
+                <marker date="1495393610817" expanded="true" signature="20986:21058" ph="SELECT * fro... orders" />
+                <marker date="1495393610817" expanded="true" signature="21304:21351" ph="SELECT * fro... orders" />
+                <marker date="1495393610817" expanded="true" signature="21606:21669" ph="UPDATE order... " />
+                <marker date="1495393610817" expanded="true" signature="21878:21942" ph="UPDATE order... " />
+                <marker date="1495393610817" expanded="true" signature="22150:22216" ph="SELECT * fro... orders" />
+                <marker date="1495393610817" expanded="true" signature="22516:22561" ph="SELECT * fro... orders" />
+                <marker date="1495393610817" expanded="true" signature="22794:22840" ph="SELECT * fro... orders" />
+                <marker date="1495393610817" expanded="true" signature="23076:23123" ph="SELECT * fro... orders" />
+                <marker date="1495393610817" expanded="true" signature="23360:23406" ph="SELECT * fro... orders" />
+                <marker date="1495393610817" expanded="true" signature="23648:23765" ph="SELECT * FRO... order_products" />
+                <marker date="1495393610817" expanded="true" signature="24118:24231" ph="INSERT INTO order_products... " />
+                <marker date="1495393610817" expanded="true" signature="24613:24709" ph="INSERT INTO order_products... " />
+                <marker date="1495393610817" expanded="true" signature="25027:25136" ph="INSERT INTO address... " />
+                <marker date="1495393610817" expanded="true" signature="25436:25565" ph="SELECT * FRO... order_products" />
+                <marker date="1495393610817" expanded="true" signature="25871:25933" ph="SELECT * fro... pizza_size" />
+                <marker date="1495393610817" expanded="true" signature="26266:26391" ph="SELECT * fro... address" />
+                <marker date="1495393610817" expanded="true" signature="26817:26903" ph="UPDATE order... " />
+                <marker date="1495393610817" expanded="true" signature="27374:27419" ph="SELECT passw... users" />
+                <marker date="1495393610817" expanded="true" signature="27798:27817" ph="Select * fro... users" />
+                <marker date="1495393610817" expanded="true" signature="28506:28528" ph="SELECT * fro... Postimet" />
+                <marker date="1495393610817" expanded="true" signature="29038:29078" ph="SELECT * fro... size" />
+                <marker date="1495393610817" expanded="true" signature="29038:29089" ph="SELECT * fro... size" />
               </folding>
             </state>
           </provider>
@@ -165,24 +197,24 @@
       <file leaf-file-name="add-product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/add-product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="124" column="67" lean-forward="false" selection-start-line="124" selection-start-column="55" selection-end-line="124" selection-end-column="67" />
+            <state relative-caret-position="231">
+              <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="36" selection-end-column="7" />
               <folding>
-                <marker date="1495398578637" expanded="true" signature="3905:3923" ph="..." />
+                <marker date="1495406492788" expanded="true" signature="4564:4582" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit-pizza.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="edit-pizza.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/edit-pizza.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state relative-caret-position="221">
+              <caret line="277" column="21" lean-forward="true" selection-start-line="277" selection-start-column="21" selection-end-line="277" selection-end-column="21" />
               <folding>
-                <marker date="1495402081854" expanded="true" signature="3175:3267" ph="UPDATE produ... " />
-                <marker date="1495402081854" expanded="true" signature="3626:3686" ph="DELETE FROM " />
-                <marker date="1495402081854" expanded="true" signature="3972:4060" ph="INSERT INTO product_ingredients... " />
+                <marker date="1495406991145" expanded="true" signature="3625:3717" ph="UPDATE produ... " />
+                <marker date="1495406991145" expanded="true" signature="4076:4136" ph="DELETE FROM " />
+                <marker date="1495406991145" expanded="true" signature="4422:4510" ph="INSERT INTO product_ingredients... " />
               </folding>
             </state>
           </provider>
@@ -192,7 +224,7 @@
         <entry file="file://$PROJECT_DIR$/includes/process.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+              <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
               <folding>
                 <marker date="1495397918018" expanded="true" signature="2025:2114" ph="INSERT INTO contact... " />
                 <marker date="1495397918018" expanded="true" signature="3104:3148" ph="INSERT INTO ingredient... " />
@@ -202,36 +234,6 @@
                 <marker date="1495397918018" expanded="true" signature="6438:6524" ph="INSERT INTO product_size... " />
                 <marker date="1495397918018" expanded="true" signature="8068:8155" ph="INSERT INTO gallery... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="constants.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/constants.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dbconfig.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/includes/dbconfig.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="showProducts.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/showProducts.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1131">
-              <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -281,12 +283,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/session.php" />
         <option value="$PROJECT_DIR$/admin/categorySizes.php" />
         <option value="$PROJECT_DIR$/includes/process.php" />
         <option value="$PROJECT_DIR$/admin/add-product.php" />
         <option value="$PROJECT_DIR$/admin/edit-pizza.php" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -371,7 +373,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imenuv3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="imenuv3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -478,18 +498,18 @@
       <option name="presentableId" value="Default" />
       <updated>1494956231869</updated>
       <workItem from="1494956233786" duration="2426000" />
-      <workItem from="1495283101895" duration="14425000" />
+      <workItem from="1495283101895" duration="22020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16851000" />
+    <option name="totallyTimeSpent" value="24446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1040" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15722656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.109375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -524,12 +544,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1495284419496" expanded="true" signature="191:228" ph="SELECT * FRO... users" />
-            <marker date="1495284419496" expanded="true" signature="17752:17761" ph="..." />
-            <marker date="1495284419496" expanded="true" signature="25283:25447" ph="..." />
-            <marker date="1495284419496" expanded="true" signature="25505:26119" ph="..." />
-            <marker date="1495284419496" expanded="true" signature="25562:25669" ph="..." />
-            <marker date="1495284419496" expanded="true" signature="25724:26091" ph="..." />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1495410601999" expanded="true" signature="191:228" ph="SELECT * FRO... users" />
+            <marker date="1495410601999" expanded="true" signature="17788:17797" ph="..." />
+            <marker date="1495410601999" expanded="true" signature="25319:25483" ph="..." />
+            <marker date="1495410601999" expanded="true" signature="25541:26155" ph="..." />
+            <marker date="1495410601999" expanded="true" signature="25598:25705" ph="..." />
+            <marker date="1495410601999" expanded="true" signature="25760:26127" ph="..." />
           </folding>
         </state>
       </provider>
@@ -556,21 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="452" column="71" lean-forward="false" selection-start-line="452" selection-start-column="50" selection-end-line="452" selection-end-column="71" />
-          <folding>
-            <marker date="1495284419496" expanded="true" signature="191:228" ph="SELECT * FRO... users" />
-            <marker date="1495284419496" expanded="true" signature="17752:17761" ph="..." />
-            <marker date="1495284419496" expanded="true" signature="25283:25447" ph="..." />
-            <marker date="1495284419496" expanded="true" signature="25505:26119" ph="..." />
-            <marker date="1495284419496" expanded="true" signature="25562:25669" ph="..." />
-            <marker date="1495284419496" expanded="true" signature="25724:26091" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/class.user.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1967">
@@ -591,10 +599,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/showProducts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1131">
+          <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="295" column="22" lean-forward="false" selection-start-line="295" selection-start-column="22" selection-end-line="298" selection-end-column="31" />
+          <folding>
+            <marker date="1495284124807" expanded="true" signature="282:319" ph="SELECT * FRO... users" />
+            <marker date="1495284124807" expanded="true" signature="6853:6917" ph="UPDATE order... " />
+            <marker date="1495284124807" expanded="true" signature="7775:7840" ph="UPDATE order... " />
+            <marker date="1495284124807" expanded="true" signature="8109:8173" ph="UPDATE order... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/dbconfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/dbconnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1495284124674" expanded="true" signature="4457:4502" ph="SELECT * FRO... users" />
+            <marker date="1495284124674" expanded="true" signature="4678:4831" ph="..." />
+            <marker date="1495284124674" expanded="false" signature="4727:4734" ph="×" />
+            <marker date="1495284124674" expanded="true" signature="5588:5748" ph="..." />
+            <marker date="1495284124674" expanded="true" signature="5892:6041" ph="..." />
+            <marker date="1495284124674" expanded="false" signature="5946:5953" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/process.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="7" lean-forward="false" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding>
+            <marker date="1495397918018" expanded="true" signature="2025:2114" ph="INSERT INTO contact... " />
+            <marker date="1495397918018" expanded="true" signature="3104:3148" ph="INSERT INTO ingredient... " />
+            <marker date="1495397918018" expanded="true" signature="3575:3685" ph="INSERT INTO dailyoffer... " />
+            <marker date="1495397918018" expanded="true" signature="5328:5405" ph="INSERT INTO product... " />
+            <marker date="1495397918018" expanded="true" signature="5886:5974" ph="INSERT INTO product_ingredients... " />
+            <marker date="1495397918018" expanded="true" signature="6438:6524" ph="INSERT INTO product_size... " />
+            <marker date="1495397918018" expanded="true" signature="8068:8155" ph="INSERT INTO gallery... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/categorySizes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/core-scripting.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="204" column="18" lean-forward="false" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/dist/css/select2.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/dist/css/select2.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/add-product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="32" column="2" lean-forward="false" selection-start-line="32" selection-start-column="2" selection-end-line="36" selection-end-column="7" />
+          <folding>
+            <marker date="1495406492788" expanded="true" signature="4564:4582" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/edit-pizza.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="277" column="21" lean-forward="true" selection-start-line="277" selection-start-column="21" selection-end-line="277" selection-end-column="21" />
+          <folding>
+            <marker date="1495406991145" expanded="true" signature="3625:3717" ph="UPDATE produ... " />
+            <marker date="1495406991145" expanded="true" signature="4076:4136" ph="DELETE FROM " />
+            <marker date="1495406991145" expanded="true" signature="4422:4510" ph="INSERT INTO product_ingredients... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/includes/session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="1096" column="0" lean-forward="false" selection-start-line="1096" selection-start-column="0" selection-end-line="1096" selection-end-column="0" />
+        <state relative-caret-position="-1098">
+          <caret line="976" column="40" lean-forward="true" selection-start-line="976" selection-start-column="40" selection-end-line="976" selection-end-column="40" />
           <folding>
             <marker date="1495393610817" expanded="true" signature="3308:3402" ph="SELECT pizza... pizza" />
             <marker date="1495393610817" expanded="true" signature="3631:3655" ph="SELECT * FRO... ingredient" />
@@ -668,108 +806,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/showProducts.php">
+    <entry file="file://$PROJECT_DIR$/cart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1131">
-          <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="295" column="22" lean-forward="true" selection-start-line="295" selection-start-column="22" selection-end-line="298" selection-end-column="31" />
+        <state relative-caret-position="204">
+          <caret line="281" column="50" lean-forward="false" selection-start-line="281" selection-start-column="50" selection-end-line="281" selection-end-column="50" />
           <folding>
-            <marker date="1495284124807" expanded="true" signature="282:319" ph="SELECT * FRO... users" />
-            <marker date="1495284124807" expanded="true" signature="6853:6917" ph="UPDATE order... " />
-            <marker date="1495284124807" expanded="true" signature="7775:7840" ph="UPDATE order... " />
-            <marker date="1495284124807" expanded="true" signature="8109:8173" ph="UPDATE order... " />
+            <marker date="1495284121406" expanded="true" signature="293:330" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/constants.php">
+    <entry file="file://$PROJECT_DIR$/addToCart.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/dbconfig.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/dbconnect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="527">
+          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="32" />
           <folding>
-            <marker date="1495284124674" expanded="true" signature="4457:4502" ph="SELECT * FRO... users" />
-            <marker date="1495284124674" expanded="true" signature="4678:4831" ph="..." />
-            <marker date="1495284124674" expanded="false" signature="4727:4734" ph="×" />
-            <marker date="1495284124674" expanded="true" signature="5588:5748" ph="..." />
-            <marker date="1495284124674" expanded="true" signature="5892:6041" ph="..." />
-            <marker date="1495284124674" expanded="false" signature="5946:5953" ph="×" />
+            <marker date="1489255550000" expanded="true" signature="191:228" ph="SELECT * FRO... users" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/process.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+        <state relative-caret-position="-360">
+          <caret line="385" column="10" lean-forward="true" selection-start-line="385" selection-start-column="10" selection-end-line="385" selection-end-column="10" />
           <folding>
-            <marker date="1495397918018" expanded="true" signature="2025:2114" ph="INSERT INTO contact... " />
-            <marker date="1495397918018" expanded="true" signature="3104:3148" ph="INSERT INTO ingredient... " />
-            <marker date="1495397918018" expanded="true" signature="3575:3685" ph="INSERT INTO dailyoffer... " />
-            <marker date="1495397918018" expanded="true" signature="5328:5405" ph="INSERT INTO product... " />
-            <marker date="1495397918018" expanded="true" signature="5886:5974" ph="INSERT INTO product_ingredients... " />
-            <marker date="1495397918018" expanded="true" signature="6438:6524" ph="INSERT INTO product_size... " />
-            <marker date="1495397918018" expanded="true" signature="8068:8155" ph="INSERT INTO gallery... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/categorySizes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="30" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/add-product.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="124" column="67" lean-forward="false" selection-start-line="124" selection-start-column="55" selection-end-line="124" selection-end-column="67" />
-          <folding>
-            <marker date="1495398578637" expanded="true" signature="3905:3923" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/edit-pizza.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="17" column="2" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding>
-            <marker date="1495402081854" expanded="true" signature="3175:3267" ph="UPDATE produ... " />
-            <marker date="1495402081854" expanded="true" signature="3626:3686" ph="DELETE FROM " />
-            <marker date="1495402081854" expanded="true" signature="3972:4060" ph="INSERT INTO product_ingredients... " />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1495410601999" expanded="true" signature="191:228" ph="SELECT * FRO... users" />
+            <marker date="1495410601999" expanded="true" signature="17788:17797" ph="..." />
+            <marker date="1495410601999" expanded="true" signature="25319:25483" ph="..." />
+            <marker date="1495410601999" expanded="true" signature="25541:26155" ph="..." />
+            <marker date="1495410601999" expanded="true" signature="25598:25705" ph="..." />
+            <marker date="1495410601999" expanded="true" signature="25760:26127" ph="..." />
           </folding>
         </state>
       </provider>
