@@ -333,10 +333,13 @@ if (isset($_POST['btn-signup'])) {
 </head>
 
 <body>
-<div class="login-wrap" id="login-wrap" style=" min-height: 500px">
+<div class="login-wrap" id="login-wrap" style=" min-height: 500px; margin-top: 50px;">
   <?php if (isset($msg)) echo $msg; ?>
-
   <div class="login-html">
+    <img src="..\assets\img\logomenu.png" alt="logo" style="
+    padding-right: 156px;
+    margin-bottom: 65px;
+    padding-left: 82px;" />
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
     <label for="tab-1" class="tab" onclick="changeLogin()">Sign In</label>
     <input id="tab-2" type="radio" name="tab" class="sign-up">

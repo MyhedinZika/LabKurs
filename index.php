@@ -75,16 +75,15 @@ if ($user_home->is_logged_in()) {
         });
     }
 
-    function addToCart(event, Size, Quantity, Pizza_IdFK, DailyIdFK) {
-      console.log(Size, Quantity, Pizza_IdFK);
+    function addToCart(event, Size, Quantity, Product_IdFK) {
+      console.log(Size, Quantity, Product_IdFK);
 
       event.preventDefault();
 
       var cartItemData = {
         Size: Size,
         Quantity: Quantity,
-        Pizza_IdFK: Pizza_IdFK,
-        DailyIdFK: DailyIdFK
+        Product_Id: Product_IdFK,
       };
       $.ajax({
         type: 'POST',
@@ -470,8 +469,8 @@ if ($user_home->is_logged_in()) {
                                     $prices = $session->getProductPrices($productId);
 
                                     ?>
-                                    <select name="pizza-size-<?= $productId ?>"
-                                            id="pizza-size-<?= $productId ?>">
+                                    <select name="product-size-<?= $productId ?>"
+                                            id="product-size-<?= $productId ?>">
                                       <?php
 
                                       foreach ($prices as $key => $value) {
@@ -483,7 +482,7 @@ if ($user_home->is_logged_in()) {
                                         <?php if ($user_home->is_logged_in()) { ?>
                                           <button type="submit"
                                                   class="add-to-basket"
-                                                  onclick="addToCart(event, $('#pizza-size-<?= $productId ?>').val(), $('#qty-<?= $productId ?>').val(), <?= $productId ?>)">
+                                                  onclick="addToCart(event, $('#product-size-<?= $productId ?>').val(), $('#qty-<?= $productId ?>').val(), <?= $productId ?>)">
                                             Add to cart
                                           </button>
                                         <?php } ?>
