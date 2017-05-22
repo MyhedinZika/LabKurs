@@ -1087,7 +1087,8 @@ class Session
     }
   }
 
-  function getCategorySizes($categoryId){
+  function getCategorySizes($categoryId)
+  {
     global $database;
     $sql = "SELECT * from size where CategoryIDFK = :categoryId";
     $stmt = $database->connection->prepare($sql);

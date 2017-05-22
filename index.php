@@ -76,7 +76,7 @@ if ($user_home->is_logged_in()) {
     }
 
     function addToCart(event, Size, Quantity, Pizza_IdFK, DailyIdFK) {
-      console.log(Size,Quantity,Pizza_IdFK);
+      console.log(Size, Quantity, Pizza_IdFK);
 
       event.preventDefault();
 
@@ -383,11 +383,11 @@ if ($user_home->is_logged_in()) {
             <span class="mu-title-bar"></span>
           </div>
           <?php //if ($user_home->is_logged_in()) { ?>
-               <div class="currencyButtons">
-                 <button style="font-size:18px" onclick="updatePrice('euro')"><i class="fa fa-euro"></i></button>
-                 <button style="font-size:18px" onclick="updatePrice('gbp')"><i class="fa fa-gbp"></i></button>
-                 <button style="font-size:18px" onclick="updatePrice('dollar')"><i class="fa fa-dollar"></i></button>
-               </div>
+          <div class="currencyButtons">
+            <button style="font-size:18px" onclick="updatePrice('euro')"><i class="fa fa-euro"></i></button>
+            <button style="font-size:18px" onclick="updatePrice('gbp')"><i class="fa fa-gbp"></i></button>
+            <button style="font-size:18px" onclick="updatePrice('dollar')"><i class="fa fa-dollar"></i></button>
+          </div>
           <?php //} ?>
           <div class="mu-restaurant-menu-content">
             <ul class="nav nav-tabs mu-restaurant-menu">
