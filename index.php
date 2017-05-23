@@ -83,7 +83,7 @@ if ($user_home->is_logged_in()) {
       var cartItemData = {
         Size: Size,
         Quantity: Quantity,
-        Product_Id: Product_IdFK,
+        Product_Id: Product_IdFK
       };
       $.ajax({
         type: 'POST',

@@ -218,7 +218,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
       <?php
       $userId = $row['userID'];
       $order = $session->getOrderId($userId);
-      $orderId = $order['Order_Id'];
+      $orderId = $order['OrderId'];
       $totalCosts = 0;
       // var_dump($orderId);
 
@@ -243,22 +243,20 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
             $suborders = $session->getOrderProducts($orderId);
 
             foreach ($suborders as $key => $value){
-            $subOrderId = $value['OrderProductsId'];//Mos e ndrysho
+            $subOrderId = $value['SuborderId'];//Mos e ndrysho
 
-            // var_dump($value);
-            //   var_dump($subOrderId);
 
-            $pizzaProduct = $session->getPizzaProduct($subOrderId);
-            if ($value['Pizza_IdFK'] == null){
-            $dailyOfferProduct = $session->getDailyOffer($value['DailyIdFK']);
+            $productInfo = $session->getProduct($value['ProductIdFK']);
+            $productPrice = $session->getProductPrice($value['ProductIdFK'],$value['ProductSize']);
 
-            $totalCosts += $dailyOfferProduct['DO_Price'] * $value['Quantity'];
+
+            $totalCosts+=$value['TotalPrice'];
 
             ?>
             <form class="admin-form" method="post">
-              <input type="hidden" name="subOrderId" value="<?= $value['OrderProductsId'] ?>">
-              <td class="item-desc"><?= $dailyOfferProduct['DO_Name']; ?></td>
-              <td>$<?= $dailyOfferProduct['DO_Price']; ?></td>
+              <input type="hidden" name="subOrderId" value="">
+              <td class="item-desc"><?php  echo $productInfo['name']; ?></td>
+              <td>$<?php echo $productPrice['price'];?></td>
               <td><input type="number" class="qty-num" name="productQuantity"
                          value="<?= $value['Quantity'] ?>">
                 <button type="submit" class="button icon go" title="Update" name="action"
@@ -276,34 +274,8 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
 
           <?php
 
-          }
-          else {
-            $pizzaProduct = $session->getPizza($value['Pizza_IdFK']);
-            $pizzaPrices = $session->getProductPrice($value['Pizza_IdFK'], $value['Size']);
-            $totalCosts += $value['Quantity'] * $pizzaPrices['price'];
+         // }
 
-            ?>
-            <form class="admin-form" method="post">
-              <input type="hidden" name="subOrderId" value="<?= $value['OrderProductsId'] ?>">
-              <td class="item-desc"><?= $pizzaProduct['p_name']; ?></td>
-              <td><?= $pizzaPrices['price']; ?></td>
-              <td><input type="number" class="qty-num" name="productQuantity"
-                         value="<?= $value['Quantity'] ?>">
-
-                <button type="submit" class="button icon go" title="Update" name="action"
-                        value="update">Update
-                </button>
-              </td>
-              <td>
-                <button type="submit" class="button icon delete" title="delete" name="action"
-                        value="delete">Delete
-                </button>
-              </td>
-
-            </form>
-            </tr>
-            <?php
-          }
           } ?>
 
           <!--   <tr>

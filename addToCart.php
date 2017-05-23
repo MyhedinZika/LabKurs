@@ -14,6 +14,7 @@ if ($user_home->is_logged_in()) {
 
   // get order id
   $order = $session->getOrderId($userId);
+  //var_dump($order);
 
   if ($order == null) {
     // create new empty order
@@ -26,27 +27,21 @@ if ($user_home->is_logged_in()) {
     }
 
     $order = $session->getOrderId($userId);
+    //var_dump($order);
   }
 
   if (is_array($order)) {
-    if (isset($_POST['Pizza_IdFK'])) {
+    if (isset($_POST['Product_Id'])) {
       try {
-        $session->addPizzaToOrder($order['Order_Id'], $_POST['Size'], $_POST['Pizza_IdFK'], $_POST['Quantity']);
+        $productPrice = $session->getProductPrice($_POST['Product_Id'],$_POST['Size']);
+        $totalPrice = $productPrice['price'] * $_POST['Quantity'];;
+        $session->addProductToOrder($order['OrderId'], $_POST['Size'], $_POST['Product_Id'], $_POST['Quantity'], $totalPrice);
       } catch (Exception $e) {
         http_response_code(500);
         echo $e->getMessage();
       }
 
-      echo 'Added Pizza to Cart';
-    } else {
-      try {
-        $session->addDailyDealToOrder($order['Order_Id'], $_POST['DailyIdFK'], $_POST['Quantity']);
-      } catch (Exception $e) {
-        http_response_code(500);
-        echo $e->getMessage();
-      }
-
-      echo 'Added Daily Deal to Cart';
+      echo 'Added Product to Cart';
     }
   }
 }

@@ -778,7 +778,7 @@ class Session
   function getOrderProducts($orderId)
   {
     global $database;
-    $sql = "SELECT * FROM order_products where Order_IdFK = :Order_IdFK";
+    $sql = "SELECT * FROM suborders where OrderIdFK = :Order_IdFK";
     $stmt = $database->connection->prepare($sql);
     $stmt->bindParam('Order_IdFK', $orderId);
     $stmt->execute();
@@ -793,7 +793,7 @@ class Session
   {
     global $database;
 
-    $stmt = $database->connection->prepare('INSERT INTO orders(Total, Status, User_Id) VALUES(0, "In_Progress", :userId)');
+    $stmt = $database->connection->prepare('INSERT INTO orders(TotalPrice, PurchaseStatus, User_Id) VALUES(0, "In_Progress", :userId)');
 
     $stmt->bindParam(':userId', $userId);
     $stmt->execute();
@@ -802,7 +802,7 @@ class Session
   function getOrderId($userId)
   {
     global $database;
-    $sql = "SELECT * from orders where Status = 'In_Progress' AND User_Id = :User_Id";
+    $sql = "SELECT * from orders where PurchaseStatus = 'In_Progress' AND User_Id = :User_Id";
     $stmt = $database->connection->prepare($sql);
     $stmt->bindParam('User_Id', $userId);
     $stmt->execute();
@@ -902,10 +902,10 @@ class Session
   }
 
 
-  function getPizzaProduct($orderId)
+  function getSuborderProduct($orderId)
   {
     global $database;
-    $sql = "SELECT * FROM order_products RIGHT JOIN pizza on order_products.Pizza_IdFK=pizza.p_id WHERE  Order_IdFK = :Order_IdFK";
+    $sql = "SELECT * FROM suborders RIGHT JOIN product on suborders.ProductIdFK = product.productId Where OrderIdFK = :Order_IdFK";
     $stmt = $database->connection->prepare($sql);
     $stmt->bindParam('Order_IdFK', $orderId);
     $stmt->execute();
@@ -914,16 +914,17 @@ class Session
     return $pizzaProduct;
   }
 
-  function addPizzaToOrder($orderId, $sizeFk, $pizzaFk, $quantity)
+  function addProductToOrder($orderId, $sizeFk, $productFK, $quantity,$totalPrice)
   {
     global $database;
     if ($quantity > 0) {
-      $stmt = $database->connection->prepare('INSERT INTO order_products(Order_IdFK, Size, Pizza_IdFK, Quantity) VALUES(:orderId, :sizeFk, :pizzaFk, :quantity)');
+      $stmt = $database->connection->prepare('INSERT INTO suborders(OrderIdFK, ProductSize, ProductIdFK, Quantity, TotalPrice) VALUES(:orderId, :sizeFk, :productFK, :quantity, :totalPrice)');
 
       $stmt->bindParam(':orderId', $orderId);
       $stmt->bindParam(':sizeFk', $sizeFk);
-      $stmt->bindParam(':pizzaFk', $pizzaFk);
+      $stmt->bindParam(':productFK', $productFK);
       $stmt->bindParam(':quantity', $quantity);
+      $stmt->bindParam(':totalPrice', $totalPrice);
       $stmt->execute();
     }
   }
@@ -969,12 +970,12 @@ class Session
 
   }
 
-  function getProductPrice($pizzaId, $sizeId)
+  function getProductPrice($productId, $sizeId)
   {
     global $database;
-    $sql = "SELECT * from pizza_size where pizza = :pizza AND size = :size";
+    $sql = "SELECT * from product_size where productIdFK = :product AND sizeIdFK = :size";
     $stmt = $database->connection->prepare($sql);
-    $stmt->bindParam('pizza', $pizzaId);
+    $stmt->bindParam('product', $productId);
     $stmt->bindParam('size', $sizeId);
     $stmt->execute();
     $productPrice = $stmt->fetch();
