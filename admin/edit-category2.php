@@ -63,7 +63,7 @@ if ($user['userAdmin'] == 1)
 </div><!-- /.page-header -->
 
 
-<div class="page-body" style="width:600px; margin:0 auto;">
+<div class="page-body">
   <?php
   if (isset($_GET['categoryId'])) {
     if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['category-name'])) {
@@ -77,22 +77,22 @@ if ($user['userAdmin'] == 1)
 
 
   ?>
-  <h2 style="margin-left: 150px;">Edit category: <?= $category['name'] ?> </h2>
+  <h2>Edit category: <?= $category['name'] ?> </h2>
 
-  <form class="admin-form" method="post" enctype="multipart/form-data" style="background-color:rgba(0, 0, 0, 0.9); border-radius: 15px;">
+  <form class="admin-form" method="post" enctype="multipart/form-data">
 
 
     <ul>
       <li>
-        <label for="name" style="color:#aaa;">Category:</label>
-        <input style="width: 295px;" type="text" id="category-name" name="category-name" value="<?= $category['name'] ?> "/>
+        <label for="name">Category:</label>
+        <input type="text" id="category-name" name="category-name" value="<?= $category['name'] ?> "/>
       </li>
     </ul>
 
 
-    <div class="buttons" style="margin-right: 150px; height: 50px;">
-      <button style="width: 145px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
-      <a style="width: 145px;" class="button icon cancel" title="Cancel" href="list-categories.php">Cancel</a>
+    <div class="buttons">
+      <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+      <a class="button icon cancel" title="Cancel" href="list-categories.php">Cancel</a>
     </div>
 
   </form>

@@ -153,11 +153,11 @@ if ($user['userAdmin'] == 0)
 
 
 <div class="container my-checkout">
-  <form action="payment.php" method="POST" enctype="multipart/form-data">
+
     <?php
     $userId = $row['userID'];
     $order = $session->getOrderId($userId);
-    $orderId = $order['Order_Id'];
+    //    $orderId = $order['Order_Id'];
     $totalCosts = 0;
     // var_dump($orderId);
 
@@ -165,129 +165,26 @@ if ($user['userAdmin'] == 0)
     <div class="row">
 
 
-      <div class="col-md-8">
-        <div class="addresses">
-          <?php
-          $addresses = $session->getUserAddresses($userId);
+      <div class="col-md-12">
+        <label for="location">Where are you ordering from?</label>
 
-          foreach ($addresses as $key => $value) {
+        <select name="location" id="location" onchange="run()">
+          <option value="0"></option>
+          <option value="1">Restaurant</option>
+          <option value="2">Online</option>
 
-
-            ?>
-            <div class="radio">
-              <label>
-                <input type="radio" required name="delivery-addresses"
-                       value="<?= $value['address_id'] ?>">
-                Address line 1: <?= $value['address_1'] ?>,<br/>
-                Address line 2: <?= $value['address_2'] ?>,<br/>
-                City:<?= $value['city'] ?>,
-                Postal code: <?= $value['postal_code'] ?>
-              </label>
-            </div>
-
-            <?php
-
-          }
-
-          ?>
-
-          <div class="radio">
-            <label>
-              <input type="radio" required name="delivery-addresses" value="new-address">
-              Enter a new address below:
-            </label>
-          </div>
-
-        </div>
+          </select>
 
 
-        <h3>New address:</h3>
-
-        <div class="form-group">
-          <label for="address-1">Address line 1:</label>
-          <input type="text" class="form-control" id="address-1" name="Address_1">
-        </div>
-        <div class="form-group">
-          <label for="address-2">Address line 2:</label>
-          <input type="text" class="form-control" id="address-2" name="Address_2">
-        </div>
-        <div class="form-group">
-          <label for="city">City:</label>
-          <input type="text" class="form-control" id="city" name="City">
-        </div>
-        <div class="form-group">
-          <label for="postal-code">Postal code:</label>
-          <input type="text" class="form-control" id="postal-code" name="Postal_Code">
-        </div>
+      </div>
+      <div class="showMore" id="showMoreClear">
 
       </div>
 
-      <div class="col-md-4">
-        <div class="order-summary">
-          <h2>Your order</h2>
-          <ul class="items-list">
-            <?php
-            $suborders = $session->getOrderProducts($orderId);
-            foreach ($suborders as $key => $value) {
-              $subOrderId = $value['OrderProductsId'];//Mos e ndrysho
-              // var_dump($value);
-              //   var_dump($subOrderId);
 
-              $pizzaProduct = $session->getPizzaProduct($subOrderId);
-              if ($value['Pizza_IdFK'] == null) {
-                $dailyOfferProduct = $session->getDailyOffer($value['DailyIdFK']);
-
-                $totalCosts += $dailyOfferProduct['DO_Price'] * $value['Quantity'];
-                $itemPrice = $dailyOfferProduct['DO_Price'] * $value['Quantity'];
-
-                ?>
-
-                <li>
-                  <span class="item-name"><?= $dailyOfferProduct['DO_Name']; ?></span>
-                  <span class="qty"><?= $value['Quantity'] ?></span>
-                  <span class="cost">$<?php echo $itemPrice; ?></span>
-                </li>
-
-                <?php
-              } else {
-                $pizzaProduct = $session->getPizza($value['Pizza_IdFK']);
-                $pizzaPrices = $session->getProductPrice($value['Pizza_IdFK'], $value['Size']);
-                $totalCosts += $value['Quantity'] * $pizzaPrices['price'];
-                $itemPrice = $value['Quantity'] * $pizzaPrices['price'];
-                ?>
-                <li>
-                  <span class="item-name"><?= $pizzaProduct['p_name']; ?></span>
-                  <span class="qty"><?= $value['Quantity'] ?></span>
-                  <span class="cost">$<?php echo $itemPrice; ?></span>
-                </li>
-
-
-                <?php
-
-              }
-            }
-
-            }
-            ?>
-          </ul>
-          <ul class="cost-list">
-
-            <li class="total">
-              <span class="cost-item">Total</span>
-              <span class="cost">$<?php echo $totalCosts; ?></span>
-              <input type="hidden" name="TotalCost" value="<?php echo $totalCosts; ?>" readonly>
-            </li>
-          </ul>
-
-
-          <button type="submit" id="placeOrder" class="mu-send-btn">Place order</button>
-        </div>
-      </div>
-    </div>
-
-  </form>
 
   <?php }
+  }
   else {
     $user_home->redirect('index.php');
   }
@@ -355,6 +252,39 @@ if ($user['userAdmin'] == 0)
     $('.input-stepper').inputStepper();
   });
 </script>
+<script type="text/javascript">
+  $(document).ready(function () {
+//      $("#category").select2();
+//      $("#ingredients").select2();
+//      run();
+  });
+  function run() {
+    var cat = document.getElementById("location").value;
 
+
+    console.log(cat);
+    showSizes(cat);
+  }
+  function showSizes(valueID) {
+
+    var categoryIdData = {
+      locationId: valueID
+    };
+
+    $.ajax({
+      type: 'POST',
+      url: 'checkoutOption.php',
+      data: categoryIdData
+    }).then(function (data) {
+      $("#showMoreClear").html("");
+      $('.showMore').append(data);
+
+      //console.log(data);
+    }, function (err, x, y) {
+      console.log(err, x, y);
+      alert('Item couldn\'t be added to cart.');
+    });
+  }
+</script>
 </body>
 </html>

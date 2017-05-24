@@ -13,7 +13,7 @@ foreach ($sizes as $key => $value) { ?>
 
   <li>
     <label for="price-<?= $value['sizeId']; ?>"><?= $value['name']; ?>:</label>
-    <input type="text" id="price-<?= $value['sizeId']; ?>" name="price[<?= $value['sizeId']; ?>]">
+    <input type="text" id="price-<?= $value['sizeId']; ?>" name="price[<?= $value['sizeId']; ?>]" style="min-width: 300px;">
   </li>
 
   <?php

@@ -164,7 +164,7 @@ p {
 }
 
 .button {
-   float: right;
+    float: right;
     font-size: 100%;
     color: #fff;
     margin: 0.1em 0.3em;
@@ -401,9 +401,9 @@ input.checkbox {
     .admin-form label {
         float: left;
         display: inline-block;
-        width: 120px;
+        width: 200px;
         margin-right: 1em;
-        text-align: left;
+        text-align: right;
     }
 
     .admin-form input,

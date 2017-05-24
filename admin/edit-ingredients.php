@@ -63,7 +63,7 @@ if ($user['userAdmin'] == 1)
 </div><!-- /.page-header -->
 
 
-<div class="page-body">
+<div class="page-body" style="width: 600px; margin: 0 auto;">
   <?php
   if (isset($_GET['ingredientId'])) {
     if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['ingredient-name'])) {
@@ -75,19 +75,19 @@ if ($user['userAdmin'] == 1)
 
     ?>
 
-    <h2>Edit Ingredient <?= $ingredient['i_name'] ?></h2>
+    <h2 style="margin-left: 150px;">Edit Ingredient <?= $ingredient['i_name'] ?></h2>
 
-    <form class="admin-form" method="post">
+    <form class="admin-form" method="post" style="background-color:rgba(0, 0, 0, 0.9); border-radius: 15px;">
       <ul>
         <li>
-          <label for="name">Ingredient:</label>
-          <input type="text" id="ingredient-name" name="ingredient-name" value="<?= $ingredient['i_name'] ?>"/>
+          <label style="color: #aaa;" for="name">Ingredient:</label>
+          <input style="width: 295px;" type="text" id="ingredient-name" name="ingredient-name" value="<?= $ingredient['i_name'] ?>"/>
         </li>
       </ul>
 
-      <div class="buttons">
-        <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
-        <a class="button icon cancel" title="Cancel" href="list-ingredients.php">Cancel</a>
+      <div class="buttons" style="margin-right: 150px; height: 50px;">
+        <button style="width: 145px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+        <a style="width: 145px;" class="button icon cancel" title="Cancel" href="list-ingredients.php">Cancel</a>
       </div>
 
     </form>

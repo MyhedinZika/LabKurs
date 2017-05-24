@@ -217,15 +217,16 @@ class Session
     return 'Category successfully updated!';
   }
 
-  function updateSubOrderQuantity($subOrderId, $quantity)
+  function updateSubOrderQuantity($subOrderId, $quantity, $totalPrice)
   {
     global $database;
-    $sql = "UPDATE order_products SET Quantity = :Quantity where OrderProductsId = :OrderProductsId";
+    $sql = "UPDATE suborders SET Quantity = :Quantity, TotalPrice = :TotalPrice where SuborderId  = :SuborderId ";
     try {
       if ($quantity > 0) {
         $stmt = $database->connection->prepare($sql);
-        $stmt->bindParam('OrderProductsId', $subOrderId);
+        $stmt->bindParam('SuborderId', $subOrderId);
         $stmt->bindParam('Quantity', $quantity);
+        $stmt->bindParam('TotalPrice', $totalPrice);
         $stmt->execute();
       }
     } catch (Exception $e) {
@@ -554,10 +555,10 @@ class Session
   function getSubOrder($suborderId)
   {
     global $database;
-    $sql = "SELECT * from order_products where OrderProductsId = :orderproductId";
+    $sql = "SELECT * from suborders where SuborderId = :SuborderId";
 
     $stmt = $database->connection->prepare($sql);
-    $stmt->bindParam('orderproductId', $suborderId);
+    $stmt->bindParam('SuborderId', $suborderId);
     $stmt->execute();
     $suborder = $stmt->fetch();
 
@@ -636,10 +637,10 @@ class Session
   function deleteSubOrder($subOrderId)
   {
     global $database;
-    $sql = "DELETE from order_products WHERE OrderProductsId = :OrderProductsId";
+    $sql = "DELETE from suborders WHERE SuborderId = :SuborderId";
     try {
       $stmt = $database->connection->prepare($sql);
-      $stmt->bindParam('OrderProductsId', $subOrderId);
+      $stmt->bindParam('SuborderId', $subOrderId);
       $stmt->execute();
     } catch (Exception $e) {
       return $e->getMessage();
@@ -828,7 +829,20 @@ class Session
     $sql = "UPDATE orders SET Status = 'Pending' WHERE Order_Id = :order_id";
 
     $stmt = $database->connection->prepare($sql);
-    $stmt->bindParam('order_id', $orderId);
+    $stmt->bindParam('order_id', $Order_Id);
+    $stmt->execute();
+
+  }
+
+  function updateOrderPrice($OrderId,$totalPrice)
+  {
+    global $database;
+
+    $sql = "UPDATE orders SET TotalPrice = :TotalPrice WHERE OrderId = :orderId";
+
+    $stmt = $database->connection->prepare($sql);
+    $stmt->bindParam('orderId', $OrderId);
+    $stmt->bindParam('TotalPrice', $totalPrice);
     $stmt->execute();
 
   }

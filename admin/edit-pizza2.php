@@ -71,7 +71,7 @@ if ($user['userAdmin'] == 1)
 </div><!-- /.page-header -->
 
 
-<div class="page-body" style="width: 600px; margin: 0 auto;">
+<div class="page-body">
   <?php
 
   $productId = $_GET['productId'];
@@ -192,34 +192,34 @@ if ($user['userAdmin'] == 1)
   $product = $session->getProduct($productId);
 
   ?>
-  <h2 style="margin-left: 150px;">Edit <?= $product['name'] ?></h2>
+  <h2>Edit <?= $product['name'] ?></h2>
 
 
-  <form class="admin-form" method="post" enctype="multipart/form-data" style="background-color:rgba(0, 0, 0, 0.9); border-radius: 15px;">
+  <form class="admin-form" method="post" enctype="multipart/form-data">
 
 
     <fieldset>
-      <legend style="font-size:22px;text-decoration:underline;color:white;">Details</legend>
+      <legend>Details</legend>
 
       <ul>
         <li>
-          <label for="name" style="color: #aaa;">Name:</label>
-          <input  type="text" id="name" name="name" value="<?= $product['name'] ?>" style="width:295px;"/>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" value="<?= $product['name'] ?>"/>
         </li>
         <li>
-          <label for="image" style="color: #aaa;">Photo:</label>
+          <label for="image">Photo:</label>
           <img class="product-photo" src="../includes/pizza_images/<?= $product['photo'] ?>"/>
         </li>
         <li>
-          <label for="image" style="color: #aaa;">Update photo:</label>
+          <label for="image">Update photo:</label>
           <input type="file" id="new-image" name="new-image"/>
         </li>
         <li>
 
           <?php
           $categories = $session->getCategory();
-          echo '<label for="category" style="color: #aaa;">Category:</label>';
-          echo '<select style="width:295px;" name="category" id="category">';
+          echo '<label for="category">Category:</label>';
+          echo '<select name="category" id="category">';
           foreach ($categories as $key => $value) {
             if ($value['categoryId'] == $product['categoryIdFK']) {
               echo '<option value="' . $value['categoryId'] . '" selected="selected">' . $value['name'] . '</option>';
@@ -231,7 +231,7 @@ if ($user['userAdmin'] == 1)
           ?>
         </li>
         <li>
-          <label for="ingredients" style="color: #aaa;">Ingredients</label>
+          <label for="ingredients">Ingredients</label>
 
 
           <?php
@@ -257,7 +257,7 @@ if ($user['userAdmin'] == 1)
 
           $ingredients = $session->getIngredients();
           //var_dump($ingredients);
-          echo '<select style="width:295px;" name="ingredients[]" id="ingredients" multiple>';
+          echo '<select name="ingredients[]" id="ingredients" multiple>';
           foreach ($ingredients as $key => $value) {
             if (pizzaIngredientCheck($ingredientsPizza, $value['ingredientId']) === true) {
               echo '<option value="' . $value['ingredientId'] . '" selected="selected">' . $value['i_name'] . ' </option>';
@@ -295,9 +295,9 @@ if ($user['userAdmin'] == 1)
     </fieldset> -->
 
 
-    <div class="buttons" style="margin-right: 150px; height: 50px;">
-      <button style="width:145px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
-      <a  style="width:145px;"class="button icon cancel" title="Cancel" href="list-products.php">Cancel</a>
+    <div class="buttons">
+      <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+      <a class="button icon cancel" title="Cancel" href="list-products.php">Cancel</a>
     </div>
 
   </form>

@@ -25,7 +25,7 @@ class Process
         break;
       case 'addPizza':
         $this->procAddPizza();
-        header("refresh:1;../admin/list-pizzas.php");
+        header("refresh:1;../admin/add-product.php");
         break;
       case 'addGallery':
         $this->procAddGallery();

@@ -12,7 +12,7 @@ ob_start();
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Edit Product category - iMenu Admin</title>
+  <title>Edit Product size - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
 
@@ -37,7 +37,7 @@ if ($user['userAdmin'] == 1)
     <img id="logo" src="../ui/images/logo.png" alt="Grandmas Pizza"/>
   </a>
 
-  <h1>iMenu Category Administration</h1>
+  <h1>iMenu Size Administration</h1>
 
 
   <div class="navbar">
@@ -46,15 +46,15 @@ if ($user['userAdmin'] == 1)
 
       <li class="active"><a href="list-products.php">Products</a>
         <ul class="subnav">
-          <li class="active"><a href="list-categories.php">Categories</a></li>
+          <li><a href="list-categories.php">Categories</a></li>
           <li><a href="list-ingredients.php">Ingredients</a></li>
-          <li><a href="list-sizes.php">Sizes</a></li>
+          <li class="active"><a href="list-sizes.php">Sizes</a></li>
         </ul>
       </li>
-      <!--<li><a href="index.php?action=manageotherfood">Other Food</a></li>
+      <!-- <li><a href="index.php?action=manageotherfood">Other Food</a></li>
       <li><a href="index.php?action=managedrinks">Drinks</a></li>-->
       <li><a href="imagelibrary.php?type=relprod">Image Library</a></li>
-      <!-- <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
+      <!--  <li><a href="list-dailyoffers.php">Daily Offers</a></li> -->
       <li><a href="list-users.php">Users</a></li>
       <li class="right"><a href="../includes/logout.php">Log Out</a></li>
     </ul>
@@ -63,36 +63,50 @@ if ($user['userAdmin'] == 1)
 </div><!-- /.page-header -->
 
 
-<div class="page-body" style="width:600px; margin:0 auto;">
+<div class="page-body">
   <?php
-  if (isset($_GET['categoryId'])) {
-    if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['category-name'])) {
-      $result = $session->updateCategory($_GET['categoryId'], $_POST['category-name']);
+  if (isset($_GET['id'])) {
+    if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['size-name']) && isset($_POST['category'])) {
+      $result = $session->updateSize($_GET['id'], $_POST['size-name'], $_POST['category']);
       echo "<p>$result</p>";
     }
   }
 
 
-  $category = $session->getOneCategory($_GET['categoryId']);
-
-
+  $size = $session->getSize($_GET['id']);
   ?>
-  <h2 style="margin-left: 150px;">Edit category: <?= $category['name'] ?> </h2>
 
-  <form class="admin-form" method="post" enctype="multipart/form-data" style="background-color:rgba(0, 0, 0, 0.9); border-radius: 15px;">
+
+  <h2>Edit size <?= $size['name'] ?></h2>
+
+  <form class="admin-form" method="post">
 
 
     <ul>
       <li>
-        <label for="name" style="color:#aaa;">Category:</label>
-        <input style="width: 295px;" type="text" id="category-name" name="category-name" value="<?= $category['name'] ?> "/>
+        Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px"
+                     value="<?= $size['name'] ?>"/>
+        <?php
+        $categories = $session->getCategory();
+
+        ?>
+
+
+        Category:
+        <select name="category" id="category">
+          <?php
+          foreach ($categories as $key => $value) {
+            echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
+          }
+          ?>
+        </select>
       </li>
     </ul>
 
 
-    <div class="buttons" style="margin-right: 150px; height: 50px;">
-      <button style="width: 145px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
-      <a style="width: 145px;" class="button icon cancel" title="Cancel" href="list-categories.php">Cancel</a>
+    <div class="buttons">
+      <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+      <a class="button icon cancel" title="Cancel" href="list-sizes.php">Cancel</a>
     </div>
 
   </form>
@@ -112,7 +126,6 @@ if ($user['userAdmin'] == 1)
 
   }
   ?>
-
 </div><!-- /.page-body -->
 
 </body>

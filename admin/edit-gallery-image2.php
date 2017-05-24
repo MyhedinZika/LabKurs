@@ -65,7 +65,7 @@ if ($user['userAdmin'] == 1)
 </div><!-- /.page-header -->
 
 
-<div class="page-body" style="width: 600px; margin:0 auto;">
+<div class="page-body">
   <?php
   $gallery = $session->getGallery($_GET['g_id']);
 
@@ -137,34 +137,34 @@ if ($user['userAdmin'] == 1)
 
   $gallery = $session->getGallery($_GET['g_id']);
   ?>
-  <h2 style="margin-top:-20px; margin-left:150px; ">Edit Gallery image: <?= $gallery['g_title'] ?></h2>
+  <h2>Edit Gallery image: <?= $gallery['g_title'] ?></h2>
 
-  <form class="admin-form" method="post" enctype="multipart/form-data" style="background-color:rgba(0, 0, 0, 0.9); border-radius: 15px;">
+  <form class="admin-form" method="post" enctype="multipart/form-data">
     <ul>
       <li>
-        <label for="title" style="color: #aaa;">Gallery item title:</label>
-        <input type="text" id="title" name="title" value="<?= $gallery['g_title'] ?>" style="width:295px;"/>
+        <label for="title">Gallery item title:</label>
+        <input type="text" id="title" name="title" value="<?= $gallery['g_title'] ?>"/>
       </li>
       <li>
-        <label for="description" style="color: #aaa;">Description:<br/></label>
-        <textarea style="width:295px;" id="description" name="description" rows="4"
-                  value="<?= $gallery['g_description'] ?>"><?= $gallery['g_description'] ?>></textarea>
+        <label for="description">Description:<br/></label>
+        <textarea id="description" name="description" rows="4"
+                  value="<?= $gallery['g_description'] ?>"><?= $gallery['g_description'] ?></textarea>
       </li>
       <li>
-        <label for="image" style="color: #aaa;">Photo:</label>
+        <label for="image">Photo:</label>
         <img class="gallery-photo" src="../includes/gallery_images/<?= $gallery['g_photo'] ?> "
              style=" max-width: 200px; min-width: 200px; " alt="<?= $gallery['g_title'] ?>"/>
       </li>
       <li>
-        <label for="image" style="color: #aaa;">Update photo:</label>
+        <label for="image">Update photo:</label>
         <input type="file" id="new-image" name="new-image"/>
       </li>
     </ul>
 
 
-    <div class="buttons" style="margin-right: 150px;">
-      <button type="submit" class="button icon go" title="Update" name="action" value="update" style="width:145px;">Update</button>
-      <a class="button icon cancel" title="Cancel" href="list-gallery-images.php" style="width:145px;">Cancel</a>
+    <div class="buttons">
+      <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+      <a class="button icon cancel" title="Cancel" href="list-gallery-images.php">Cancel</a>
     </div>
 
   </form>

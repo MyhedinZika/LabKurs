@@ -85,7 +85,7 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
 </div><!-- /.page-header -->
 
 
-<div class="page-body" style="width: 600px;margin: 0 auto;">
+<div class="page-body">
   <?php
   $userId = $_GET['userID'];
 
@@ -137,30 +137,30 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
   $user = $session->getUser($userId);
   ?>
 
-  <h2 style="margin-left: 150px; margin-top: -20px;">Edit <?= $user['userName'] ?><?php echo '&nbsp'; ?><?= $user['userSurname'] ?></h2>
+  <h2>Edit <?= $user['userName'] ?><?php echo '&nbsp'; ?><?= $user['userSurname'] ?></h2>
 
-  <form class="admin-form" method="post" style="background-color:rgba(0, 0, 0, 0.9); border-radius: 15px;">
+  <form class="admin-form" method="post">
 
 
     <fieldset>
-      <legend style="color: white; text-decoration: underline; font-size: 16px;">Details</legend>
+      <legend>Details</legend>
 
       <ul>
         <li>
-          <label style="color: #aaa;" for="name">Name:</label>
-          <input style="width:295px;" type="text" id="name" name="name" value="<?= $user['userName'] ?>"/>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" value="<?= $user['userName'] ?>"/>
         </li>
         <li>
-          <label style="color: #aaa;" for="surname">Surname:</label>
-          <input style="width:295px;" type="text" id="surname" name="surname" value="<?= $user['userSurname'] ?>"/>
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname" name="surname" value="<?= $user['userSurname'] ?>"/>
         </li>
         <li>
-          <label style="color: #aaa;" for="email">Email:</label>
-          <input style="width:295px;" type="text" id="email" name="email" value="<?= $user['userEmail'] ?>"/>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" value="<?= $user['userEmail'] ?>"/>
         </li>
         <li>
-          <label style="color: #aaa;" for="gender">Gender:</label>
-          <select style="width:295px;" name="gender" id="gender">
+          <label for="gender">Gender:</label>
+          <select name="gender" id="gender">
             <?php
             if ($user['userGender'] === 'M') {
               echo '<option value="M" selected="selected">Male</option>';
@@ -173,12 +173,12 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
           </select>
         </li>
         <li>
-          <label style="color: #aaa;" for="phone">Phone:</label>
-          <input style="width:295px;" type="text" id="phone" name="phone" value="<?= $user['userPhone'] ?>"/>
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone" value="<?= $user['userPhone'] ?>"/>
         </li>
         <li>
-          <label style="color: #aaa;" for="status">Status:</label>
-          <select style="width:295px;" name="status" id="status" disabled>
+          <label for="status">Status:</label>
+          <select name="status" id="status" disabled>
             <?php
             if ($user['userStatus'] == 0) {
               echo '<option value="0" selected="selected">Unverified</option>';
@@ -191,8 +191,8 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
           </select>
         </li>
         <li>
-          <div class="checkbox" style="color: #aaa;">
-            <label style="color: #aaa;" for="is-admin">Role:</label>
+          <div class="checkbox">
+            <label for="is-admin">Role:</label>
             <?php
             if ($user['userAdmin'] == 0) {
               echo '<input type="radio" name="role" value="Client" checked="checked"/> Client';
@@ -224,9 +224,9 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
     </fieldset>
 
 
-    <div class="buttons" style="margin-right: 150px; height: 50px;">
-      <button style="width: 145px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
-      <a style="width: 145px;" class="button icon cancel" title="Cancel" href="list-users.php">Cancel</a>
+    <div class="buttons">
+      <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+      <a class="button icon cancel" title="Cancel" href="list-users.php">Cancel</a>
     </div>
 
   </form>

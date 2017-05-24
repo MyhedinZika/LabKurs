@@ -105,9 +105,10 @@ if ($user['userAdmin'] == 1)
 
 
         <div class="actions">
+          <a class="button icon edit" href="edit-gallery-image.php?g_id=<?= $gallery['g_id'] ?>">Edit</a>
           <a class="button icon delete"
              href="list-gallery-images.php?action=delete&g_id=<?= $gallery['g_id'] ?>">Delete</a>
-          <a class="button icon edit" href="edit-gallery-image.php?g_id=<?= $gallery['g_id'] ?>">Edit</a>
+
         </div>
       </li>
     <?php endforeach; ?>

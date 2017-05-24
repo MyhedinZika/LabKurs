@@ -63,7 +63,7 @@ if ($user['userAdmin'] == 1)
 </div><!-- /.page-header -->
 
 
-<div class="page-body">
+<div class="page-body" style="width: 600px; margin: 0 auto;">
   <?php
   if (isset($_GET['id'])) {
     if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['size-name']) && isset($_POST['category'])) {
@@ -77,13 +77,13 @@ if ($user['userAdmin'] == 1)
   ?>
 
 
-  <h2>Edit size <?= $size['name'] ?></h2>
+  <h2 style="margin-left: 150px;">Edit size: <?= $size['name'] ?></h2>
 
-  <form class="admin-form" method="post">
+  <form class="admin-form" method="post" style="background-color:rgba(0, 0, 0, 0.9); border-radius: 15px;">
 
 
     <ul>
-      <li>
+      <li style="color: #aaa;">
         Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px"
                      value="<?= $size['name'] ?>"/>
         <?php
@@ -105,8 +105,8 @@ if ($user['userAdmin'] == 1)
 
 
     <div class="buttons">
-      <button type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
-      <a class="button icon cancel" title="Cancel" href="list-sizes.php">Cancel</a>
+      <button style="width: 122px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+      <a style="width: 122px;" class="button icon cancel" title="Cancel" href="list-sizes.php">Cancel</a>
     </div>
 
   </form>

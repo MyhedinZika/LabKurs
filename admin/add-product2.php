@@ -106,25 +106,25 @@ if ($user['userAdmin'] == 1)
 </div><!-- /.page-header -->
 
 
-<div class="page-body" style="width:600px; margin:auto;">
+<div class="page-body">
 
-  <h2 style="font-size:26px;margin-left:19px;margin-top: -46px; ">Add Product</h2>
+  <h2>Add Pizza</h2>
 
-  <form class="admin-form" method="post" action="../includes/process.php" enctype="multipart/form-data" style="border-left: solid 2px #cac0c0; border-bottom: solid 2px #cac0c0; background-color:rgba(0, 0, 0, 0.9);border-radius:10px;">
+  <form class="admin-form" method="post" action="../includes/process.php" enctype="multipart/form-data">
     <fieldset>
-      <legend style="font-size:22px;text-decoration:underline;color:white;">Details</legend>
+      <legend>Details</legend>
 
       <ul>
         <div class="form-group col-lg-1">
           <li>
-            <label for="name" style="font-size: 16px;color:#aaa;">Name:</label>
-            <input type="text" id="name" name="name" style="width:300px;"/>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"/>
           </li>
         </div>
         <div class="form-group">
           <li>
-            <label for="new-image" style="font-size: 16px;color:#aaa;">Photo:</label>
-            <input type="file" id="new-image" name="new-image" style="width:300px;"/>
+            <label for="new-image">Photo:</label>
+            <input type="file" id="new-image" name="new-image"/>
           </li>
         </div>
         <li>
@@ -133,8 +133,8 @@ if ($user['userAdmin'] == 1)
           ?>
 
           <div class="form-group">
-            <label for="category"style="font-size: 16px;color:#aaa;">Category:</label>
-            <select name="category" id="category" class="js-example-basic-single" onchange="run()" style="width:300px;">
+            <label for="category">Category:</label>
+            <select name="category" id="category" class="js-example-basic-single" onchange="run()">
               <?php
               foreach ($categories as $key => $value) {
                 echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
@@ -145,11 +145,11 @@ if ($user['userAdmin'] == 1)
         </li>
 
         <li>
-          <label for="ingredients" style="font-size: 16px;color:#aaa;">Ingredients:</label>
+          <label for="ingredients">Ingredients</label>
           <?php
           $ingredients = $session->getIngredients();
 
-          echo '<select name="ingredients[]" id="ingredients" class="js-example-basic-multiple" multiple style=" min-width: 300px;">';
+          echo '<select name="ingredients[]" id="ingredients" class="js-example-basic-multiple" multiple style=" min-width: 400px;">';
           foreach ($ingredients as $key => $value) {
             echo '<option value="' . $value['ingredientId'] . '">' . $value['i_name'] . '</option>';
           }
@@ -158,11 +158,9 @@ if ($user['userAdmin'] == 1)
           ?>
 
         </li>
-        </br>
-
         <fieldset>
-          <legend style="font-size:22px;text-decoration:underline; color:white;">Prices</legend>
-          <div class="showMore" id="showMoreClear" style="color: #aaa;">
+          <legend>Prices</legend>
+          <div class="showMore" id="showMoreClear">
 
           </div>
         </fieldset>
@@ -172,14 +170,12 @@ if ($user['userAdmin'] == 1)
     </fieldset>
 
 
-    <div class="buttons" style="height:50px;margin-right:146px;margin-top:10px;margin-bottom:10px;">
-      <button type="submit" class="button icon go" title="Submit" value="addPizza" name="action" style="width:145px;">Submit</button>
-      <a class="button icon cancel" title="Cancel" href="../admin/add-pizza.php" style="width:145px;margin-left:10px;">Cancel</a>
+    <div class="buttons">
+      <button type="submit" class="button icon go" title="Submit" value="addPizza" name="action">Submit</button>
+      <a class="button icon cancel" title="Cancel" href="../admin/add-pizza.php">Cancel</a>
     </div>
 
-
   </form>
-
 
   <?php }
   else {

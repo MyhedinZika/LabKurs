@@ -197,11 +197,26 @@ if (isset($_POST['action']) && $_POST['action'] === 'delete') {
 
 if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['productQuantity'])) {
   $subOrderId = $_POST['subOrderId'];
-
+  $subOrder = $session->getSubOrder($subOrderId);
   $quantity = $_POST['productQuantity'];
 
+  $productInfo = $session->getProduct($subOrder['ProductIdFK']);
+  $productPrice = $session->getProductPrice($subOrder['ProductIdFK'],$subOrder['ProductSize']);
 
-  $result = $session->updateSubOrderQuantity($subOrderId, $quantity);
+
+
+  $totalPrice=$productPrice['price'] * $quantity;
+
+//  echo $quantity;
+//  echo " ";
+//
+//  echo $subOrderId;
+//
+//  echo " ";
+//
+//  echo $totalPrice;
+  $result = $session->updateSubOrderQuantity($_POST['subOrderId'], $quantity, $totalPrice);
+
 }
 
 
@@ -254,7 +269,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
 
             ?>
             <form class="admin-form" method="post">
-              <input type="hidden" name="subOrderId" value="">
+              <input type="hidden" name="subOrderId" value="<?=$subOrderId?>">
               <td class="item-desc"><?php  echo $productInfo['name']; ?></td>
               <td>$<?php echo $productPrice['price'];?></td>
               <td><input type="number" class="qty-num" name="productQuantity"
@@ -302,7 +317,10 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
 
             <li class="total">
               <span class="cost-item">Total</span>
-              <span class="cost">$<?php echo $totalCosts; ?></span>
+              <span class="cost">$<?php echo $totalCosts;
+                $orderTotal = $session->updateOrderPrice($orderId,$totalCosts);
+
+              ?></span>
             </li>
           </ul>
 

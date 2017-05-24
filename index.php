@@ -153,6 +153,7 @@ if ($user_home->is_logged_in()) {
           if (!$user_home->is_logged_in()) {
             echo '<li><a href="includes/login.php">LOG IN / SIGN UP</a></li>';
           } else { ?>
+
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"
                                     href="index.php"><?php echo strtoupper($row['userName']); ?>
                 <span class="caret"></span></a>
@@ -163,6 +164,8 @@ if ($user_home->is_logged_in()) {
                 <li><a href="includes/logout.php">LOG OUT</a></li>
               </ul>
             </li>
+            <li><a href="cart.php"><img src="cart.png"/></a></li>
+
 
             <?php
           }
@@ -960,29 +963,42 @@ if ($user_home->is_logged_in()) {
                     <div class="form-group">
                       <label for="name">Your Name</label>
                       <input type="text" class="form-control" id="name" placeholder="Name"
-                             name="name" required>
+                             name="name" data-validation="required length" data-validation-length="3-25"
+                             data-validation-error-msg-required="Ju lutem shkruani emrin tuaj!"
+                             data-validation-error-msg-length="Gjatesia e emrit duhet te jete ne mes 3 dhe 25!"
+                             data-sanitize="trim capitalize">
                     </div>
                     <div class="form-group">
                       <label for="email">Email address</label>
                       <input type="email" class="form-control" id="email" placeholder="Email"
-                             name="email" required>
+                             name="email" data-validation="required email"
+                             data-validation-error-msg-required="Ju lutem shkruani nje email!"
+                             data-validation-error-msg-email="Formati i email nuk eshte ne rregull!" data-sanitize="trim">
                     </div>
                     <div class="form-group">
                       <label for="subject">Subject</label>
                       <input type="text" class="form-control" id="subject" placeholder="Subject"
-                             name="subject"
-                             required>
+                             name="subject" data-validation="required length" data-validation-length="min2"
+                             data-validation-error-msg-required="Ju lutem shkruani titullin!"
+                             data-validation-error-msg-length="Duhet te jene se paku 2 germa!">
                     </div>
                     <div class="form-group">
                       <label for="message">Message</label>
                       <textarea class="form-control" id="message" cols="30" rows="10"
                                 placeholder="Type Your Message"
-                                name="message" required></textarea>
+                                name="message" data-validation="required length" data-validation-length="6-500"
+                                data-validation-error-msg-required="Mesazhi nuk mund te jete i zbrazet!"
+                                data-validation-error-msg-length="Gjatesia e mesazhit duhet te jete ne mes 6-500!"></textarea>
                     </div>
                     <button type="submit" class="mu-send-btn" name="action" value="sendMessage">Send
                       Message
                     </button>
                   </form>
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+                  <script>
+                    $.validate();
+                  </script>
                 </div>
               </div>
               <div class="col-md-6">
