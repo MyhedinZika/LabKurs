@@ -109,14 +109,11 @@ if ($user['userAdmin'] == 0)
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right mu-main-nav">
-          <li><a href="index.php">HOME</a></li>
-          <li><a href="index.php">ABOUT US</a></li>
+
           <li><a href="index.php">MENU</a></li>
           <!-- <li><a href="#mu-reservation">RESERVATION</a></li>   -->
-          <li><a href="index.php">GALLERY</a></li>
-          <!-- <li><a href="#mu-chef">OUR TEAM</a></li> -->
-          <!-- <li><a href="#mu-latest-news">BLOG</a></li>  -->
-          <li><a href="index.php">CONTACT</a></li>
+
+
           <?php
           if (!$user_home->is_logged_in()){
             echo '<li><a href="includes/login.php">LOG IN / SIGN UP</a></li>';
@@ -154,137 +151,136 @@ if ($user['userAdmin'] == 0)
 
 <div class="container my-checkout">
 
-    <?php
-    $userId = $row['userID'];
-    $order = $session->getOrderId($userId);
-    //    $orderId = $order['Order_Id'];
-    $totalCosts = 0;
-    // var_dump($orderId);
+  <?php
+  $userId = $row['userID'];
+  $order = $session->getOrderId($userId);
+  //    $orderId = $order['Order_Id'];
+  $totalCosts = 0;
+  // var_dump($orderId);
 
-    ?>
-    <div class="row">
-
-
-      <div class="col-md-12">
-        <label for="location">Where are you ordering from?</label>
-
-        <select name="location" id="location" onchange="run()">
-          <option value="0"></option>
-          <option value="1">Restaurant</option>
-          <option value="2">Online</option>
-
-          </select>
-
-
-      </div>
-      <div class="showMore" id="showMoreClear">
-
-      </div>
-
-
-
-  <?php }
-  }
-  else {
-    $user_home->redirect('index.php');
-  }
-  }
-  else {
-    //ob_end();
-    $user_home->redirect('index.php');
-
-
-    //header("Location: ../../index.php" );
-    //exit();
-
-
-  }
   ?>
+  <div class="row">
 
 
-</div>
+    <div class="col-md-12" style="text-align: center; padding-bottom: 20px;">
+      <label for="location" style="margin-right: 5px;">Where are you ordering from?</label>
 
-<!-- End basket section -->
+      <select name="location" id="location" onchange="run()">
+        <option value="0"></option>
+        <option value="1">Restaurant</option>
+        <option value="2">Online</option>
+
+      </select>
 
 
-<!-- Start Footer -->
-<footer id="mu-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="mu-footer-area">
-          <div class="mu-footer-social">
-            <a href="#"><span class="fa fa-facebook"></span></a>
-            <a href="#"><span class="fa fa-twitter"></span></a>
-            <a href="#"><span class="fa fa-google-plus"></span></a>
-            <a href="#"><span class="fa fa-linkedin"></span></a>
-            <a href="#"><span class="fa fa-youtube"></span></a>
-          </div>
-          <div class="mu-footer-copyright">
-            <p>Copyrights &copy; <a rel="nofollow" href="#">2016</a></p>
+    </div>
+    <div class="showMore" id="showMoreClear">
+
+    </div>
+
+
+    <?php }
+    }
+    else {
+      $user_home->redirect('index.php');
+    }
+    }
+    else {
+      //ob_end();
+      $user_home->redirect('index.php');
+
+
+      //header("Location: ../../index.php" );
+      //exit();
+
+
+    }
+    ?>
+
+
+  </div>
+
+  <!-- End basket section -->
+
+
+  <!-- Start Footer -->
+  <footer id="mu-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mu-footer-area">
+            <div class="mu-footer-social">
+              <a href="#"><span class="fa fa-facebook"></span></a>
+              <a href="#"><span class="fa fa-twitter"></span></a>
+              <a href="#"><span class="fa fa-google-plus"></span></a>
+              <a href="#"><span class="fa fa-linkedin"></span></a>
+              <a href="#"><span class="fa fa-youtube"></span></a>
+            </div>
+            <div class="mu-footer-copyright">
+              <p>Copyrights &copy; <a rel="nofollow" href="#">2016</a></p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-<!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
-<!-- jQuery library -->
-<script src="assets/js/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/bootstrap.js"></script>
-<!-- Slick slider -->
-<script type="text/javascript" src="assets/js/slick.js"></script>
-<!-- Counter -->
-<script type="text/javascript" src="assets/js/waypoints.js"></script>
-<script type="text/javascript" src="assets/js/jquery.counterup.js"></script>
-<!-- Date Picker -->
-<script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
+  <!-- jQuery library -->
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/js/bootstrap.js"></script>
+  <!-- Slick slider -->
+  <script type="text/javascript" src="assets/js/slick.js"></script>
+  <!-- Counter -->
+  <script type="text/javascript" src="assets/js/waypoints.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.counterup.js"></script>
+  <!-- Date Picker -->
+  <script type="text/javascript" src="assets/js/bootstrap-datepicker.js"></script>
 
-<!-- Custom js -->
-<script src="assets/js/custom.js"></script>
-<script src="assets/js/jquery.input-stepper.js"></script>
+  <!-- Custom js -->
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/jquery.input-stepper.js"></script>
 
-<script>
-  $(function () {
-    // Document ready
-    $('.input-stepper').inputStepper();
-  });
-</script>
-<script type="text/javascript">
-  $(document).ready(function () {
+  <script>
+    $(function () {
+      // Document ready
+      $('.input-stepper').inputStepper();
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
 //      $("#category").select2();
 //      $("#ingredients").select2();
 //      run();
-  });
-  function run() {
-    var cat = document.getElementById("location").value;
-
-
-    console.log(cat);
-    showSizes(cat);
-  }
-  function showSizes(valueID) {
-
-    var categoryIdData = {
-      locationId: valueID
-    };
-
-    $.ajax({
-      type: 'POST',
-      url: 'checkoutOption.php',
-      data: categoryIdData
-    }).then(function (data) {
-      $("#showMoreClear").html("");
-      $('.showMore').append(data);
-
-      //console.log(data);
-    }, function (err, x, y) {
-      console.log(err, x, y);
-      alert('Item couldn\'t be added to cart.');
     });
-  }
-</script>
+    function run() {
+      var cat = document.getElementById("location").value;
+
+
+      console.log(cat);
+      showSizes(cat);
+    }
+    function showSizes(valueID) {
+
+      var categoryIdData = {
+        locationId: valueID
+      };
+
+      $.ajax({
+        type: 'POST',
+        url: 'checkoutOption.php',
+        data: categoryIdData
+      }).then(function (data) {
+        $("#showMoreClear").html("");
+        $('.showMore').append(data);
+
+        //console.log(data);
+      }, function (err, x, y) {
+        console.log(err, x, y);
+        alert('Item couldn\'t be added to cart.');
+      });
+    }
+  </script>
 </body>
 </html>

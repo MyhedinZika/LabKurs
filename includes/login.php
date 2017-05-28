@@ -339,7 +339,7 @@ if (isset($_POST['btn-signup'])) {
     <img src="..\assets\img\logomenu.png" alt="logo" style="
     padding-right: 156px;
     margin-bottom: 65px;
-    padding-left: 82px;" />
+    padding-left: 82px;"/>
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
     <label for="tab-1" class="tab" onclick="changeLogin()">Sign In</label>
     <input id="tab-2" type="radio" name="tab" class="sign-up">

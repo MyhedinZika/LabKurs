@@ -66,7 +66,8 @@ if ($user['userAdmin'] == 1)
 
   <h2 style="margin-top: -30px; margin-left: 150px;">Add Gallery Image</h2>
 
-  <form class="admin-form" method="post" action="../includes/process.php" enctype="multipart/form-data" style=" background-color:rgba(0, 0, 0, 0.9); border-radius:15px;">
+  <form class="admin-form" method="post" action="../includes/process.php" enctype="multipart/form-data"
+        style=" background-color:rgba(0, 0, 0, 0.9); border-radius:15px;">
     <input type="hidden" name="action" value="doaddimage"/>
     <!-- you might not want this - I used it to specify what the next action would be after submitting the form -->
 
@@ -74,7 +75,7 @@ if ($user['userAdmin'] == 1)
     <ul>
       <li>
         <label for="title" style="color:#aaa;">Gallery item title:</label>
-        <input type="text" id="title" name="title" style="width:295px;" />
+        <input type="text" id="title" name="title" style="width:295px;"/>
       </li>
       <li>
         <label for="description" style="color:#aaa;">Description:<br/></label>
@@ -88,7 +89,9 @@ if ($user['userAdmin'] == 1)
 
 
     <div class="buttons" style="margin-right: 150px;">
-      <button type="submit" class="button icon go" title="Submit" value="addGallery" name="action" style="width:145px;">Submit</button>
+      <button type="submit" class="button icon go" title="Submit" value="addGallery" name="action" style="width:145px;">
+        Submit
+      </button>
       <a class="button icon cancel" title="Cancel" href="list-gallery-images.php" style="width:145px;">Cancel</a>
     </div>
 

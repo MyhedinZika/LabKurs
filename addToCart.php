@@ -33,7 +33,7 @@ if ($user_home->is_logged_in()) {
   if (is_array($order)) {
     if (isset($_POST['Product_Id'])) {
       try {
-        $productPrice = $session->getProductPrice($_POST['Product_Id'],$_POST['Size']);
+        $productPrice = $session->getProductPrice($_POST['Product_Id'], $_POST['Size']);
         $totalPrice = $productPrice['price'] * $_POST['Quantity'];;
         $session->addProductToOrder($order['OrderId'], $_POST['Size'], $_POST['Product_Id'], $_POST['Quantity'], $totalPrice);
       } catch (Exception $e) {

@@ -167,6 +167,17 @@ class Session
     return $ing;
   }
 
+  function getTotalCosts($orderId){
+    global $database;
+    $sql = "SELECT SUM(TotalPrice) FROM `suborders` WHERE OrderIDFK = :orderId";
+    $stmt = $database->connection->prepare($sql);
+    $stmt->bindParam('orderId', $orderId);
+    $stmt->execute();
+    $totalCosts = $stmt->fetch();
+
+    return $totalCosts;
+  }
+
   function updateIngredient($ingredientId, $ingredientName)
   {
     global $database;
@@ -217,15 +228,16 @@ class Session
     return 'Category successfully updated!';
   }
 
-  function updateSubOrderQuantity($subOrderId, $quantity, $totalPrice)
+  function updateSubOrderQuantity($subOrderId, $quantity, $productSize,  $totalPrice)
   {
     global $database;
-    $sql = "UPDATE suborders SET Quantity = :Quantity, TotalPrice = :TotalPrice where SuborderId  = :SuborderId ";
+    $sql = "UPDATE suborders SET Quantity = :Quantity, TotalPrice = :TotalPrice, ProductSize = :productSize where SuborderId  = :SuborderId ";
     try {
       if ($quantity > 0) {
         $stmt = $database->connection->prepare($sql);
         $stmt->bindParam('SuborderId', $subOrderId);
         $stmt->bindParam('Quantity', $quantity);
+        $stmt->bindParam('productSize', $productSize);
         $stmt->bindParam('TotalPrice', $totalPrice);
         $stmt->execute();
       }
@@ -594,7 +606,7 @@ class Session
   function getUserAddresses($userId)
   {
     global $database;
-    $sql = "SELECT DISTINCT orders.address_id, address.address_1, address.address_2,address.city, address.postal_code FROM orders, address where orders.address_Id = address.address_id AND User_Id = :User_Id";
+    $sql = "SELECT DISTINCT orders.AddressIDFK, address.address_1, address.address_2,address.city, address.PostalCode FROM orders, address where orders.AddressIDFK = address.AddressId AND User_Id = :User_Id";
     $stmt = $database->connection->prepare($sql);
     $stmt->bindParam('User_Id', $userId);
     $stmt->execute();
@@ -834,7 +846,7 @@ class Session
 
   }
 
-  function updateOrderPrice($OrderId,$totalPrice)
+  function updateOrderPrice($OrderId, $totalPrice)
   {
     global $database;
 
@@ -928,7 +940,7 @@ class Session
     return $pizzaProduct;
   }
 
-  function addProductToOrder($orderId, $sizeFk, $productFK, $quantity,$totalPrice)
+  function addProductToOrder($orderId, $sizeFk, $productFK, $quantity, $totalPrice)
   {
     global $database;
     if ($quantity > 0) {
@@ -995,6 +1007,19 @@ class Session
     $productPrice = $stmt->fetch();
     return $productPrice;
   }
+
+  function getProductCategories($sizeId, $categoryID)
+  {
+    global $database;
+    $sql = "SELECT * from size where sizeId = :size OR CategoryIDFK = :categoryId ";
+    $stmt = $database->connection->prepare($sql);
+    $stmt->bindParam('size', $sizeId);
+    $stmt->bindParam('categoryId', $categoryID);
+    $stmt->execute();
+    $productCategory = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $productCategory;
+  }
+
 
   function checkUserAddress($Address_1, $Address_2, $City, $Postal_Code)
   {

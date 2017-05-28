@@ -81,12 +81,15 @@ if ($user['userAdmin'] == 1)
       <ul>
         <li>
           <label style="color: #aaa;" for="name">Ingredient:</label>
-          <input style="width: 295px;" type="text" id="ingredient-name" name="ingredient-name" value="<?= $ingredient['i_name'] ?>"/>
+          <input style="width: 295px;" type="text" id="ingredient-name" name="ingredient-name"
+                 value="<?= $ingredient['i_name'] ?>"/>
         </li>
       </ul>
 
       <div class="buttons" style="margin-right: 150px; height: 50px;">
-        <button style="width: 145px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+        <button style="width: 145px;" type="submit" class="button icon go" title="Update" name="action" value="update">
+          Update
+        </button>
         <a style="width: 145px;" class="button icon cancel" title="Cancel" href="list-ingredients.php">Cancel</a>
       </div>
 

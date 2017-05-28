@@ -105,7 +105,9 @@ if ($user['userAdmin'] == 1)
 
 
     <div class="buttons">
-      <button style="width: 122px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+      <button style="width: 122px;" type="submit" class="button icon go" title="Update" name="action" value="update">
+        Update
+      </button>
       <a style="width: 122px;" class="button icon cancel" title="Cancel" href="list-sizes.php">Cancel</a>
     </div>
 

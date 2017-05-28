@@ -137,7 +137,8 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
   $user = $session->getUser($userId);
   ?>
 
-  <h2 style="margin-left: 150px; margin-top: -20px;">Edit <?= $user['userName'] ?><?php echo '&nbsp'; ?><?= $user['userSurname'] ?></h2>
+  <h2 style="margin-left: 150px; margin-top: -20px;">
+    Edit <?= $user['userName'] ?><?php echo '&nbsp'; ?><?= $user['userSurname'] ?></h2>
 
   <form class="admin-form" method="post" style="background-color:rgba(0, 0, 0, 0.9); border-radius: 15px;">
 
@@ -225,7 +226,9 @@ if ($user['userAdmin'] == 1 | $user['userAdmin'] == 3)
 
 
     <div class="buttons" style="margin-right: 150px; height: 50px;">
-      <button style="width: 145px;" type="submit" class="button icon go" title="Update" name="action" value="update">Update</button>
+      <button style="width: 145px;" type="submit" class="button icon go" title="Update" name="action" value="update">
+        Update
+      </button>
       <a style="width: 145px;" class="button icon cancel" title="Cancel" href="list-users.php">Cancel</a>
     </div>
 

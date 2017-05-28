@@ -463,7 +463,7 @@ if ($user_home->is_logged_in()) {
                                       <button type="button" data-input-stepper-decrease>-</button>
                                       <input type="text" name="qty-<?= $productId ?>"
                                              id="qty-<?= $productId ?>"
-                                             value="0">
+                                             value="1">
                                       <button type="button" data-input-stepper-increase>+</button>
                                     </div>
 
@@ -973,7 +973,8 @@ if ($user_home->is_logged_in()) {
                       <input type="email" class="form-control" id="email" placeholder="Email"
                              name="email" data-validation="required email"
                              data-validation-error-msg-required="Ju lutem shkruani nje email!"
-                             data-validation-error-msg-email="Formati i email nuk eshte ne rregull!" data-sanitize="trim">
+                             data-validation-error-msg-email="Formati i email nuk eshte ne rregull!"
+                             data-sanitize="trim">
                     </div>
                     <div class="form-group">
                       <label for="subject">Subject</label>
@@ -995,7 +996,8 @@ if ($user_home->is_logged_in()) {
                     </button>
                   </form>
                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+                  <script
+                    src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
                   <script>
                     $.validate();
                   </script>
