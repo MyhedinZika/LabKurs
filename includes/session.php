@@ -17,7 +17,7 @@ class Session
   function __construct()
   {
     $this->time = time();
-    if (session_status() == PHP_SESSION_NONE) {
+    if (session_status() === PHP_SESSION_NONE) {
       $this->startSession();
     }
   }
@@ -25,8 +25,9 @@ class Session
   function startSession()
   {
     global $database;  //The database connection
-    session_start();   //Tell PHP to start the session
-
+    if (session_status() === PHP_SESSION_NONE) {
+      session_start();   //Tell PHP to start the session
+    }
     /* Determine if user is logged in */
     $this->logged_in = $this->checkLogin();
 
@@ -167,7 +168,8 @@ class Session
     return $ing;
   }
 
-  function getTotalCosts($orderId){
+  function getTotalCosts($orderId)
+  {
     global $database;
     $sql = "SELECT SUM(TotalPrice) FROM `suborders` WHERE OrderIDFK = :orderId";
     $stmt = $database->connection->prepare($sql);
@@ -228,7 +230,7 @@ class Session
     return 'Category successfully updated!';
   }
 
-  function updateSubOrderQuantity($subOrderId, $quantity, $productSize,  $totalPrice)
+  function updateSubOrderQuantity($subOrderId, $quantity, $productSize, $totalPrice)
   {
     global $database;
     $sql = "UPDATE suborders SET Quantity = :Quantity, TotalPrice = :TotalPrice, ProductSize = :productSize where SuborderId  = :SuborderId ";
@@ -838,7 +840,7 @@ class Session
   {
     global $database;
 
-    $sql = "UPDATE orders SET Status = 'Pending' WHERE Order_Id = :order_id";
+    $sql = "UPDATE orders SET PurchaseStatus = 'Pending' WHERE OrderId = :order_id";
 
     $stmt = $database->connection->prepare($sql);
     $stmt->bindParam('order_id', $Order_Id);
@@ -881,6 +883,15 @@ class Session
     $checkOrderPrice = $stmt->fetch();
     return $checkOrderPrice;
 
+  }
+
+  function getAreas(){
+    global $database;
+    $sql = "SELECT * from areas";
+    $stmt = $database->connection->prepare($sql);
+    $stmt->execute();
+    $areas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $areas;
   }
 
   function getPendingOrders()
@@ -1024,7 +1035,7 @@ class Session
   function checkUserAddress($Address_1, $Address_2, $City, $Postal_Code)
   {
     global $database;
-    $sql = "SELECT * from address where Address_1 = :address_1 AND Address_2 = :address_2 AND City = :city AND Postal_Code = :postal_code";
+    $sql = "SELECT * from address where Address_1 = :address_1 AND Address_2 = :address_2 AND City = :city AND PostalCode = :postal_code";
     $stmt = $database->connection->prepare($sql);
     $stmt->bindParam('address_1', $Address_1);
     $stmt->bindParam('address_2', $Address_2);
@@ -1039,7 +1050,7 @@ class Session
   function updateOrderAddressPrice($addressId, $orderId, $total)
   {
     global $database;
-    $sql = "UPDATE orders SET Address_Id = :address_id, Total = :total  WHERE Order_Id = :order_id";
+    $sql = "UPDATE orders SET AddressIDFK = :address_id, TotalPrice = :total  WHERE OrderId = :order_id";
     try {
       $stmt = $database->connection->prepare($sql);
       $stmt->bindParam('address_id', $addressId);

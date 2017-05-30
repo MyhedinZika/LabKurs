@@ -32,7 +32,7 @@ if (isset($_POST['btn-login'])) {
           $user_login->redirect('../index.php');
           exit();
         } else if ($user['userAdmin'] == 1) {
-          $user_login->redirect('../admin/list-pizzas.php');
+          $user_login->redirect('../admin/list-products.php');
           exit();
         } else if ($user['userAdmin'] == 2) {
           $user_login->redirect('../orders.php');
@@ -162,10 +162,10 @@ if (isset($_POST['btn-signup'])) {
         $message = "					
 							Hello $uname,
 							<br /><br />
-							Welcome to Grandma's Pizza!<br/>
+							Welcome to iMenu!<br/>
 							To complete your registration  please , just click following link<br/>
 							<br /><br />
-							<a href='grandmaspizza.online-presence.com/includes/verify.php?id=$id&code=$code'>Click HERE to Activate :)</a>
+							<a href='labcourse.online-presence.com/includes/verify.php?id=$id&code=$code'>Click HERE to Activate :)</a>
 							<br /><br />
 							Thanks,";
 
@@ -218,7 +218,7 @@ if (isset($_POST['btn-signup'])) {
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Grandma's Pizza Login</title>
+  <title>iMenuLogin</title>
 
   <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
   <link rel="stylesheet" href="css/style.css">

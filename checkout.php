@@ -103,7 +103,7 @@ if ($user['userAdmin'] == 0)
         </button>
         <!-- LOGO -->
         <!--  Image based logo  -->
-        <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Logo img"></a>
+        <a class="navbar-brand" href="index.php"><img src="assets/img/logomenu.png" alt="Logo img"></a>
         <!--  Text based logo  -->
         <!--           <a class="navbar-brand" href="index.html"><span>SpicyX</span></a>   -->
       </div>

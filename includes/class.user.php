@@ -134,10 +134,10 @@ class USER
     $mail->Host = "smtp.gmail.com";
     $mail->Port = 465;
     $mail->AddAddress($email);
-    $mail->Username = "contactgrandmaspizza@gmail.com";
+    $mail->Username = "imenu2017@gmail.com";
     $mail->Password = "shki2016";
-    $mail->SetFrom('contactgrandmaspizza@gmail.com', 'Grandmas Pizza');
-    $mail->AddReplyTo("contactgrandmaspizza@gmail.com", "Grandmas Pizza");
+    $mail->SetFrom('imenu2017@gmail.com', 'iMenu Administration');
+    $mail->AddReplyTo("imenu2017@gmail.com", "iMenu Administration");
     $mail->Subject = $subject;
     $mail->MsgHTML($message);
     $mail->Send();

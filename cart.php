@@ -131,7 +131,7 @@ if ($user['userAdmin'] == 0)
         </button>
         <!-- LOGO -->
         <!--  Image based logo  -->
-        <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Logo img"></a>
+        <a class="navbar-brand" href="index.php"><img src="assets/img/logomenu.png" alt="Logo img"></a>
         <!--  Text based logo  -->
         <!--           <a class="navbar-brand" href="index.html"><span>SpicyX</span></a>   -->
       </div>
@@ -193,7 +193,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
   $orderId = $subOrder['OrderIdFK'];
   $quantity = $_POST['productQuantity'];
   $productSize = $_POST['product-size'];
-  
+
 
   //var_dump($_POST);
   $productInfo = $session->getProduct($subOrder['ProductIdFK']);
@@ -201,9 +201,6 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
 
 
   $totalPrice = $productPrice['price'] * $quantity;
-
-
-
 
 
 //  echo $quantity;
@@ -214,9 +211,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
 //  echo " ";
 //
 //  echo $totalPrice;
-  $result = $session->updateSubOrderQuantity($_POST['subOrderId'], $quantity,$productSize, $totalPrice);
-
-
+  $result = $session->updateSubOrderQuantity($_POST['subOrderId'], $quantity, $productSize, $totalPrice);
 
 
 }
@@ -265,8 +260,6 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
             $subOrderId = $value['SuborderId'];//Mos e ndrysho
 
 
-
-
             $productInfo = $session->getProduct($value['ProductIdFK']);
 
 
@@ -282,18 +275,17 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
               <td class="item-desc"><?php echo $productInfo['name']; ?></td>
               <td name="productSize">
                 <select name="product-size" id="product-size">
-                <?php
-                  foreach($productCategory as $sizeCat){
-                    if($sizeCat['sizeId'] == $value['ProductSize']){
+                  <?php
+                  foreach ($productCategory as $sizeCat) {
+                    if ($sizeCat['sizeId'] == $value['ProductSize']) {
                       echo '<option value="' . $sizeCat['sizeId'] . '" selected="selected">' . $sizeCat['name'] . '</option>';
-                    }
-                    else {
+                    } else {
                       echo '<option value="' . $sizeCat['sizeId'] . '">' . $sizeCat['name'] . '</option>';
                     }
                   }
                   echo '<select/>';
 
-                ?>
+                  ?>
 
               </td>
               <td>$<?php echo $productPrice['price']; ?></td>
@@ -352,7 +344,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['pr
                 $totalCost = $array[0];
 
                 echo $totalCost;
-               $orderTotal = $session->updateOrderPrice($orderId, $totalCost);
+                $orderTotal = $session->updateOrderPrice($orderId, $totalCost);
 
                 ?></span>
             </li>

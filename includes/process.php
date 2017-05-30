@@ -163,7 +163,7 @@ EMAIL;
   {
     global $database;
 
-    var_dump($_POST);
+//    var_dump($_POST);
     $name = $_POST['name'];// name of pizza
 
     $imgFile = $_FILES['new-image']['name'];
@@ -174,7 +174,7 @@ EMAIL;
     $ingredients = $_POST['ingredients'];
 
     $prices = $_POST['price'];
-    var_dump($prices);
+//    var_dump($prices);
     if (empty($name)) {
       $errMSG = "Please Enter Username.";
     } else if (empty($imgFile)) {

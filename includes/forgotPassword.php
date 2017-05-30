@@ -27,7 +27,7 @@ if (isset($_POST['btn-submit'])) {
 				   <br /><br />
 				   Click The Following Link To Reset Your Password 
 				   <br /><br />
-				   <a href='grandmaspizza.online-presence.com/includes/resetPassword.php?id=$id&code=$code'>click here to reset your password</a>
+				   <a href='labcourse.online-presence.com/includes/resetPassword.php?id=$id&code=$code'>click here to reset your password</a>
 				   <br /><br />
 				   Thank you :)
 				   ";
@@ -51,7 +51,7 @@ if (isset($_POST['btn-submit'])) {
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Grandma's Pizza Forgot Password</title>
+  <title>iMenu Forgot Password</title>
 
 
   <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
@@ -93,6 +93,10 @@ if (isset($_POST['btn-submit'])) {
 <body>
 <div class="login-wrap" id="login-wrap" style=" min-height: 350px">
   <div class="login-html">
+    <img src="..\assets\img\logomenu.png" alt="logo" style="
+    padding-right: 156px;
+    margin-bottom: 65px;
+    padding-left: 82px;"/>
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
     <label for="tab-1" class="tab">Forgot Password</label>
     <input id="tab-2" type="radio" name="tab" class="sign-up">

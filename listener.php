@@ -78,7 +78,7 @@ if (strcmp($res, "VERIFIED") == 0) {
 
   global $database;
 
-  $sql = "UPDATE orders SET Status = 'Pending' WHERE Order_Id = :order_id";
+  $sql = "UPDATE orders SET PurchaseStatus = 'Pending' WHERE OrderId = :order_id";
 
   $stmt = $database->connection->prepare($sql);
   $stmt->bindParam('order_id', $item_number);
