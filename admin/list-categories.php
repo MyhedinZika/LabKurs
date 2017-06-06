@@ -43,7 +43,7 @@ if ($user['userAdmin'] == 1)
   <div class="navbar">
     <ul class="nav">
       <li class="right"><a href="../" target="_blank">View Live Site</a></li>
-      <li class="active"><a href="list-Products.php">Products</a>
+      <li class="active"><a href="list-products.php">Products</a>
         <ul class="subnav">
           <li class="active"><a href="list-categories.php">Categories</a></li>
           <li><a href="list-ingredients.php">Ingredients</a></li>
@@ -66,7 +66,7 @@ if ($user['userAdmin'] == 1)
 
   <form class="admin-form" method="post" style="margin-top:-21px; width: 700px; float: right;">
     <input type="text" id="category-name" name="category-name"
-           style="width:100px; margin-left: 225px; height: 36px;"/>
+           style="width:100px; margin-left: 225px; height: 36px;" required/>
     <button type="submit" class="button inline add" title="Add category" value="addCategory" name="action"
             style="width:180px; height:36px;">Add new Category
     </button>
@@ -81,15 +81,12 @@ if ($user['userAdmin'] == 1)
 
     $categoryName = $_POST['category-name'];
     if ($categoryName == null) {
-      $result = "Kategoria nuk mund te shtohet, 
-       emri i kategoriese nuk duhet te jete i zbrazet";
+      $result = "Emri i kategoriese nuk ben te jete i zbrazet";
     } else {
 
       $result = $session->addCategory($categoryName);
 
     }
-
-    echo $result;
   }
 
   if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['categoryId'])) {

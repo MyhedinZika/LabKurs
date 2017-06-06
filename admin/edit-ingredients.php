@@ -82,7 +82,7 @@ if ($user['userAdmin'] == 1)
         <li>
           <label style="color: #aaa;" for="name">Ingredient:</label>
           <input style="width: 295px;" type="text" id="ingredient-name" name="ingredient-name"
-                 value="<?= $ingredient['i_name'] ?>"/>
+                 value="<?= $ingredient['i_name'] ?>" required/>
         </li>
       </ul>
 

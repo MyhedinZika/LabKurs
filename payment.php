@@ -34,8 +34,6 @@ if ($user_home->is_logged_in()) {
 //  $userOrderId = $userOrder['Order_Id'];
 
 
-
-
   $suborders = $session->getOrderProducts($order['OrderId']);
 
 //  var_dump($suborders);

@@ -59,6 +59,7 @@ if ($user_home->is_logged_in()) {
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
+
 </head>
 <body>
 <?php
@@ -165,7 +166,7 @@ if ($user['userAdmin'] == 0)
     <div class="col-md-12" style="text-align: center; padding-bottom: 20px;">
       <label for="location" style="margin-right: 5px;">Where are you ordering from?</label>
 
-      <select name="location" id="location" onchange="run()">
+      <select name="location" id="location" onchange="run()" style="width:150px; height: 35px; border-radius:8px;">
         <option value="0"></option>
         <option value="1">Restaurant</option>
         <option value="2">Online</option>
@@ -174,7 +175,7 @@ if ($user['userAdmin'] == 0)
 
 
     </div>
-    <div class="showMore" id="showMoreClear">
+    <div class="showMore" id="showMoreClear" style="margin-bottom: 20px; padding-left: 20px;  padding-right: 20px;">
 
     </div>
 

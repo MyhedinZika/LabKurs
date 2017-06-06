@@ -29,16 +29,25 @@ if ($location == 1) {
 
   $areas = $session->getAreas();
 
+
   ?>
+
   <form action="#" method="POST" enctype="multipart/form-data">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8" style="padding-left: 45px;">
 
-        <label>Please pick the area where you are:</label><br/>
-        <select>
+        <label style="margin-bottom: 10px;">Please pick the area where you are:</label><br/>
+        <select name="area" id="area" class="js-example-basic-single" style="width: 150px; height: 35px; border-radius:10px;" onchange="runArea()">
+          <option value=""></option>
+          <?php foreach ($areas as $ar) { ?>
+            <option value="<?= $ar['areaId'] ?>"><?php echo $ar['name']; ?></option>
+          <?php } ?>
+
 
         </select><br/>
-        <label>Please pick the table number where you are: </label>
+        <div class="showTables">
+
+        </div>
       </div>
       <div class="col-md-4">
         <div class="order-summary">
@@ -115,7 +124,6 @@ if ($location == 1) {
     <?php
 
 
-
     $user_home = new USER();
 
     if ($user_home->is_logged_in()) {
@@ -156,11 +164,15 @@ if ($location == 1) {
             ?>
             <div class="radio">
               <label>
-                <input type="radio" required name="delivery-addresses" value="<?=$value['AddressIDFK'] ?>">
-                Address line 1: <?php   echo  str_repeat('&nbsp;', 2); echo $value['address_1'] ?>,<br/>
-                Address line 2: <?php echo  str_repeat('&nbsp;', 2); echo $value['address_2'] ?> ,<br/>
-                City: <?php echo  str_repeat('&nbsp;', 2); echo $value['city'] ?>,
-                Postal code: <?php echo  str_repeat('&nbsp;', 2); echo $value['PostalCode'] ?>
+                <input type="radio" required name="delivery-addresses" value="<?= $value['AddressIDFK'] ?>">
+                Address line 1: <?php echo str_repeat('&nbsp;', 2);
+                echo $value['address_1'] ?>,<br/>
+                Address line 2: <?php echo str_repeat('&nbsp;', 2);
+                echo $value['address_2'] ?> ,<br/>
+                City: <?php echo str_repeat('&nbsp;', 2);
+                echo $value['city'] ?>,
+                Postal code: <?php echo str_repeat('&nbsp;', 2);
+                echo $value['PostalCode'] ?>
               </label>
             </div>
 
@@ -267,8 +279,39 @@ if ($location == 1) {
   </form>
 
   <?php
-} else {
-  echo "No option was selected. Please pick one";
+} else { ?>
+  <div class="noOptionSelected" style="text-align: center;">
+    No option was selected. Please pick one of the options.
+  </div>
+  <?php
 }
 
 ?>
+<script type="text/javascript">
+  function runArea(){
+    var area = document.getElementById("area").value;
+    console.log(area);
+    showRestaurantTables(area);
+  }
+  function showRestaurantTables(valueID) {
+
+    var areaIdData = {
+      areaId: valueID
+    };
+
+    $.ajax({
+      type: 'POST',
+      url: 'areatables.php',
+      data: areaIdData
+    }).then(function (data) {
+      ('.showTables').append(data);
+      $("#showMoreClear").html("");
+
+      //console.log(data);
+    }, function (err, x, y) {
+      console.log(err, x, y);
+      alert('Item couldn\'t be added to cart.');
+    });
+  }
+
+</script>

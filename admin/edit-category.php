@@ -87,7 +87,7 @@ if ($user['userAdmin'] == 1)
       <li>
         <label for="name" style="color:#aaa;">Category:</label>
         <input style="width: 295px;" type="text" id="category-name" name="category-name"
-               value="<?= $category['name'] ?> "/>
+               value="<?= $category['name'] ?> " required/>
       </li>
     </ul>
 

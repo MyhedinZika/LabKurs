@@ -23,7 +23,7 @@ if ($user_home->is_logged_in()) {
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GrandmaPizzas | Orders</title>
+  <title>iMenu | Orders</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/d/d8/Pizza_slice_icon.png"
@@ -134,7 +134,7 @@ if ($user_home->is_logged_in()) {
         </button>
         <!-- LOGO -->
         <!--  Image based logo  -->
-        <a class="navbar-brand" href="index.php"><img src="assets/img/logo.png" alt="Logo img"></a>
+        <a class="navbar-brand" href="index.php"><img src="assets/img/logomenu.png" alt="Logo img"></a>
         <!--  Text based logo  -->
         <!--           <a class="navbar-brand" href="index.html"><span>SpicyX</span></a>   -->
       </div>
@@ -187,7 +187,7 @@ if ($user_home->is_logged_in()) {
 <?php
 if (isset($_POST['action']) && $_POST['action'] === 'accept') {
   // $result = $session->updateOrderToAccepted($_POST['orderId']);
-  $sql = "UPDATE orders SET Status = 'Accepted' WHERE Order_Id = :order_id";
+  $sql = "UPDATE orders SET PurchaseStatus = 'Accepted' WHERE OrderId = :order_id";
   $stmt = $database->connection->prepare($sql);
   $stmt->bindParam('order_id', $_POST['orderId']);
   $stmt->execute();
@@ -200,10 +200,10 @@ if (isset($_POST['action']) && $_POST['action'] === 'accept') {
 
   $message = "
      Dear $userName,<br/>
-     Thanks for ordering at Grandma's Pizza. <br/><br/>
+     Thanks for ordering at iMenu restaurant. <br/><br/>
      We'd like to let you know that your order has been accepted  succesfully.
      We hope you keep ordering at our store.<br/><br/>
-     Best regards, Grandma's Pizza Staff.
+     Best regards, iMenu's  Staff.
            ";
   $subject = "Your order";
   $user_home->send_mail($userEmail, $message, $subject);
@@ -212,7 +212,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'accept') {
 
 if (isset($_POST['action']) && $_POST['action'] === 'done') {
   // $result = $session->updateOrderToAccepted($_POST['orderId']);
-  $sql = "UPDATE orders SET Status = 'Completed' WHERE Order_Id = :order_id";
+  $sql = "UPDATE orders SET PurchaseStatus = 'Completed' WHERE OrderId = :order_id";
   $stmt = $database->connection->prepare($sql);
   $stmt->bindParam('order_id', $_POST['orderId']);
   $stmt->execute();
@@ -221,7 +221,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'done') {
 
 if (isset($_POST['action']) && $_POST['action'] === 'decline') {
   // $result = $session-> updateOrderToAccepted($_POST['orderId']);
-  $sql = "UPDATE orders SET Status = 'Canceled' WHERE Order_Id = :order_id";
+  $sql = "UPDATE orders SET PurchaseStatus = 'Canceled' WHERE OrderId = :order_id";
   $stmt = $database->connection->prepare($sql);
   $stmt->bindParam('order_id', $_POST['orderId']);
   $stmt->execute();
@@ -237,7 +237,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'decline') {
      Unfortunately we cannot accept your order at this moment. <br/><br/>
      We'll refund your money.
      Sorry for the inconvenience.<br/><br/>
-     Best regards, Grandma's Pizza Staff.";
+     Best regards, iMenu Staff.";
   $subject = "Your order";
   $user_home->send_mail($userEmail, $message, $subject);
 }
@@ -276,15 +276,15 @@ if (isset($_POST['action']) && $_POST['action'] === 'decline') {
                 {
                 $user = $session->getUser($value['User_Id']);
                 $userName = $user['userName'] . str_repeat('&nbsp;', 1) . $user['userSurname'];
-                $address = $session->getAddress($value['Address_Id']);
+                $address = $session->getAddress($value['AddressIDFK']);
                 $mainAddress = $address['Address_1'];
                 ?>
                 <tr>
                   <form class="admin-form" method="post">
-                    <input type="hidden" name="orderId" value="<?= $value['Order_Id'] ?>">
-                    <td><?= $value['Order_Id'] ?></td>
-                    <td><?= $value['Total'] ?></td>
-                    <td><?= $value['Status'] ?></td>
+                    <input type="hidden" name="orderId" value="<?= $value['OrderId'] ?>">
+                    <td><?= $value['OrderId'] ?></td>
+                    <td><?= $value['TotalPrice'] ?></td>
+                    <td><?= $value['PurchaseStatus'] ?></td>
                     <td><?= $userName ?></td>
                     <td><?= $mainAddress ?></td>
                     <td>
@@ -294,11 +294,11 @@ if (isset($_POST['action']) && $_POST['action'] === 'decline') {
                         Decline
                       </button>
                       <button type="button" class="showMore" data-request="0"
-                              data-orderid="<?= $value['Order_Id'] ?>">
+                              data-orderid="<?= $value['OrderId'] ?>">
                         Show More
                       </button>
                     </td>
-                <tbody id="more_<?= $value['Order_Id'] ?>">
+                <tbody id="more_<?= $value['OrderId'] ?>">
 
                 </tbody>
           </form>
@@ -311,7 +311,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'decline') {
         </div>
         </form>
 
-        <h2>Accepted</h2>
+        <h2>On Progress</h2>
         <form action="#" method="post">
           <div class="order-items table-responsive">
             <table>
@@ -331,14 +331,14 @@ if (isset($_POST['action']) && $_POST['action'] === 'decline') {
               foreach ($acceptedOrders as $key => $value) {
                 $user = $session->getUser($value['User_Id']);
                 $userName = $user['userName'] . str_repeat('&nbsp;', 1) . $user['userSurname'];
-                $address = $session->getAddress($value['Address_Id']);
+                $address = $session->getAddress($value['AddressIDFK']);
                 $mainAddress = $address['Address_1'];
                 ?>
                 <tr>
-                  <input type="hidden" name="orderId" value="<?= $value['Order_Id'] ?>">
-                  <td><?= $value['Order_Id'] ?></td>
-                  <td><?= $value['Total'] ?></td>
-                  <td><?= $value['Status'] ?></td>
+                  <input type="hidden" name="orderId" value="<?= $value['OrderId'] ?>">
+                  <td><?= $value['OrderId'] ?></td>
+                  <td><?= $value['TotalPrice'] ?></td>
+                  <td><?= $value['PurchaseStatus'] ?></td>
                   <td><?= $userName ?></td>
                   <td><?= $mainAddress ?></td>
                   <td>
@@ -372,13 +372,13 @@ if (isset($_POST['action']) && $_POST['action'] === 'decline') {
             foreach ($completedOrders as $key => $value) {
               $user = $session->getUser($value['User_Id']);
               $userName = $user['userName'] . str_repeat('&nbsp;', 1) . $user['userSurname'];
-              $address = $session->getAddress($value['Address_Id']);
+              $address = $session->getAddress($value['AddressIDFK']);
               $mainAddress = $address['Address_1'];
               ?>
               <tr>
-                <td><?= $value['Order_Id'] ?></td>
-                <td><?= $value['Total'] ?></td>
-                <td><?= $value['Status'] ?></td>
+                <td><?= $value['OrderId'] ?></td>
+                <td><?= $value['TotalPrice'] ?></td>
+                <td><?= $value['PurchaseStatus'] ?></td>
                 <td><?= $userName ?></td>
                 <td><?= $mainAddress ?></td>
               </tr>
@@ -408,13 +408,13 @@ if (isset($_POST['action']) && $_POST['action'] === 'decline') {
             foreach ($canceledOrders as $key => $value) {
               $user = $session->getUser($value['User_Id']);
               $userName = $user['userName'] . str_repeat('&nbsp;', 1) . $user['userSurname'];
-              $address = $session->getAddress($value['Address_Id']);
+              $address = $session->getAddress($value['AddressIDFK']);
               $mainAddress = $address['Address_1'];
               ?>
               <tr>
-                <td><?= $value['Order_Id'] ?></td>
-                <td><?= $value['Total'] ?></td>
-                <td><?= $value['Status'] ?></td>
+                <td><?= $value['OrderId'] ?></td>
+                <td><?= $value['TotalPrice'] ?></td>
+                <td><?= $value['PurchaseStatus'] ?></td>
                 <td><?= $userName ?></td>
                 <td><?= $mainAddress ?></td>
               </tr>

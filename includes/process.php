@@ -166,9 +166,9 @@ EMAIL;
 //    var_dump($_POST);
     $name = $_POST['name'];// name of pizza
 
-    $imgFile = $_FILES['new-image']['name'];
-    $tmp_dir = $_FILES['new-image']['tmp_name'];
-    $imgSize = $_FILES['new-image']['size'];
+    $imgFile = $_FILES['newimage']['name'];
+    $tmp_dir = $_FILES['newimage']['tmp_name'];
+    $imgSize = $_FILES['newimage']['size'];
 
     $category = $_POST['category'];
     $ingredients = $_POST['ingredients'];
@@ -258,9 +258,9 @@ EMAIL;
 
     $title = $_POST['title'];
 
-    $imgFile = $_FILES['new-image']['name'];
-    $tmp_dir = $_FILES['new-image']['tmp_name'];
-    $imgSize = $_FILES['new-image']['size'];
+    $imgFile = $_FILES['newimage']['name'];
+    $tmp_dir = $_FILES['newimage']['tmp_name'];
+    $imgSize = $_FILES['newimage']['size'];
 
     $description = $_POST['description'];
     if (empty($title)) {

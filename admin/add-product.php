@@ -18,6 +18,25 @@ ob_start();
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
   <link rel="stylesheet" type="../assets/css/bootstrap.css"/>
   <link rel="stylesheet" href="bootstrap-select/dist/css/bootstrap-select.min.css">
+
+<!--  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"
+          type="text/javascript"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/additional-methods.js"></script>
+
+  <style>
+    label.error{
+      float: none;
+      margin-left: 131px;
+      color: red;
+      padding-left: .5em;
+      vertical-align: top;
+      display: block;
+      width:300px;
+    }
+  </style>
+
   <!---->
   <!--  <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">-->
   <!--  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css"/>-->
@@ -36,6 +55,78 @@ ob_start();
       $("#ingredients").select2();
       run();
     });
+    $(function () {
+
+      $.validator.addMethod("loginRegex", function(value, element) {
+        return this.optional(element) || /^[a-z0-9\-\s]+$/i.test(value);
+      }, "Username must contain only letters, numbers, or dashes.");
+
+
+      $("#form-product").validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 3,
+//            lettersonly: true
+            pattern: /^[a-zA-Z_ -]*$/
+          },
+          newimage: {
+            required: true,
+            extension: "jpg|jpeg|png|gif"
+         },
+         category:{
+            required: true
+         },
+         "ingredients[]":{
+            required: true
+         },
+          price:{
+            required: true
+          }
+
+        },
+        messages: {
+          name: {
+            required: "Please write the name"
+          },
+          newimage:{
+            required: "Please select a picture"
+          },
+          category:{
+            required: "Please select a category"
+          },
+          ingredients: {
+            required: "Please select an ingredient"
+          },
+          price: {
+            required: "Please write price"
+          }
+
+        }
+      });
+    });
+
+
+
+//    $("#form-product").validate({
+//      rules: {
+//        name:{
+//          required: true,
+//          minlength: 2/*,
+//           alphanumericwithpunc: true*/
+//        }
+//      },
+//      messages: {
+//        name: {
+//          required: "Escriba el titulo",
+//          minlength: "Al menos 2 caracteres",
+//          alphanumericwithpunc: "Sólo alfanumérico"
+//        }
+//      },
+//
+//    });
+
+
     function run() {
       var cat = document.getElementById("category").value;
 
@@ -63,6 +154,8 @@ ob_start();
       });
     }
   </script>
+
+
 
 
 </head>
@@ -110,7 +203,7 @@ if ($user['userAdmin'] == 1)
 
   <h2 style="font-size:26px;margin-left:19px;margin-top: -46px; ">Add Product</h2>
 
-  <form class="admin-form" method="post" action="../includes/process.php" enctype="multipart/form-data"
+  <form class="admin-form" id="form-product" method="post" action="../includes/process.php" enctype="multipart/form-data"
         style="border-left: solid 2px #cac0c0; border-bottom: solid 2px #cac0c0; background-color:rgba(0, 0, 0, 0.9);border-radius:10px;">
     <fieldset>
       <legend style="font-size:22px;text-decoration:underline;color:white;">Details</legend>
@@ -119,13 +212,14 @@ if ($user['userAdmin'] == 1)
         <div class="form-group col-lg-1">
           <li>
             <label for="name" style="font-size: 16px;color:#aaa;">Name:</label>
-            <input type="text" id="name" name="name" style="width:300px;"/>
+            <input type="text" id="name" name="name" style="width:300px;" />
+
           </li>
         </div>
         <div class="form-group">
           <li>
-            <label for="new-image" style="font-size: 16px;color:#aaa;">Photo:</label>
-            <input type="file" id="new-image" name="new-image" style="width:300px;"/>
+            <label for="newimage" style="font-size: 16px;color:#aaa;">Photo:</label>
+            <input type="file" id="newimage" name="newimage" style="width:300px;" />
           </li>
         </div>
         <li>
@@ -135,7 +229,7 @@ if ($user['userAdmin'] == 1)
 
           <div class="form-group">
             <label for="category" style="font-size: 16px;color:#aaa;">Category:</label>
-            <select name="category" id="category" class="js-example-basic-single" onchange="run()" style="width:300px;">
+            <select name="category" id="category" class="js-example-basic-single" onchange="run()" style="width:300px;" >
               <?php
               foreach ($categories as $key => $value) {
                 echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';
@@ -150,7 +244,7 @@ if ($user['userAdmin'] == 1)
           <?php
           $ingredients = $session->getIngredients();
 
-          echo '<select name="ingredients[]" id="ingredients" class="js-example-basic-multiple" multiple style=" min-width: 300px;">';
+          echo '<select name="ingredients[]" id="ingredients" class="js-example-basic-multiple" multiple style=" min-width: 300px; " > ' ;
           foreach ($ingredients as $key => $value) {
             echo '<option value="' . $value['ingredientId'] . '">' . $value['i_name'] . '</option>';
           }

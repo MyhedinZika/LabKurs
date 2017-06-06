@@ -17,6 +17,12 @@ ob_start();
   <title>Edit gallery image - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
+  <style>
+    .galleryUpdated p{
+      text-align: right;
+      margin-top: -20px;
+    }
+  </style>
 
 </head>
 
@@ -72,9 +78,9 @@ if ($user['userAdmin'] == 1)
   if (isset($_POST['action']) && $_POST['action'] == 'update') {
     try {
       $title = $_POST['title'];
-      $imgFile = $_FILES['new-image']['name'];
-      $tmp_dir = $_FILES['new-image']['tmp_name'];
-      $imgSize = $_FILES['new-image']['size'];
+      $imgFile = $_FILES['newimage']['name'];
+      $tmp_dir = $_FILES['newimage']['tmp_name'];
+      $imgSize = $_FILES['newimage']['size'];
 
       $description = $_POST['description'];
       if (empty($title)) {
@@ -123,12 +129,12 @@ if ($user['userAdmin'] == 1)
       return $e->getMessage();
     }
 
-    echo '<p>Gallery image successfully updated!</p>';
+    echo '<div class="galleryUpdated" style="margin-top: -5px"><p>Gallery image successfully updated!</p></div>';
 
   }
 
   // if(isset($_GET['g_id'])){
-  //    if(isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['title']) && isset($_POST['description']) && isset($_POST['new-image'])){
+  //    if(isset($_POST['action']) && $_POST['action'] === 'update' && isset($_POST['title']) && isset($_POST['description']) && isset($_POST['newimage'])){
 
   //         $result = $session->updateGallery($_GET['g_id']); 
   //         echo "<p>$result</p>";
@@ -158,7 +164,7 @@ if ($user['userAdmin'] == 1)
       </li>
       <li>
         <label for="image" style="color: #aaa;">Update photo:</label>
-        <input type="file" id="new-image" name="new-image"/>
+        <input type="file" id="newimage" name="newimage"/>
       </li>
     </ul>
 

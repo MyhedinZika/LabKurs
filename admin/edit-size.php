@@ -85,7 +85,7 @@ if ($user['userAdmin'] == 1)
     <ul>
       <li style="color: #aaa;">
         Name: <input type="text" id="size-name" name="size-name" style="min-width: 200px"
-                     value="<?= $size['name'] ?>"/>
+                     value="<?= $size['name'] ?>" required/>
         <?php
         $categories = $session->getCategory();
 
@@ -93,7 +93,7 @@ if ($user['userAdmin'] == 1)
 
 
         Category:
-        <select name="category" id="category">
+        <select name="category" id="category" required>
           <?php
           foreach ($categories as $key => $value) {
             echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';

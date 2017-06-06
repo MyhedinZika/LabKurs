@@ -224,11 +224,11 @@ if (isset($_POST['btn-signup'])) {
   <link rel="stylesheet" href="css/style.css">
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"
           type="text/javascript"></script>
   <script type="text/javascript"
-          src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.js"></script>
-  <script src='https://www.google.com/recaptcha/api.js'></script>
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/additional-methods.js"></script>
+
   <script>
     $(function () {
       $("#form-signin").validate(

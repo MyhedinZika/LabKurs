@@ -258,9 +258,9 @@ class Session
     try {
       $title = $_POST['title'];
       var_dump($_POST);
-      $imgFile = $_FILES['new-image']['name'];
-      $tmp_dir = $_FILES['new-image']['tmp_name'];
-      $imgSize = $_FILES['new-image']['size'];
+      $imgFile = $_FILES['newimage']['name'];
+      $tmp_dir = $_FILES['newimage']['tmp_name'];
+      $imgSize = $_FILES['newimage']['size'];
 
       $description = $_POST['description'];
       if (empty($title)) {
@@ -596,7 +596,7 @@ class Session
   function getAddress($addressId)
   {
     global $database;
-    $sql = "Select * from address where Address_Id= :address_id";
+    $sql = "Select * from address where AddressId= :address_id";
     $stmt = $database->connection->prepare($sql);
     $stmt->bindParam('address_id', $addressId);
     $stmt->execute();
@@ -828,7 +828,7 @@ class Session
   function getOrderbyId($orderId)
   {
     global $database;
-    $sql = "SELECT * from orders where Order_Id = :order_id";
+    $sql = "SELECT * from orders where OrderId = :order_id";
     $stmt = $database->connection->prepare($sql);
     $stmt->bindParam('order_id', $orderId);
     $stmt->execute();
@@ -885,9 +885,19 @@ class Session
 
   }
 
-  function getAreas(){
+  function getAreas()
+  {
     global $database;
-    $sql = "SELECT * from areas";
+    $sql = "SELECT * from area";
+    $stmt = $database->connection->prepare($sql);
+    $stmt->execute();
+    $areas = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $areas;
+  }
+  function getAreaTables($areaId)
+  {
+    global $database;
+    $sql = "SELECT * from rtable where AreaIdFK = :";
     $stmt = $database->connection->prepare($sql);
     $stmt->execute();
     $areas = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -897,7 +907,7 @@ class Session
   function getPendingOrders()
   {
     global $database;
-    $sql = "SELECT * from orders where Status = 'Pending'";
+    $sql = "SELECT * from orders where PurchaseStatus = 'Pending'";
     $stmt = $database->connection->prepare($sql);
     $stmt->execute();
     $pendingOrders = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -908,7 +918,7 @@ class Session
   function getAcceptedOrders()
   {
     global $database;
-    $sql = "SELECT * from orders where Status = 'Accepted'";
+    $sql = "SELECT * from orders where PurchaseStatus = 'Accepted'";
     $stmt = $database->connection->prepare($sql);
     $stmt->execute();
     $acceptedOrders = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -919,7 +929,7 @@ class Session
   function getCompletedOrders()
   {
     global $database;
-    $sql = "SELECT * from orders where Status = 'Completed'";
+    $sql = "SELECT * from orders where PurchaseStatus = 'Completed'";
     $stmt = $database->connection->prepare($sql);
     $stmt->execute();
     $completedOrders = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -930,7 +940,7 @@ class Session
   function getCanceledOrders()
   {
     global $database;
-    $sql = "SELECT * from orders where Status = 'Canceled'";
+    $sql = "SELECT * from orders where PurchaseStatus = 'Canceled'";
     $stmt = $database->connection->prepare($sql);
     $stmt->execute();
     $canceledOrders = $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -70,9 +70,19 @@ if ($user['userAdmin'] == 1)
     $name = $_POST['size-name'];
     $category = $_POST['category'];
 
-    $result = $session->addSize($name, $category);
+    if($name != null){
+      $result = $session->addSize($name, $category);
 
-    echo $result;
+   
+
+    }
+    else{
+      $result = 'Emri i size nuk ben te jete i zbrazet';
+    }
+
+     echo $result;
+
+    
   }
 
   if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])) {
@@ -97,7 +107,7 @@ if ($user['userAdmin'] == 1)
   ?>
 
   <form class="admin-form" method="POST" style="width:849px; float:right;margin-top: -20px; ">
-    Name: <input type="text" id="size-name" name="size-name" style="height: 36px;"/>
+    Name: <input type="text" id="size-name" name="size-name" style="height: 36px;" required/>
 
     <?php
     $categories = $session->getCategory();
@@ -106,7 +116,7 @@ if ($user['userAdmin'] == 1)
 
 
     Category:
-    <select name="category" id="category" style="height: 38px;">
+    <select name="category" id="category" style="height: 38px;" required>
       <?php
       foreach ($categories as $key => $value) {
         echo '<option value="' . $value['categoryId'] . '">' . $value['name'] . '</option>';

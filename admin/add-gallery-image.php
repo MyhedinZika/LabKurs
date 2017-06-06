@@ -15,6 +15,58 @@ ob_start();
   <title>Add gallery image - iMenu Admin</title>
 
   <link rel="stylesheet" type="text/css" href="ui/css/admin.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"
+          type="text/javascript"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/additional-methods.js"></script>
+
+  <style>
+    label.error{
+      float: none;
+      margin-left: 131px;
+      color: red;
+      padding-left: .5em;
+      vertical-align: top;
+      display: block;
+      width:300px;
+    }
+  </style>
+
+  <script type="text/javascript">
+    $(function () {
+
+      $.validator.addMethod("loginRegex", function(value, element) {
+        return this.optional(element) || /^[a-z0-9\-\s]+$/i.test(value);
+      }, "Username must contain only letters, numbers, or dashes.");
+
+
+      $("#form-gallery").validate({
+        rules: {
+          newimage: {
+            required: true,
+            extension: "jpg|jpeg|png|gif"
+          },
+          description:{
+            required: true
+          }
+
+        },
+        messages: {
+          newimage:{
+            required: "Please select a picture"
+          },
+          description:{
+            required: "Please fill out some info"
+          }
+
+        }
+      });
+    });
+
+  </script>
+
 
 </head>
 
@@ -66,7 +118,7 @@ if ($user['userAdmin'] == 1)
 
   <h2 style="margin-top: -30px; margin-left: 150px;">Add Gallery Image</h2>
 
-  <form class="admin-form" method="post" action="../includes/process.php" enctype="multipart/form-data"
+  <form class="admin-form" id="form-gallery" method="post" action="../includes/process.php" enctype="multipart/form-data"
         style=" background-color:rgba(0, 0, 0, 0.9); border-radius:15px;">
     <input type="hidden" name="action" value="doaddimage"/>
     <!-- you might not want this - I used it to specify what the next action would be after submitting the form -->
@@ -75,15 +127,15 @@ if ($user['userAdmin'] == 1)
     <ul>
       <li>
         <label for="title" style="color:#aaa;">Gallery item title:</label>
-        <input type="text" id="title" name="title" style="width:295px;"/>
+        <input type="text" id="title" name="title" style="width:295px;" />
       </li>
       <li>
         <label for="description" style="color:#aaa;">Description:<br/></label>
         <textarea id="description" name="description" rows="4" style="width:295px"></textarea>
       </li>
       <li>
-        <label for="new-image" style="color:#aaa;">Photo:</label>
-        <input type="file" id="new-image" name="new-image"/>
+        <label for="newimage" style="color:#aaa;">Photo:</label>
+        <input type="file" id="newimage" name="newimage" />
       </li>
     </ul>
 

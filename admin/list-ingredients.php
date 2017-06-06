@@ -64,12 +64,10 @@ if ($user['userAdmin'] == 1)
 
 <div class="page-body">
 
-  <form class="admin-form" method="post" action="../includes/process.php"
-        style="width: 700px; margin-top: -20px; float:right;">
+  <form class="admin-form" method="post"  style="width: 700px; margin-top: -20px; float:right;">
     <input type="hidden" name="action" value="doaddingredient"/>
-    <!-- you might not want this - I used it to specify what the next action would be after submitting the form -->
 
-    <input type="text" id="ingredient-name" name="ingredient-name" style=" margin-left: 225px; height: 36px;"/>
+    <input type="text" id="ingredient-name" name="ingredient-name" style=" margin-left: 225px; height: 36px;" required/>
     <button type="submit" class="button inline add" title="Add ingredient" value="addIngredient" name="action">Add
       new
       Ingredient

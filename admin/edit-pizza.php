@@ -83,9 +83,9 @@ if ($user['userAdmin'] == 1)
 
       $name = $_POST['name'];// name of pizza
 
-      $imgFile = $_FILES['new-image']['name'];
-      $tmp_dir = $_FILES['new-image']['tmp_name'];
-      $imgSize = $_FILES['new-image']['size'];
+      $imgFile = $_FILES['newimage']['name'];
+      $tmp_dir = $_FILES['newimage']['tmp_name'];
+      $imgSize = $_FILES['newimage']['size'];
 
       $category = $_POST['category'];
       $ingredients = $_POST['ingredients'];
@@ -213,7 +213,7 @@ if ($user['userAdmin'] == 1)
         </li>
         <li>
           <label for="image" style="color: #aaa;">Update photo:</label>
-          <input type="file" id="new-image" name="new-image"/>
+          <input type="file" id="newimage" name="newimage"/>
         </li>
         <li>
 
